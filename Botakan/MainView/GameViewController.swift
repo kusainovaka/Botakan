@@ -5,6 +5,8 @@ import GameplayKit
 class GameViewController: UIViewController {
     
     override func viewDidLoad() {
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         let skView = SKView(frame: screenBounds)
         skView.ignoresSiblingOrder = true
         skView.showsPhysics = true

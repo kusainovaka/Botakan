@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E099EE3201A5D2F00151DE8 /* FeedBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E099EE2201A5D2F00151DE8 /* FeedBackView.swift */; };
+		8E099EE4201A62FC00151DE8 /* FeedBackView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E099EE2201A5D2F00151DE8 /* FeedBackView.swift */; };
+		8E0D77CA201081A4008F1FC2 /* TakpaktarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D77C9201081A4008F1FC2 /* TakpaktarVC.swift */; };
+		8E15084D200B4D5C00409ECD /* HeadTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15084C200B4D5C00409ECD /* HeadTextView.swift */; };
+		8E1A36BB201F202200E089F5 /* FeedBackSons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1A36BA201F202200E089F5 /* FeedBackSons.swift */; };
+		8E1A36BC201F221300E089F5 /* FeedBackSons.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E1A36BA201F202200E089F5 /* FeedBackSons.swift */; };
+		8E1A36BE201F24FD00E089F5 /* DetailLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1A36BD201F24FD00E089F5 /* DetailLabels.swift */; };
+		8E1A36BF201F278100E089F5 /* DetailLabels.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E1A36BD201F24FD00E089F5 /* DetailLabels.swift */; };
+		8E1A36C1201F533F00E089F5 /* MenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1A36C0201F533F00E089F5 /* MenuButtons.swift */; };
+		8E1A36C2201F541600E089F5 /* MenuButtons.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E1A36C0201F533F00E089F5 /* MenuButtons.swift */; };
 		8E6D9B6D1FE8E5C700E0E3DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B6C1FE8E5C700E0E3DC /* AppDelegate.swift */; };
 		8E6D9B731FE8E5C700E0E3DC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B721FE8E5C700E0E3DC /* GameScene.swift */; };
 		8E6D9B751FE8E5C700E0E3DC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B741FE8E5C700E0E3DC /* GameViewController.swift */; };
@@ -21,47 +31,87 @@
 		8E6D9B951FE8E85800E0E3DC /* ZhanylData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B8E1FE8E85800E0E3DC /* ZhanylData.json */; };
 		8E6D9B961FE8E85800E0E3DC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B8F1FE8E85800E0E3DC /* Helpers.swift */; };
 		8E6D9B991FE8E8D800E0E3DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B981FE8E8D800E0E3DC /* Default-568h@2x.png */; };
-		8E6D9B9D1FE8E90C00E0E3DC /* SanamakScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B9A1FE8E90C00E0E3DC /* SanamakScene.swift */; };
-		8E6D9B9E1FE8E90C00E0E3DC /* ZhanultpashScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B9B1FE8E90C00E0E3DC /* ZhanultpashScene.swift */; };
-		8E6D9B9F1FE8E90C00E0E3DC /* AnderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B9C1FE8E90C00E0E3DC /* AnderScene.swift */; };
-		8E6D9BA81FE8E93700E0E3DC /* menuNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BA11FE8E93700E0E3DC /* menuNodes.swift */; };
-		8E6D9BA91FE8E93700E0E3DC /* TakpakDeatils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BA21FE8E93700E0E3DC /* TakpakDeatils.swift */; };
-		8E6D9BAA1FE8E93700E0E3DC /* takpakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BA31FE8E93700E0E3DC /* takpakView.swift */; };
-		8E6D9BAB1FE8E93700E0E3DC /* SanamakDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BA41FE8E93700E0E3DC /* SanamakDetails.swift */; };
-		8E6D9BAC1FE8E93700E0E3DC /* AnderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BA51FE8E93700E0E3DC /* AnderDetails.swift */; };
-		8E6D9BAD1FE8E93700E0E3DC /* anderNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BA61FE8E93700E0E3DC /* anderNodes.swift */; };
-		8E6D9BAE1FE8E93700E0E3DC /* ZhanyltDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BA71FE8E93700E0E3DC /* ZhanyltDetails.swift */; };
-		8E6D9BB61FE8E95000E0E3DC /* DefaultBGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BB01FE8E95000E0E3DC /* DefaultBGImage.swift */; };
-		8E6D9BB71FE8E95000E0E3DC /* CollectionViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BB11FE8E95000E0E3DC /* CollectionViewDetails.swift */; };
-		8E6D9BB81FE8E95000E0E3DC /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BB21FE8E95000E0E3DC /* ProgressBar.swift */; };
-		8E6D9BB91FE8E95000E0E3DC /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BB31FE8E95000E0E3DC /* LabelView.swift */; };
-		8E6D9BBA1FE8E95000E0E3DC /* CLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BB41FE8E95000E0E3DC /* CLImage.swift */; };
-		8E6D9BBB1FE8E95000E0E3DC /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BB51FE8E95000E0E3DC /* BackgroundView.swift */; };
-		8E6D9BC11FE8E97A00E0E3DC /* ZhanyltpashExtensionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BBD1FE8E97A00E0E3DC /* ZhanyltpashExtensionV.swift */; };
-		8E6D9BC21FE8E97A00E0E3DC /* AnderExtensionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BBE1FE8E97A00E0E3DC /* AnderExtensionV.swift */; };
-		8E6D9BC31FE8E97A00E0E3DC /* SanamakExtensionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BBF1FE8E97A00E0E3DC /* SanamakExtensionV.swift */; };
-		8E6D9BC41FE8E97A00E0E3DC /* TakpaktarExtensionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9BC01FE8E97A00E0E3DC /* TakpaktarExtensionV.swift */; };
 		8E6D9BDE1FE8EB4A00E0E3DC /* HelveticaMedCd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B971FE8E86D00E0E3DC /* HelveticaMedCd.ttf */; };
 		8E6D9BE11FE8EBDF00E0E3DC /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9BDF1FE8EBDF00E0E3DC /* MyParticle.sks */; };
 		8E6D9BE21FE8EBDF00E0E3DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9BE01FE8EBDF00E0E3DC /* Assets.xcassets */; };
-		8E90AADE1FFF9F6F0070DD1B /* 8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AAD31FFF9F6F0070DD1B /* 8.mp3 */; };
-		8E90AADF1FFF9F6F0070DD1B /* 11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AAD41FFF9F6F0070DD1B /* 11.mp3 */; };
-		8E90AAE01FFF9F6F0070DD1B /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AAD51FFF9F6F0070DD1B /* 2.mp3 */; };
-		8E90AAE11FFF9F6F0070DD1B /* 7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AAD61FFF9F6F0070DD1B /* 7.mp3 */; };
-		8E90AAE21FFF9F6F0070DD1B /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AAD71FFF9F6F0070DD1B /* 4.mp3 */; };
-		8E90AAE31FFF9F6F0070DD1B /* 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AAD81FFF9F6F0070DD1B /* 5.mp3 */; };
-		8E90AAE41FFF9F6F0070DD1B /* 6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AAD91FFF9F6F0070DD1B /* 6.mp3 */; };
-		8E90AAE51FFF9F6F0070DD1B /* 9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AADA1FFF9F6F0070DD1B /* 9.mp3 */; };
-		8E90AAE61FFF9F6F0070DD1B /* 10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AADB1FFF9F6F0070DD1B /* 10.mp3 */; };
-		8E90AAE71FFF9F6F0070DD1B /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AADC1FFF9F6F0070DD1B /* 3.mp3 */; };
-		8E90AAE81FFF9F6F0070DD1B /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AADD1FFF9F6F0070DD1B /* 1.mp3 */; };
-		8E90AAEA1FFF9F7B0070DD1B /* other-music-loops-08610001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AAE91FFF9F7B0070DD1B /* other-music-loops-08610001.mp3 */; };
+		8E7CCC9E20135C2700B4E47A /* TakpakDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CCC9D20135C2700B4E47A /* TakpakDetailsVC.swift */; };
+		8E87FE6A2017011C00FE7560 /* AnderScene.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EBC61682016570C001F593E /* AnderScene.swift */; };
+		8E87FE6B2017011C00FE7560 /* GameScene.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B721FE8E5C700E0E3DC /* GameScene.swift */; };
+		8E87FE6C2017011C00FE7560 /* SanamakScene.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EBC617020165766001F593E /* SanamakScene.swift */; };
+		8E87FE6D2017011C00FE7560 /* ZhanultpashScene.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EBC617120165767001F593E /* ZhanultpashScene.swift */; };
+		8E87FE6E2017011C00FE7560 /* GameViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B741FE8E5C700E0E3DC /* GameViewController.swift */; };
+		8E87FE732017014900FE7560 /* Helpers.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B8F1FE8E85800E0E3DC /* Helpers.swift */; };
+		8E87FE742017014900FE7560 /* ParsingJSON.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B8A1FE8E85700E0E3DC /* ParsingJSON.swift */; };
+		8E87FE752017014900FE7560 /* screenSize.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B8B1FE8E85700E0E3DC /* screenSize.swift */; };
+		8E87FE762017205200FE7560 /* AppDelegate.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B6C1FE8E5C700E0E3DC /* AppDelegate.swift */; };
+		8E87FE772017206800FE7560 /* MenuViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E90AAEB1FFFA2210070DD1B /* MenuViewController.swift */; };
+		8E87FE7A2017208600FE7560 /* TakpaktarVC.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E0D77C9201081A4008F1FC2 /* TakpaktarVC.swift */; };
+		8E87FE7B2017208600FE7560 /* TakpakDetailsVC.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E7CCC9D20135C2700B4E47A /* TakpakDetailsVC.swift */; };
+		8E87FE7C2017208600FE7560 /* TakpakCVext.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E8C402520149535002DCE27 /* TakpakCVext.swift */; };
+		8E87FE7D2017208600FE7560 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B7E1FE8E5C700E0E3DC /* Info.plist */; };
+		8E87FE7E20173A9C00FE7560 /* HeadTextView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E15084C200B4D5C00409ECD /* HeadTextView.swift */; };
+		8E87FE7F20173A9C00FE7560 /* BallonsView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E8C402720150641002DCE27 /* BallonsView.swift */; };
+		8E8C402620149535002DCE27 /* TakpakCVext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C402520149535002DCE27 /* TakpakCVext.swift */; };
+		8E8C402820150641002DCE27 /* BallonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C402720150641002DCE27 /* BallonsView.swift */; };
+		8E90AAEC1FFFA2210070DD1B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90AAEB1FFFA2210070DD1B /* MenuViewController.swift */; };
+		8E9C29BC2020ED3500BB462B /* TakpakImageCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C29BB2020ED3500BB462B /* TakpakImageCV.swift */; };
+		8E9C29BD2020EDA300BB462B /* TakpakImageCV.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E9C29BB2020ED3500BB462B /* TakpakImageCV.swift */; };
+		8E9C29BF2020EE2F00BB462B /* ImageCellCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C29BE2020EE2F00BB462B /* ImageCellCV.swift */; };
+		8E9C29C02020F00D00BB462B /* ImageCellCV.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E9C29BE2020EE2F00BB462B /* ImageCellCV.swift */; };
+		8EA0E10A20188D0E00C7DE57 /* MusicBtnMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0E10920188D0E00C7DE57 /* MusicBtnMenu.swift */; };
+		8EA0E10B20188DF400C7DE57 /* MusicBtnMenu.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0E10920188D0E00C7DE57 /* MusicBtnMenu.swift */; };
+		8EBAEB1720224B08008DB211 /* AnderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBAEB1620224B08008DB211 /* AnderVC.swift */; };
+		8EBAEB1820224B5B008DB211 /* AnderVC.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EBAEB1620224B08008DB211 /* AnderVC.swift */; };
+		8EBC617220166291001F593E /* AnderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC61682016570C001F593E /* AnderScene.swift */; };
+		8EBC617320166291001F593E /* SanamakScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC617020165766001F593E /* SanamakScene.swift */; };
+		8EBC617420166291001F593E /* ZhanultpashScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC617120165767001F593E /* ZhanultpashScene.swift */; };
+		8EF5E7682025B0DE00155124 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7612025B0DD00155124 /* ProgressBar.swift */; };
+		8EF5E7692025B0DE00155124 /* DefaultBGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */; };
+		8EF5E76A2025B0DE00155124 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7632025B0DD00155124 /* BackgroundView.swift */; };
+		8EF5E76B2025B0DE00155124 /* CollectionViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7642025B0DD00155124 /* CollectionViewDetails.swift */; };
+		8EF5E76D2025B0DE00155124 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7662025B0DE00155124 /* LabelView.swift */; };
+		8EF5E76E2025B0DE00155124 /* CLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7672025B0DE00155124 /* CLImage.swift */; };
+		8EF5E7762025B10200155124 /* menuNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E76F2025B10100155124 /* menuNodes.swift */; };
+		8EF5E7772025B10200155124 /* ZhanyltDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7702025B10100155124 /* ZhanyltDetails.swift */; };
+		8EF5E7782025B10200155124 /* TakpakDeatils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7712025B10100155124 /* TakpakDeatils.swift */; };
+		8EF5E7792025B10200155124 /* AnderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7722025B10100155124 /* AnderDetails.swift */; };
+		8EF5E77A2025B10200155124 /* takpakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7732025B10100155124 /* takpakView.swift */; };
+		8EF5E77B2025B10200155124 /* anderNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7742025B10100155124 /* anderNodes.swift */; };
+		8EF5E77C2025B10200155124 /* SanamakDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7752025B10100155124 /* SanamakDetails.swift */; };
+		8EF5E7812025B11500155124 /* SanamakExtensionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E77D2025B11500155124 /* SanamakExtensionV.swift */; };
+		8EF5E7822025B11500155124 /* ZhanyltpashExtensionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E77E2025B11500155124 /* ZhanyltpashExtensionV.swift */; };
+		8EF5E7832025B11500155124 /* TakpaktarExtensionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E77F2025B11500155124 /* TakpaktarExtensionV.swift */; };
+		8EF5E7842025B11500155124 /* AnderExtensionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7802025B11500155124 /* AnderExtensionV.swift */; };
+		8EF5E7852025B17E00155124 /* BackgroundView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7632025B0DD00155124 /* BackgroundView.swift */; };
+		8EF5E7862025B17E00155124 /* CLImage.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7672025B0DE00155124 /* CLImage.swift */; };
+		8EF5E7872025B17E00155124 /* CollectionViewDetails.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7642025B0DD00155124 /* CollectionViewDetails.swift */; };
+		8EF5E7882025B17E00155124 /* DefaultBGImage.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */; };
+		8EF5E7892025B17E00155124 /* LabelView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7662025B0DE00155124 /* LabelView.swift */; };
+		8EF5E78A2025B17E00155124 /* ProgressBar.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7612025B0DD00155124 /* ProgressBar.swift */; };
+		8EF5E78B2025B1CD00155124 /* AnderDetails.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7722025B10100155124 /* AnderDetails.swift */; };
+		8EF5E78C2025B1CD00155124 /* anderNodes.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7742025B10100155124 /* anderNodes.swift */; };
+		8EF5E78D2025B1CD00155124 /* menuNodes.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E76F2025B10100155124 /* menuNodes.swift */; };
+		8EF5E78E2025B1CD00155124 /* SanamakDetails.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7752025B10100155124 /* SanamakDetails.swift */; };
+		8EF5E78F2025B1CD00155124 /* TakpakDeatils.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7712025B10100155124 /* TakpakDeatils.swift */; };
+		8EF5E7902025B1CD00155124 /* takpakView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7732025B10100155124 /* takpakView.swift */; };
+		8EF5E7912025B1CD00155124 /* ZhanyltDetails.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7702025B10100155124 /* ZhanyltDetails.swift */; };
+		8EF5E7922025B1CD00155124 /* AnderExtensionV.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7802025B11500155124 /* AnderExtensionV.swift */; };
+		8EF5E7932025B1CD00155124 /* SanamakExtensionV.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E77D2025B11500155124 /* SanamakExtensionV.swift */; };
+		8EF5E7942025B1CD00155124 /* TakpaktarExtensionV.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E77F2025B11500155124 /* TakpaktarExtensionV.swift */; };
+		8EF5E7952025B1CD00155124 /* ZhanyltpashExtensionV.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E77E2025B11500155124 /* ZhanyltpashExtensionV.swift */; };
+		8EF5E7972025B30000155124 /* other-music-loops-08610001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7962025B2FF00155124 /* other-music-loops-08610001.mp3 */; };
 		9D76546255D14CDEE7E5624E /* Pods_Botakan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4FC35A0B099ABA6465B19C /* Pods_Botakan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		69C7AE5FBE1911598AF36CF5 /* Pods-Botakan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Botakan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Botakan/Pods-Botakan.release.xcconfig"; sourceTree = "<group>"; };
 		8C4FC35A0B099ABA6465B19C /* Pods_Botakan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Botakan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E099EE2201A5D2F00151DE8 /* FeedBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackView.swift; sourceTree = "<group>"; };
+		8E0D77C9201081A4008F1FC2 /* TakpaktarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakpaktarVC.swift; sourceTree = "<group>"; };
+		8E15084C200B4D5C00409ECD /* HeadTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTextView.swift; sourceTree = "<group>"; };
+		8E1A36BA201F202200E089F5 /* FeedBackSons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackSons.swift; sourceTree = "<group>"; };
+		8E1A36BD201F24FD00E089F5 /* DetailLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLabels.swift; sourceTree = "<group>"; };
+		8E1A36C0201F533F00E089F5 /* MenuButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtons.swift; sourceTree = "<group>"; };
 		8E6D9B691FE8E5C700E0E3DC /* Botakan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Botakan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6D9B6C1FE8E5C700E0E3DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E6D9B721FE8E5C700E0E3DC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -79,40 +129,37 @@
 		8E6D9B8F1FE8E85800E0E3DC /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		8E6D9B971FE8E86D00E0E3DC /* HelveticaMedCd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaMedCd.ttf; sourceTree = "<group>"; };
 		8E6D9B981FE8E8D800E0E3DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8E6D9B9A1FE8E90C00E0E3DC /* SanamakScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SanamakScene.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/MainView/SanamakScene.swift"; sourceTree = "<group>"; };
-		8E6D9B9B1FE8E90C00E0E3DC /* ZhanultpashScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZhanultpashScene.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/MainView/ZhanultpashScene.swift"; sourceTree = "<group>"; };
-		8E6D9B9C1FE8E90C00E0E3DC /* AnderScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnderScene.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/MainView/AnderScene.swift"; sourceTree = "<group>"; };
-		8E6D9BA11FE8E93700E0E3DC /* menuNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = menuNodes.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/menuNodes.swift"; sourceTree = "<group>"; };
-		8E6D9BA21FE8E93700E0E3DC /* TakpakDeatils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TakpakDeatils.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/TakpakDeatils.swift"; sourceTree = "<group>"; };
-		8E6D9BA31FE8E93700E0E3DC /* takpakView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = takpakView.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/takpakView.swift"; sourceTree = "<group>"; };
-		8E6D9BA41FE8E93700E0E3DC /* SanamakDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SanamakDetails.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/SanamakDetails.swift"; sourceTree = "<group>"; };
-		8E6D9BA51FE8E93700E0E3DC /* AnderDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnderDetails.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/AnderDetails.swift"; sourceTree = "<group>"; };
-		8E6D9BA61FE8E93700E0E3DC /* anderNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = anderNodes.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/anderNodes.swift"; sourceTree = "<group>"; };
-		8E6D9BA71FE8E93700E0E3DC /* ZhanyltDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZhanyltDetails.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/ZhanyltDetails.swift"; sourceTree = "<group>"; };
-		8E6D9BB01FE8E95000E0E3DC /* DefaultBGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultBGImage.swift; path = "../../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/View/DefaultBGImage.swift"; sourceTree = "<group>"; };
-		8E6D9BB11FE8E95000E0E3DC /* CollectionViewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewDetails.swift; path = "../../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/View/CollectionViewDetails.swift"; sourceTree = "<group>"; };
-		8E6D9BB21FE8E95000E0E3DC /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBar.swift; path = "../../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/View/ProgressBar.swift"; sourceTree = "<group>"; };
-		8E6D9BB31FE8E95000E0E3DC /* LabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelView.swift; path = "../../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/View/LabelView.swift"; sourceTree = "<group>"; };
-		8E6D9BB41FE8E95000E0E3DC /* CLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLImage.swift; path = "../../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/View/CLImage.swift"; sourceTree = "<group>"; };
-		8E6D9BB51FE8E95000E0E3DC /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = "../../../../../Downloads/instaMama-master-2/mamakaz/ViewNodes/View/BackgroundView.swift"; sourceTree = "<group>"; };
-		8E6D9BBD1FE8E97A00E0E3DC /* ZhanyltpashExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZhanyltpashExtensionV.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/Extension/ZhanyltpashExtensionV.swift"; sourceTree = "<group>"; };
-		8E6D9BBE1FE8E97A00E0E3DC /* AnderExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnderExtensionV.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/Extension/AnderExtensionV.swift"; sourceTree = "<group>"; };
-		8E6D9BBF1FE8E97A00E0E3DC /* SanamakExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SanamakExtensionV.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/Extension/SanamakExtensionV.swift"; sourceTree = "<group>"; };
-		8E6D9BC01FE8E97A00E0E3DC /* TakpaktarExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TakpaktarExtensionV.swift; path = "../../../../Downloads/instaMama-master-2/mamakaz/Extension/TakpaktarExtensionV.swift"; sourceTree = "<group>"; };
 		8E6D9BDF1FE8EBDF00E0E3DC /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MyParticle.sks; path = Botakan/Media/MyParticle.sks; sourceTree = SOURCE_ROOT; };
 		8E6D9BE01FE8EBDF00E0E3DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Botakan/Media/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		8E90AAD31FFF9F6F0070DD1B /* 8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 8.mp3; path = "../../../../Desktop/BOTS/zima music/8.mp3"; sourceTree = "<group>"; };
-		8E90AAD41FFF9F6F0070DD1B /* 11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 11.mp3; path = "../../../../Desktop/BOTS/zima music/11.mp3"; sourceTree = "<group>"; };
-		8E90AAD51FFF9F6F0070DD1B /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 2.mp3; path = "../../../../Desktop/BOTS/zima music/2.mp3"; sourceTree = "<group>"; };
-		8E90AAD61FFF9F6F0070DD1B /* 7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 7.mp3; path = "../../../../Desktop/BOTS/zima music/7.mp3"; sourceTree = "<group>"; };
-		8E90AAD71FFF9F6F0070DD1B /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 4.mp3; path = "../../../../Desktop/BOTS/zima music/4.mp3"; sourceTree = "<group>"; };
-		8E90AAD81FFF9F6F0070DD1B /* 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 5.mp3; path = "../../../../Desktop/BOTS/zima music/5.mp3"; sourceTree = "<group>"; };
-		8E90AAD91FFF9F6F0070DD1B /* 6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 6.mp3; path = "../../../../Desktop/BOTS/zima music/6.mp3"; sourceTree = "<group>"; };
-		8E90AADA1FFF9F6F0070DD1B /* 9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 9.mp3; path = "../../../../Desktop/BOTS/zima music/9.mp3"; sourceTree = "<group>"; };
-		8E90AADB1FFF9F6F0070DD1B /* 10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 10.mp3; path = "../../../../Desktop/BOTS/zima music/10.mp3"; sourceTree = "<group>"; };
-		8E90AADC1FFF9F6F0070DD1B /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 3.mp3; path = "../../../../Desktop/BOTS/zima music/3.mp3"; sourceTree = "<group>"; };
-		8E90AADD1FFF9F6F0070DD1B /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 1.mp3; path = "../../../../Desktop/BOTS/zima music/1.mp3"; sourceTree = "<group>"; };
-		8E90AAE91FFF9F7B0070DD1B /* other-music-loops-08610001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "other-music-loops-08610001.mp3"; path = "../../../../Desktop/BOTS/other-music-loops-08610001.mp3"; sourceTree = "<group>"; };
+		8E7CCC9D20135C2700B4E47A /* TakpakDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakpakDetailsVC.swift; sourceTree = "<group>"; };
+		8E8C402520149535002DCE27 /* TakpakCVext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakpakCVext.swift; sourceTree = "<group>"; };
+		8E8C402720150641002DCE27 /* BallonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallonsView.swift; sourceTree = "<group>"; };
+		8E90AAEB1FFFA2210070DD1B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8E9C29BB2020ED3500BB462B /* TakpakImageCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakpakImageCV.swift; sourceTree = "<group>"; };
+		8E9C29BE2020EE2F00BB462B /* ImageCellCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellCV.swift; sourceTree = "<group>"; };
+		8EA0E10920188D0E00C7DE57 /* MusicBtnMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBtnMenu.swift; sourceTree = "<group>"; };
+		8EBAEB1620224B08008DB211 /* AnderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnderVC.swift; sourceTree = "<group>"; };
+		8EBC61682016570C001F593E /* AnderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnderScene.swift; sourceTree = "<group>"; };
+		8EBC617020165766001F593E /* SanamakScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanamakScene.swift; sourceTree = "<group>"; };
+		8EBC617120165767001F593E /* ZhanultpashScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhanultpashScene.swift; sourceTree = "<group>"; };
+		8EF5E7612025B0DD00155124 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBGImage.swift; sourceTree = "<group>"; };
+		8EF5E7632025B0DD00155124 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		8EF5E7642025B0DD00155124 /* CollectionViewDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDetails.swift; sourceTree = "<group>"; };
+		8EF5E7662025B0DE00155124 /* LabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		8EF5E7672025B0DE00155124 /* CLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLImage.swift; sourceTree = "<group>"; };
+		8EF5E76F2025B10100155124 /* menuNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuNodes.swift; sourceTree = "<group>"; };
+		8EF5E7702025B10100155124 /* ZhanyltDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhanyltDetails.swift; sourceTree = "<group>"; };
+		8EF5E7712025B10100155124 /* TakpakDeatils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakpakDeatils.swift; sourceTree = "<group>"; };
+		8EF5E7722025B10100155124 /* AnderDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnderDetails.swift; sourceTree = "<group>"; };
+		8EF5E7732025B10100155124 /* takpakView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = takpakView.swift; sourceTree = "<group>"; };
+		8EF5E7742025B10100155124 /* anderNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = anderNodes.swift; sourceTree = "<group>"; };
+		8EF5E7752025B10100155124 /* SanamakDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanamakDetails.swift; sourceTree = "<group>"; };
+		8EF5E77D2025B11500155124 /* SanamakExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanamakExtensionV.swift; sourceTree = "<group>"; };
+		8EF5E77E2025B11500155124 /* ZhanyltpashExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhanyltpashExtensionV.swift; sourceTree = "<group>"; };
+		8EF5E77F2025B11500155124 /* TakpaktarExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakpaktarExtensionV.swift; sourceTree = "<group>"; };
+		8EF5E7802025B11500155124 /* AnderExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnderExtensionV.swift; sourceTree = "<group>"; };
+		8EF5E7962025B2FF00155124 /* other-music-loops-08610001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "other-music-loops-08610001.mp3"; sourceTree = "<group>"; };
 		DDC95B2DBF50FCAD9CDC1E7F /* Pods-Botakan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Botakan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Botakan/Pods-Botakan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +192,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E3D15F02019A9FD004720F3 /* SummerView */ = {
+			isa = PBXGroup;
+			children = (
+				8E3D15F32019AAE6004720F3 /* Controller */,
+				8E3D15F12019AA77004720F3 /* View */,
+				8E3D15F22019AA9B004720F3 /* ExtensionView */,
+			);
+			path = SummerView;
+			sourceTree = "<group>";
+		};
+		8E3D15F12019AA77004720F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E15084C200B4D5C00409ECD /* HeadTextView.swift */,
+				8E9C29BE2020EE2F00BB462B /* ImageCellCV.swift */,
+				8E1A36C0201F533F00E089F5 /* MenuButtons.swift */,
+				8E1A36BD201F24FD00E089F5 /* DetailLabels.swift */,
+				8E8C402720150641002DCE27 /* BallonsView.swift */,
+				8E099EE2201A5D2F00151DE8 /* FeedBackView.swift */,
+				8E1A36BA201F202200E089F5 /* FeedBackSons.swift */,
+				8EA0E10920188D0E00C7DE57 /* MusicBtnMenu.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E3D15F22019AA9B004720F3 /* ExtensionView */ = {
+			isa = PBXGroup;
+			children = (
+				8E8C402520149535002DCE27 /* TakpakCVext.swift */,
+				8E9C29BB2020ED3500BB462B /* TakpakImageCV.swift */,
+			);
+			path = ExtensionView;
+			sourceTree = "<group>";
+		};
+		8E3D15F32019AAE6004720F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E90AAEB1FFFA2210070DD1B /* MenuViewController.swift */,
+				8E0D77C9201081A4008F1FC2 /* TakpaktarVC.swift */,
+				8EBAEB1620224B08008DB211 /* AnderVC.swift */,
+				8E7CCC9D20135C2700B4E47A /* TakpakDetailsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8E6D9B601FE8E5C700E0E3DC = {
 			isa = PBXGroup;
 			children = (
@@ -167,13 +259,14 @@
 		8E6D9B6B1FE8E5C700E0E3DC /* Botakan */ = {
 			isa = PBXGroup;
 			children = (
-				8E6D9B841FE8E7E800E0E3DC /* Others */,
-				8E6D9B851FE8E7FE00E0E3DC /* MainView */,
 				8E6D9BA01FE8E91200E0E3DC /* ViewNodes */,
+				8E6D9BBC1FE8E96100E0E3DC /* Extension */,
+				8E6D9B851FE8E7FE00E0E3DC /* MainView */,
+				8E3D15F02019A9FD004720F3 /* SummerView */,
+				8E6D9B841FE8E7E800E0E3DC /* Others */,
 				8E6D9B791FE8E5C700E0E3DC /* Assets.xcassets */,
 				8E6D9B7E1FE8E5C700E0E3DC /* Info.plist */,
 				8E6D9BC51FE8EAAA00E0E3DC /* Media */,
-				8E6D9BBC1FE8E96100E0E3DC /* Extension */,
 				8E6D9B881FE8E83900E0E3DC /* Helpers */,
 			);
 			path = Botakan;
@@ -193,10 +286,10 @@
 		8E6D9B851FE8E7FE00E0E3DC /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				8EBC61682016570C001F593E /* AnderScene.swift */,
 				8E6D9B721FE8E5C700E0E3DC /* GameScene.swift */,
-				8E6D9B9C1FE8E90C00E0E3DC /* AnderScene.swift */,
-				8E6D9B9A1FE8E90C00E0E3DC /* SanamakScene.swift */,
-				8E6D9B9B1FE8E90C00E0E3DC /* ZhanultpashScene.swift */,
+				8EBC617020165766001F593E /* SanamakScene.swift */,
+				8EBC617120165767001F593E /* ZhanultpashScene.swift */,
 				8E6D9B741FE8E5C700E0E3DC /* GameViewController.swift */,
 			);
 			path = MainView;
@@ -220,14 +313,14 @@
 			isa = PBXGroup;
 			children = (
 				8E6D9BAF1FE8E94000E0E3DC /* Views */,
-				8E6D9BA11FE8E93700E0E3DC /* menuNodes.swift */,
-				8E6D9BA61FE8E93700E0E3DC /* anderNodes.swift */,
-				8E6D9BA71FE8E93700E0E3DC /* ZhanyltDetails.swift */,
-				8E6D9BA51FE8E93700E0E3DC /* AnderDetails.swift */,
-				8E6D9BA41FE8E93700E0E3DC /* SanamakDetails.swift */,
-				8E6D9BA21FE8E93700E0E3DC /* TakpakDeatils.swift */,
-				8E6D9BA31FE8E93700E0E3DC /* takpakView.swift */,
 				8E6D9BDF1FE8EBDF00E0E3DC /* MyParticle.sks */,
+				8EF5E7722025B10100155124 /* AnderDetails.swift */,
+				8EF5E7742025B10100155124 /* anderNodes.swift */,
+				8EF5E76F2025B10100155124 /* menuNodes.swift */,
+				8EF5E7752025B10100155124 /* SanamakDetails.swift */,
+				8EF5E7712025B10100155124 /* TakpakDeatils.swift */,
+				8EF5E7732025B10100155124 /* takpakView.swift */,
+				8EF5E7702025B10100155124 /* ZhanyltDetails.swift */,
 				8E6D9BE01FE8EBDF00E0E3DC /* Assets.xcassets */,
 			);
 			path = ViewNodes;
@@ -236,12 +329,12 @@
 		8E6D9BAF1FE8E94000E0E3DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8E6D9BB51FE8E95000E0E3DC /* BackgroundView.swift */,
-				8E6D9BB41FE8E95000E0E3DC /* CLImage.swift */,
-				8E6D9BB11FE8E95000E0E3DC /* CollectionViewDetails.swift */,
-				8E6D9BB01FE8E95000E0E3DC /* DefaultBGImage.swift */,
-				8E6D9BB31FE8E95000E0E3DC /* LabelView.swift */,
-				8E6D9BB21FE8E95000E0E3DC /* ProgressBar.swift */,
+				8EF5E7632025B0DD00155124 /* BackgroundView.swift */,
+				8EF5E7672025B0DE00155124 /* CLImage.swift */,
+				8EF5E7642025B0DD00155124 /* CollectionViewDetails.swift */,
+				8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */,
+				8EF5E7662025B0DE00155124 /* LabelView.swift */,
+				8EF5E7612025B0DD00155124 /* ProgressBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,10 +342,10 @@
 		8E6D9BBC1FE8E96100E0E3DC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				8E6D9BBE1FE8E97A00E0E3DC /* AnderExtensionV.swift */,
-				8E6D9BBF1FE8E97A00E0E3DC /* SanamakExtensionV.swift */,
-				8E6D9BC01FE8E97A00E0E3DC /* TakpaktarExtensionV.swift */,
-				8E6D9BBD1FE8E97A00E0E3DC /* ZhanyltpashExtensionV.swift */,
+				8EF5E7802025B11500155124 /* AnderExtensionV.swift */,
+				8EF5E77D2025B11500155124 /* SanamakExtensionV.swift */,
+				8EF5E77F2025B11500155124 /* TakpaktarExtensionV.swift */,
+				8EF5E77E2025B11500155124 /* ZhanyltpashExtensionV.swift */,
 			);
 			name = Extension;
 			path = ViewNodes;
@@ -261,18 +354,7 @@
 		8E6D9BC51FE8EAAA00E0E3DC /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				8E90AADD1FFF9F6F0070DD1B /* 1.mp3 */,
-				8E90AAD51FFF9F6F0070DD1B /* 2.mp3 */,
-				8E90AADC1FFF9F6F0070DD1B /* 3.mp3 */,
-				8E90AAD71FFF9F6F0070DD1B /* 4.mp3 */,
-				8E90AAD81FFF9F6F0070DD1B /* 5.mp3 */,
-				8E90AAE91FFF9F7B0070DD1B /* other-music-loops-08610001.mp3 */,
-				8E90AAD91FFF9F6F0070DD1B /* 6.mp3 */,
-				8E90AAD61FFF9F6F0070DD1B /* 7.mp3 */,
-				8E90AAD31FFF9F6F0070DD1B /* 8.mp3 */,
-				8E90AADA1FFF9F6F0070DD1B /* 9.mp3 */,
-				8E90AADB1FFF9F6F0070DD1B /* 10.mp3 */,
-				8E90AAD41FFF9F6F0070DD1B /* 11.mp3 */,
+				8EF5E7962025B2FF00155124 /* other-music-loops-08610001.mp3 */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -339,27 +421,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E90AAEA1FFF9F7B0070DD1B /* other-music-loops-08610001.mp3 in Resources */,
-				8E90AAE81FFF9F6F0070DD1B /* 1.mp3 in Resources */,
-				8E90AADF1FFF9F6F0070DD1B /* 11.mp3 in Resources */,
+				8EF5E78B2025B1CD00155124 /* AnderDetails.swift in Resources */,
+				8EF5E78C2025B1CD00155124 /* anderNodes.swift in Resources */,
+				8EF5E78D2025B1CD00155124 /* menuNodes.swift in Resources */,
+				8EF5E78E2025B1CD00155124 /* SanamakDetails.swift in Resources */,
+				8EF5E78F2025B1CD00155124 /* TakpakDeatils.swift in Resources */,
+				8EF5E7902025B1CD00155124 /* takpakView.swift in Resources */,
+				8EF5E7912025B1CD00155124 /* ZhanyltDetails.swift in Resources */,
+				8EF5E7922025B1CD00155124 /* AnderExtensionV.swift in Resources */,
+				8EF5E7932025B1CD00155124 /* SanamakExtensionV.swift in Resources */,
+				8EF5E7942025B1CD00155124 /* TakpaktarExtensionV.swift in Resources */,
+				8EF5E7952025B1CD00155124 /* ZhanyltpashExtensionV.swift in Resources */,
+				8EF5E7852025B17E00155124 /* BackgroundView.swift in Resources */,
+				8EF5E7862025B17E00155124 /* CLImage.swift in Resources */,
+				8EF5E7872025B17E00155124 /* CollectionViewDetails.swift in Resources */,
+				8EF5E7882025B17E00155124 /* DefaultBGImage.swift in Resources */,
+				8EF5E7892025B17E00155124 /* LabelView.swift in Resources */,
+				8EF5E7972025B30000155124 /* other-music-loops-08610001.mp3 in Resources */,
+				8EF5E78A2025B17E00155124 /* ProgressBar.swift in Resources */,
+				8EBAEB1820224B5B008DB211 /* AnderVC.swift in Resources */,
+				8E9C29C02020F00D00BB462B /* ImageCellCV.swift in Resources */,
+				8E9C29BD2020EDA300BB462B /* TakpakImageCV.swift in Resources */,
+				8E1A36C2201F541600E089F5 /* MenuButtons.swift in Resources */,
+				8E1A36BF201F278100E089F5 /* DetailLabels.swift in Resources */,
+				8E1A36BC201F221300E089F5 /* FeedBackSons.swift in Resources */,
+				8E099EE4201A62FC00151DE8 /* FeedBackView.swift in Resources */,
+				8EA0E10B20188DF400C7DE57 /* MusicBtnMenu.swift in Resources */,
+				8E87FE7E20173A9C00FE7560 /* HeadTextView.swift in Resources */,
+				8E87FE7F20173A9C00FE7560 /* BallonsView.swift in Resources */,
+				8E87FE7A2017208600FE7560 /* TakpaktarVC.swift in Resources */,
+				8E87FE7B2017208600FE7560 /* TakpakDetailsVC.swift in Resources */,
+				8E87FE7C2017208600FE7560 /* TakpakCVext.swift in Resources */,
+				8E87FE7D2017208600FE7560 /* Info.plist in Resources */,
+				8E87FE772017206800FE7560 /* MenuViewController.swift in Resources */,
+				8E87FE762017205200FE7560 /* AppDelegate.swift in Resources */,
+				8E87FE732017014900FE7560 /* Helpers.swift in Resources */,
+				8E87FE742017014900FE7560 /* ParsingJSON.swift in Resources */,
+				8E87FE752017014900FE7560 /* screenSize.swift in Resources */,
+				8E87FE6A2017011C00FE7560 /* AnderScene.swift in Resources */,
+				8E87FE6B2017011C00FE7560 /* GameScene.swift in Resources */,
+				8E87FE6C2017011C00FE7560 /* SanamakScene.swift in Resources */,
+				8E87FE6D2017011C00FE7560 /* ZhanultpashScene.swift in Resources */,
+				8E87FE6E2017011C00FE7560 /* GameViewController.swift in Resources */,
 				8E6D9BDE1FE8EB4A00E0E3DC /* HelveticaMedCd.ttf in Resources */,
 				8E6D9BE21FE8EBDF00E0E3DC /* Assets.xcassets in Resources */,
-				8E90AAE51FFF9F6F0070DD1B /* 9.mp3 in Resources */,
-				8E90AAE41FFF9F6F0070DD1B /* 6.mp3 in Resources */,
-				8E90AAE61FFF9F6F0070DD1B /* 10.mp3 in Resources */,
 				8E6D9B781FE8E5C700E0E3DC /* Main.storyboard in Resources */,
-				8E90AADE1FFF9F6F0070DD1B /* 8.mp3 in Resources */,
-				8E90AAE01FFF9F6F0070DD1B /* 2.mp3 in Resources */,
 				8E6D9B931FE8E85800E0E3DC /* Sanamak.json in Resources */,
-				8E90AAE21FFF9F6F0070DD1B /* 4.mp3 in Resources */,
 				8E6D9B7A1FE8E5C700E0E3DC /* Assets.xcassets in Resources */,
 				8E6D9B951FE8E85800E0E3DC /* ZhanylData.json in Resources */,
 				8E6D9B941FE8E85800E0E3DC /* AllData.json in Resources */,
 				8E6D9B991FE8E8D800E0E3DC /* Default-568h@2x.png in Resources */,
-				8E90AAE71FFF9F6F0070DD1B /* 3.mp3 in Resources */,
 				8E6D9B901FE8E85800E0E3DC /* AnderData.json in Resources */,
-				8E90AAE11FFF9F6F0070DD1B /* 7.mp3 in Resources */,
-				8E90AAE31FFF9F6F0070DD1B /* 5.mp3 in Resources */,
 				8E6D9B7D1FE8E5C700E0E3DC /* LaunchScreen.storyboard in Resources */,
 				8E6D9BE11FE8EBDF00E0E3DC /* MyParticle.sks in Resources */,
 			);
@@ -426,32 +538,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EBC617220166291001F593E /* AnderScene.swift in Sources */,
+				8E9C29BF2020EE2F00BB462B /* ImageCellCV.swift in Sources */,
+				8EF5E7822025B11500155124 /* ZhanyltpashExtensionV.swift in Sources */,
+				8EBC617320166291001F593E /* SanamakScene.swift in Sources */,
+				8EBAEB1720224B08008DB211 /* AnderVC.swift in Sources */,
+				8EBC617420166291001F593E /* ZhanultpashScene.swift in Sources */,
+				8E1A36BB201F202200E089F5 /* FeedBackSons.swift in Sources */,
 				8E6D9B921FE8E85800E0E3DC /* screenSize.swift in Sources */,
-				8E6D9BB81FE8E95000E0E3DC /* ProgressBar.swift in Sources */,
-				8E6D9BBB1FE8E95000E0E3DC /* BackgroundView.swift in Sources */,
-				8E6D9B9E1FE8E90C00E0E3DC /* ZhanultpashScene.swift in Sources */,
-				8E6D9BAA1FE8E93700E0E3DC /* takpakView.swift in Sources */,
-				8E6D9BC21FE8E97A00E0E3DC /* AnderExtensionV.swift in Sources */,
+				8E8C402620149535002DCE27 /* TakpakCVext.swift in Sources */,
+				8E7CCC9E20135C2700B4E47A /* TakpakDetailsVC.swift in Sources */,
+				8EF5E7792025B10200155124 /* AnderDetails.swift in Sources */,
+				8E9C29BC2020ED3500BB462B /* TakpakImageCV.swift in Sources */,
+				8E099EE3201A5D2F00151DE8 /* FeedBackView.swift in Sources */,
+				8EF5E7682025B0DE00155124 /* ProgressBar.swift in Sources */,
+				8EF5E76E2025B0DE00155124 /* CLImage.swift in Sources */,
 				8E6D9B961FE8E85800E0E3DC /* Helpers.swift in Sources */,
-				8E6D9BBA1FE8E95000E0E3DC /* CLImage.swift in Sources */,
-				8E6D9BA91FE8E93700E0E3DC /* TakpakDeatils.swift in Sources */,
-				8E6D9BC11FE8E97A00E0E3DC /* ZhanyltpashExtensionV.swift in Sources */,
+				8EF5E76A2025B0DE00155124 /* BackgroundView.swift in Sources */,
+				8EF5E77A2025B10200155124 /* takpakView.swift in Sources */,
+				8EF5E7832025B11500155124 /* TakpaktarExtensionV.swift in Sources */,
+				8EF5E7812025B11500155124 /* SanamakExtensionV.swift in Sources */,
+				8EA0E10A20188D0E00C7DE57 /* MusicBtnMenu.swift in Sources */,
+				8EF5E7782025B10200155124 /* TakpakDeatils.swift in Sources */,
 				8E6D9B731FE8E5C700E0E3DC /* GameScene.swift in Sources */,
-				8E6D9BA81FE8E93700E0E3DC /* menuNodes.swift in Sources */,
-				8E6D9BAC1FE8E93700E0E3DC /* AnderDetails.swift in Sources */,
-				8E6D9BB91FE8E95000E0E3DC /* LabelView.swift in Sources */,
-				8E6D9BC31FE8E97A00E0E3DC /* SanamakExtensionV.swift in Sources */,
-				8E6D9B9F1FE8E90C00E0E3DC /* AnderScene.swift in Sources */,
+				8EF5E77B2025B10200155124 /* anderNodes.swift in Sources */,
+				8E15084D200B4D5C00409ECD /* HeadTextView.swift in Sources */,
+				8E1A36BE201F24FD00E089F5 /* DetailLabels.swift in Sources */,
+				8E8C402820150641002DCE27 /* BallonsView.swift in Sources */,
 				8E6D9B751FE8E5C700E0E3DC /* GameViewController.swift in Sources */,
+				8EF5E77C2025B10200155124 /* SanamakDetails.swift in Sources */,
 				8E6D9B911FE8E85800E0E3DC /* ParsingJSON.swift in Sources */,
-				8E6D9BB71FE8E95000E0E3DC /* CollectionViewDetails.swift in Sources */,
-				8E6D9B9D1FE8E90C00E0E3DC /* SanamakScene.swift in Sources */,
-				8E6D9BC41FE8E97A00E0E3DC /* TakpaktarExtensionV.swift in Sources */,
-				8E6D9BAD1FE8E93700E0E3DC /* anderNodes.swift in Sources */,
+				8EF5E76D2025B0DE00155124 /* LabelView.swift in Sources */,
+				8EF5E7772025B10200155124 /* ZhanyltDetails.swift in Sources */,
+				8E90AAEC1FFFA2210070DD1B /* MenuViewController.swift in Sources */,
+				8EF5E7762025B10200155124 /* menuNodes.swift in Sources */,
 				8E6D9B6D1FE8E5C700E0E3DC /* AppDelegate.swift in Sources */,
-				8E6D9BB61FE8E95000E0E3DC /* DefaultBGImage.swift in Sources */,
-				8E6D9BAB1FE8E93700E0E3DC /* SanamakDetails.swift in Sources */,
-				8E6D9BAE1FE8E93700E0E3DC /* ZhanyltDetails.swift in Sources */,
+				8EF5E76B2025B0DE00155124 /* CollectionViewDetails.swift in Sources */,
+				8EF5E7692025B0DE00155124 /* DefaultBGImage.swift in Sources */,
+				8E1A36C1201F533F00E089F5 /* MenuButtons.swift in Sources */,
+				8EF5E7842025B11500155124 /* AnderExtensionV.swift in Sources */,
+				8E0D77CA201081A4008F1FC2 /* TakpaktarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

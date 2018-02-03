@@ -4,8 +4,6 @@ import UIKit
 import EasyPeasy
 import AVFoundation
 
-
-
 var grassNode: SKSpriteNode!
 var wRect: SKSpriteNode!
 var location = CGPoint.zero
@@ -54,7 +52,7 @@ let backToCVBtn: UIButton = {
     return backBtn
 }()
 
-//detal
+//Detal
 var detailsView: CollectionViewDetails = {
     let field = CollectionViewDetails()
     field.frame = CGRect(x: screenWidth / 15, y: screenWidth / 1.92, width: screenWidth / 1.153 , height: screenHeight / 1.66)
