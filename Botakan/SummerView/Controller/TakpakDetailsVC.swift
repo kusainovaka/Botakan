@@ -1,15 +1,17 @@
+//Second View
 import UIKit
 import EasyPeasy
 
-class TakpakDetailsVC: UIViewController {
+class TakpakDetailsVC: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var tempImage: ParsingJSON?
+    
     var detailsTakpakBG: BackgroundView = {
         let field = BackgroundView()
         field.isUserInteractionEnabled = true
         return field
     }()
-   
+    
     let detailsViewTakpakt: CollectionViewDetails = {
         let field = CollectionViewDetails()
         field.frame = CGRect(x: screenWidth / 15, y: screenWidth / 1.92, width: screenWidth / 1.153 , height: screenHeight / 1.66)
@@ -36,68 +38,81 @@ class TakpakDetailsVC: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 50, height: 50)
-//        layout.minimumLineSpacing = 10
-//        layout.minimumInteritemSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         return layout
     }()
-//    let image: UIImageView = {
-//        let imgV = UIImageView(frame: CGRect(x: screenWidth / 2.82, y: screenWidth / 7.5, width: screenWidth / 3.4, height: screenWidth / 3.4))
-//        imgV.layer.cornerRadius = 5
-//        return imgV
-//    }()
-//    let imageView1: UIImageView = {
-//        let imgView = UIImageView()
-//        imgView.contentMode = .scaleAspectFill
-//        imgView.clipsToBounds = true
-//        return imgView
-//    }()
-//    let imageView2: UIImageView = {
-//        let imgView = UIImageView()
-//        imgView.contentMode = .scaleAspectFill
-//        imgView.clipsToBounds = true
-//        return imgView
-//    }()
-    
-
-    let backSanamakTakpak: UIButton = {
-        let backBtn = UIButton(frame: CGRect(x: screenWidth / 18.75, y: screenWidth / 9.375, width: screenWidth / 11.574, height: screenWidth / 15.625))
-        backBtn.setImage(#imageLiteral(resourceName: "Shape"), for: .normal)
-        return backBtn
+    public lazy var leftImage: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.intoTakpakImage)
+        collectionView.backgroundColor = .clear
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(ImageCellCV.self, forCellWithReuseIdentifier: "takpakImageCell")
+        collectionView.reloadData()
+        return collectionView
+    }()
+    fileprivate lazy var leftImageLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 50, height: 50)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        return layout
+    }()
+    fileprivate lazy var nameTakpak: UILabel = {
+        let takpakLB = UILabel(frame: CGRect(x: screenWidth / 5.97, y: screenWidth / 25, width: screenWidth / 1.5, height: screenWidth / 11.72))
+        takpakLB.textColor = .BlueColor
+        takpakLB.font = UIFont(name: "Noteworthy-Bold", size: screenWidth / 18.75)
+        return takpakLB
+    }()
+    fileprivate lazy var takpak: UITextView = {
+        let takpakLB = UITextView(frame: CGRect(x: screenWidth / 6, y: screenWidth / 3.5, width: screenWidth / 1.563, height: screenWidth / 1.3))
+        takpakLB.textAlignment = NSTextAlignment.justified
+        takpakLB.showsVerticalScrollIndicator = false
+        takpakLB.isScrollEnabled = true
+        takpakLB.isEditable = false
+        takpakLB.textColor = .BlueColor
+        takpakLB.font = UIFont(name: "Noteworthy-Light", size: screenWidth / 18.75)
+        return takpakLB
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        view.addSubview(detailsTakpakBG)
         
+        view.addSubview(detailsTakpakBG)
         view.addSubview(detailsViewTakpakt)
-//        view.addSubview(image)
-//        view.addSubview(imageView1)
-//        view.addSubview(imageView2)
-        view.addSubview(backSanamakTakpak)
+        detailsViewTakpakt.addSubview(nameTakpak)
+        detailsViewTakpakt.addSubview(takpak)
         view.addSubview(tempCollectionView)
-//        detailsViewTakpakt.nameTakpak.text = self.tempImage?.name
-//        detailsViewTakpakt.takpaktarText.text = self.tempImage?.text
-//        getFromJSONtemp()
-        backSanamakTakpak.addTarget(self, action: #selector(backToCV), for: .touchUpInside)
+        
+        nameTakpak.text = self.tempImage?.name
+        takpak.text = self.tempImage?.text
+        detailsTakpakBG.backBTN.addTarget(self, action: #selector(backToCV), for: .touchUpInside)
         setUpLayout()
     }
-//    func getFromJSONtemp(){
-//        do {
-//            if let path = Bundle.main.url(forResource: "AllData", withExtension: "json") {
-//                let url = try Data(contentsOf: path)
-//                let jsonData = try
-//                    JSONDecoder().decode([ParsingJSON].self, from: url)
-//                self.tempImage = jsonData
-//            } else { print("Error") }
-//        }
-//        catch {
-//            print(error.localizedDescription)
-//        }
-//    }
+    @objc func backToCV(){
+        navigationController?.popViewController(animated: false)
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "takpakImageCell", for: indexPath) as! ImageCellCV
+        //        cell.image.image = UIImage(named: tempParse[indexPath.row].photo)
+        let strtemp = self.tempImage!.photo
+        let tttt = Int(strtemp.components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
+        
+        cell.image.image = UIImage(named: (self.tempImage!.photo))
+        let pict1 = "\(tttt! - 1)t"
+        let pict2 = "\(tttt! + 1)t"
+        cell.isSelected = true
+        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
+        cell.imageView1.image = UIImage(named: pict1)
+        cell.imageView2.image = UIImage(named: pict2)
+        return cell
+    }
     
-   @objc func backToCV(){
-    navigationController?.popViewController(animated: false)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.tempCollectionView{
+            print("Kamila")
+        }
     }
     
     func setUpLayout(){
@@ -113,17 +128,5 @@ class TakpakDetailsVC: UIViewController {
             Left(0),
             Height(130)
         ]
-//        imageView1 <- [
-//            Width(screenWidth / 4.93),
-//            Height(screenWidth / 4.93),
-//            Top(screenWidth / 5.59),
-//            Left(screenWidth / 7.978)
-//        ]
-//        imageView2 <- [
-//            Width(screenWidth / 4.93),
-//            Height(screenWidth / 4.93),
-//            Top(screenWidth / 5.59),
-//            Left(screenWidth / 1.48)
-//        ]
     }
 }

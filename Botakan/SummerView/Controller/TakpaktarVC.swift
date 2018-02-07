@@ -2,12 +2,12 @@ import UIKit
 import EasyPeasy
 
 var tempParse = [ParsingJSON]()
-class TakpaktarVC: UIViewController{
-//var tempParse = [ParsingJSON]()
-    var s = TakpakDetailsVC()
+
+class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
     var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
-        view.nameLabel.text = "Тақпақтар"
+        view.nameLabel.text = "     Тақпақтар"
         return view
     }()
     fileprivate lazy var collectionView: UICollectionView = {
@@ -27,26 +27,30 @@ class TakpaktarVC: UIViewController{
         layout.sectionInset = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
         return layout
     }()
-    let backTakpak: UIButton = {
-        let backBtn = UIButton(frame: CGRect(x: screenWidth / 18.75, y: screenWidth / 9.375, width: screenWidth / 11.574, height: screenWidth / 15.625))
-        backBtn.setImage(#imageLiteral(resourceName: "Shape"), for: .normal)
-        return backBtn
+    fileprivate lazy var tempViewL: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.tempViewLayp)
+        collectionView.backgroundColor = UIColor.clear
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(CLImage.self, forCellWithReuseIdentifier: "collectionCell")
+        return collectionView
     }()
-    
-    var takpakBG: BackgroundView = {
-        let field = BackgroundView ()
-        field.isUserInteractionEnabled = true
-        return field
+    fileprivate lazy var tempViewLayp: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: 100, height: 100)
+        layout.sectionInset = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
+        return layout
     }()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         getFromJSONtemp()
         
-        view.addSubview(takpakBG)
         view.addSubview(detailLabel)
         view.addSubview(collectionView)
-        view.addSubview(backTakpak)
-        backTakpak.addTarget(self, action: #selector(backToBTN), for: .touchUpInside)
+        
+        detailLabel.backBTN.addTarget(self, action: #selector(backToBTN), for: .touchUpInside)
         layouyts()
     }
     
@@ -63,22 +67,60 @@ class TakpaktarVC: UIViewController{
             print(error.localizedDescription)
         }
     }
+    
     @objc func backToBTN(){
         navigationController?.popViewController(animated: false)
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.tempViewL{
+            return 1
+        }else {
+            return tempParse.count
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       var one = tempParse[indexPath.row].photo
+        if collectionView == self.tempViewL{
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CLImage
+        cell.imageView.image = UIImage(named: one)
+            return cell
+        }else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CLImage
+            cell.imageView.image = UIImage(named: one)
+        
+            return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.collectionView {
+           about(place: tempParse[indexPath.row])
+        }else {
+            
+        }
+    }
+    
+    func about(place: ParsingJSON){
+        let vc = TakpakDetailsVC()
+        vc.tempImage = place
+        navigationController?.pushViewController(vc, animated: false)
+    }
+    
     func layouyts(){
-        takpakBG <- [
-            Top(0),
-            Width(screenWidth),
-            Left(0),
-            Height(screenHeight)
-        ]
+      
         collectionView <- [
             Top(screenWidth / 2.3),
             Width(screenWidth),
             Left(10),
             Height(screenHeight / 1.08)
+        ]
+        tempViewL <- [
+            Top(100),
+            Width(110),
+            Left(153),
+            Height(130)
         ]
     }
 }

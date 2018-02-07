@@ -33,7 +33,7 @@ class MenuButtons: UIView {
 override init(frame: CGRect) {
     super.init(frame: frame)
     setupViewsLabel()
-    anderBtn.addTarget(self, action: #selector(Temp1), for: .touchUpInside)
+//    anderBtn.addTarget(self, action: #selector(Temp1), for: .touchUpInside)
     LayoutsLabel()
 }
 

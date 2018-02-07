@@ -15,6 +15,11 @@ class BackgroundView: UIView {
         imgV.image = UIImage(named: "second_bg.png")
         return imgV
     }()
+    let backBTN: UIButton = {
+        let backBtn = UIButton()
+        backBtn.setImage(#imageLiteral(resourceName: "Shape"), for: .normal)
+        return backBtn
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,7 +27,7 @@ class BackgroundView: UIView {
         LayoutsBGR()
     }
     func SetupViewsBGR() {
-        [imageCV].forEach{ addSubview($0) }
+        [imageCV,backBTN].forEach{ addSubview($0) }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,6 +35,12 @@ class BackgroundView: UIView {
     }
     
      func LayoutsBGR(){
+        backBTN <- [
+            Height(30),
+            Width(37),
+            Left(20),
+            Top(40)
+        ]
         imageCV <- [
             Top(0),
             Width(screenWidth),

@@ -10,6 +10,16 @@ import EasyPeasy
 
 class DetailLabels: UIView {
     
+    let bgCV: UIImageView = {
+        let imgV = UIImageView()
+        imgV.image = UIImage(named: "second_bg.png")
+        return imgV
+    }()
+    let backBTN: UIButton = {
+        let backBtn = UIButton()
+        backBtn.setImage(#imageLiteral(resourceName: "Shape"), for: .normal)
+        return backBtn
+    }()
     let whiteBG: UIImageView = {
         let imgV = UIImageView()
         imgV.image = UIImage(named: "white_lenta.png")
@@ -33,18 +43,24 @@ class DetailLabels: UIView {
     }
     
     func setupViewsLabel() {
-        [whiteBG,nameLabel,triangle].forEach{ addSubview($0) }
+        [bgCV,whiteBG,nameLabel,triangle,backBTN].forEach{ addSubview($0) }
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     func LayoutsLabel(){
-//        backTakpak <- [
-//            Height(30),
-//            Width(37),
-//            Left(20),
-//            Top(10)
-//        ]
+        backBTN <- [
+            Height(30),
+            Width(37),
+            Left(20),
+            Top(40)
+        ]
+        bgCV <- [
+            Top(0),
+            Width(screenWidth),
+            Left(0),
+            Height(screenHeight)
+        ]
         whiteBG <- [
             Height(50),
             Width(257),
@@ -54,8 +70,8 @@ class DetailLabels: UIView {
         nameLabel <- [
             Height(60),
             Width(250),
-            Left(128.5),
-            Top(77)
+            Left(105),
+            Top(78)
         ]
         triangle <- [
             Height(43),

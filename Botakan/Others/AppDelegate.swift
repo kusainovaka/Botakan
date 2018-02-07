@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: screenBounds)
-        let viewFirst = UINavigationController(rootViewController: GameViewController())
+        let viewFirst = UINavigationController(rootViewController: MenuViewController())
         
         window?.rootViewController = viewFirst
         window?.makeKeyAndVisible()

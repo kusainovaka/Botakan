@@ -17,6 +17,12 @@
 		8E1A36BF201F278100E089F5 /* DetailLabels.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E1A36BD201F24FD00E089F5 /* DetailLabels.swift */; };
 		8E1A36C1201F533F00E089F5 /* MenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1A36C0201F533F00E089F5 /* MenuButtons.swift */; };
 		8E1A36C2201F541600E089F5 /* MenuButtons.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E1A36C0201F533F00E089F5 /* MenuButtons.swift */; };
+		8E37DFDE2025D65800E19382 /* CenterImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E37DFDD2025D65800E19382 /* CenterImageCell.swift */; };
+		8E37DFDF2025D82400E19382 /* CenterImageCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E37DFDD2025D65800E19382 /* CenterImageCell.swift */; };
+		8E37DFE12026463700E19382 /* ZhanyltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E37DFE02026463700E19382 /* ZhanyltViewController.swift */; };
+		8E37DFE22026499F00E19382 /* ZhanyltViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E37DFE02026463700E19382 /* ZhanyltViewController.swift */; };
+		8E37DFE42026531300E19382 /* SanamakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E37DFE32026531300E19382 /* SanamakViewController.swift */; };
+		8E37DFE52026531B00E19382 /* SanamakViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E37DFE32026531300E19382 /* SanamakViewController.swift */; };
 		8E6D9B6D1FE8E5C700E0E3DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B6C1FE8E5C700E0E3DC /* AppDelegate.swift */; };
 		8E6D9B731FE8E5C700E0E3DC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B721FE8E5C700E0E3DC /* GameScene.swift */; };
 		8E6D9B751FE8E5C700E0E3DC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B741FE8E5C700E0E3DC /* GameViewController.swift */; };
@@ -65,6 +71,10 @@
 		8EBC617220166291001F593E /* AnderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC61682016570C001F593E /* AnderScene.swift */; };
 		8EBC617320166291001F593E /* SanamakScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC617020165766001F593E /* SanamakScene.swift */; };
 		8EBC617420166291001F593E /* ZhanultpashScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC617120165767001F593E /* ZhanultpashScene.swift */; };
+		8EDD10E52026E2F300DB6267 /* AnserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */; };
+		8EDD10E62026E35200DB6267 /* AnserDetailsViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */; };
+		8EDD10E82026EAD100DB6267 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD10E72026EAD000DB6267 /* MusicView.swift */; };
+		8EDD10E92026EBF900DB6267 /* MusicView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD10E72026EAD000DB6267 /* MusicView.swift */; };
 		8EF5E7682025B0DE00155124 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7612025B0DD00155124 /* ProgressBar.swift */; };
 		8EF5E7692025B0DE00155124 /* DefaultBGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */; };
 		8EF5E76A2025B0DE00155124 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7632025B0DD00155124 /* BackgroundView.swift */; };
@@ -112,6 +122,9 @@
 		8E1A36BA201F202200E089F5 /* FeedBackSons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackSons.swift; sourceTree = "<group>"; };
 		8E1A36BD201F24FD00E089F5 /* DetailLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLabels.swift; sourceTree = "<group>"; };
 		8E1A36C0201F533F00E089F5 /* MenuButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtons.swift; sourceTree = "<group>"; };
+		8E37DFDD2025D65800E19382 /* CenterImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterImageCell.swift; sourceTree = "<group>"; };
+		8E37DFE02026463700E19382 /* ZhanyltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhanyltViewController.swift; sourceTree = "<group>"; };
+		8E37DFE32026531300E19382 /* SanamakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanamakViewController.swift; sourceTree = "<group>"; };
 		8E6D9B691FE8E5C700E0E3DC /* Botakan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Botakan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6D9B6C1FE8E5C700E0E3DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E6D9B721FE8E5C700E0E3DC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -142,6 +155,8 @@
 		8EBC61682016570C001F593E /* AnderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnderScene.swift; sourceTree = "<group>"; };
 		8EBC617020165766001F593E /* SanamakScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanamakScene.swift; sourceTree = "<group>"; };
 		8EBC617120165767001F593E /* ZhanultpashScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhanultpashScene.swift; sourceTree = "<group>"; };
+		8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnserDetailsViewController.swift; sourceTree = "<group>"; };
+		8EDD10E72026EAD000DB6267 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		8EF5E7612025B0DD00155124 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBGImage.swift; sourceTree = "<group>"; };
 		8EF5E7632025B0DD00155124 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -207,6 +222,8 @@
 			children = (
 				8E15084C200B4D5C00409ECD /* HeadTextView.swift */,
 				8E9C29BE2020EE2F00BB462B /* ImageCellCV.swift */,
+				8EDD10E72026EAD000DB6267 /* MusicView.swift */,
+				8E37DFDD2025D65800E19382 /* CenterImageCell.swift */,
 				8E1A36C0201F533F00E089F5 /* MenuButtons.swift */,
 				8E1A36BD201F24FD00E089F5 /* DetailLabels.swift */,
 				8E8C402720150641002DCE27 /* BallonsView.swift */,
@@ -233,6 +250,9 @@
 				8E0D77C9201081A4008F1FC2 /* TakpaktarVC.swift */,
 				8EBAEB1620224B08008DB211 /* AnderVC.swift */,
 				8E7CCC9D20135C2700B4E47A /* TakpakDetailsVC.swift */,
+				8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */,
+				8E37DFE02026463700E19382 /* ZhanyltViewController.swift */,
+				8E37DFE32026531300E19382 /* SanamakViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -421,6 +441,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDD10E92026EBF900DB6267 /* MusicView.swift in Resources */,
+				8EDD10E62026E35200DB6267 /* AnserDetailsViewController.swift in Resources */,
+				8E37DFE52026531B00E19382 /* SanamakViewController.swift in Resources */,
+				8E37DFE22026499F00E19382 /* ZhanyltViewController.swift in Resources */,
+				8E37DFDF2025D82400E19382 /* CenterImageCell.swift in Resources */,
 				8EF5E78B2025B1CD00155124 /* AnderDetails.swift in Resources */,
 				8EF5E78C2025B1CD00155124 /* anderNodes.swift in Resources */,
 				8EF5E78D2025B1CD00155124 /* menuNodes.swift in Resources */,
@@ -560,13 +585,18 @@
 				8EF5E7812025B11500155124 /* SanamakExtensionV.swift in Sources */,
 				8EA0E10A20188D0E00C7DE57 /* MusicBtnMenu.swift in Sources */,
 				8EF5E7782025B10200155124 /* TakpakDeatils.swift in Sources */,
+				8EDD10E82026EAD100DB6267 /* MusicView.swift in Sources */,
 				8E6D9B731FE8E5C700E0E3DC /* GameScene.swift in Sources */,
+				8E37DFE12026463700E19382 /* ZhanyltViewController.swift in Sources */,
+				8E37DFDE2025D65800E19382 /* CenterImageCell.swift in Sources */,
 				8EF5E77B2025B10200155124 /* anderNodes.swift in Sources */,
+				8EDD10E52026E2F300DB6267 /* AnserDetailsViewController.swift in Sources */,
 				8E15084D200B4D5C00409ECD /* HeadTextView.swift in Sources */,
 				8E1A36BE201F24FD00E089F5 /* DetailLabels.swift in Sources */,
 				8E8C402820150641002DCE27 /* BallonsView.swift in Sources */,
 				8E6D9B751FE8E5C700E0E3DC /* GameViewController.swift in Sources */,
 				8EF5E77C2025B10200155124 /* SanamakDetails.swift in Sources */,
+				8E37DFE42026531300E19382 /* SanamakViewController.swift in Sources */,
 				8E6D9B911FE8E85800E0E3DC /* ParsingJSON.swift in Sources */,
 				8EF5E76D2025B0DE00155124 /* LabelView.swift in Sources */,
 				8EF5E7772025B10200155124 /* ZhanyltDetails.swift in Sources */,

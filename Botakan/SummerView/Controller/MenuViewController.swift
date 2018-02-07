@@ -60,6 +60,8 @@ class MenuViewController: UIViewController {
         
         btn.takpakBtn.addTarget(self, action: #selector(goToTakpak), for: .touchUpInside)
         btn.anderBtn.addTarget(self, action: #selector(goToAnder), for: .touchUpInside)
+        btn.zhanyltBtn.addTarget(self, action: #selector(goToZhanylt), for: .touchUpInside)
+        btn.sanamakBtn.addTarget(self, action: #selector(goToSanamak), for: .touchUpInside)
         
         musicBTN.addTarget(self, action: #selector(songStatus), for: .touchUpInside)
         
@@ -83,6 +85,15 @@ class MenuViewController: UIViewController {
         let vc = AnderVC()
         self.navigationController?.pushViewController(vc, animated: false)
     }
+    @objc func goToZhanylt(){
+        let vc = ZhanyltViewController()
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    @objc func goToSanamak(){
+        let vc = SanamakViewController()
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
     @objc func hiddenHeadText(){
         headView.isHidden = true
     }
