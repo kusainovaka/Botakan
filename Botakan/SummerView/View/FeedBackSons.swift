@@ -58,34 +58,34 @@ class FeedBackSons: UIView {
     }
     func setUpLayout(){
         ballons <- [
-            Height(100),
-            Width(46),
-            Left(50),
+            Height(screenWidth / 3.75),
+            Width(screenWidth / 8.15217),
+            Left(screenWidth / 7.5),
             Top(0)
         ]
         longSon <- [
-            Height(120),
-            Width(40),
-            Left(54),
-            Top(163)
+            Height(screenWidth / 3.125),
+            Width(screenWidth / 9.375),
+            Left(screenWidth / 6.94),
+            Top(screenWidth / 2.15)
         ]
         orangeV <- [
-            Height(40),
-            Width(155),
-            Left(110),
-            Top(145)
+            Height(screenWidth / 9.375),
+            Width(screenWidth / 2.419),
+            Left(screenWidth / 3.125),
+            Top(screenWidth / 2.48)
         ]
         twoSons <- [
-            Height(100),
-            Width(75),
-            Right(10),
-            Top(14)
+            Height(screenWidth / 3.75),
+            Width(screenWidth / 5),
+            Right(screenWidth / 37.5),
+            Top(screenWidth / 25)
         ]
         slLogo <- [
-            Height(13),
-            Width(28),
-            Left(174),
-            Top(320)
+            Height(screenWidth / 28.8461),
+            Width(screenWidth / 13.39285),
+            Left(screenWidth / 2.155),
+            Top(screenWidth / 1.17)
         ]
     }
 }

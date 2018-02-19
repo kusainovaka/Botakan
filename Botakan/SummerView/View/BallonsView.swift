@@ -4,12 +4,12 @@ import EasyPeasy
 
 class BallonsView: UIView {
     let ballon1: UIImageView = {
-        let imgV = UIImageView(frame: CGRect(x: 86, y: 40, width: 48, height: 80))
+        let imgV = UIImageView()
         imgV.image = UIImage(named: "parashut_yellow.png")
         return imgV
     }()
     let ballon2: UIImageView = {
-        let imgV = UIImageView(frame: CGRect(x: 267, y: 194, width: 59, height: 100))
+        let imgV = UIImageView()
         imgV.image = UIImage(named: "parashut_pink.png")
         return imgV
     }()
@@ -40,14 +40,14 @@ class BallonsView: UIView {
     func LayoutsLabel(){
         ballon1 <- [
             Height(80),
-            Width(48),
-            Left(8),
+            Width(screenWidth / 7.81),
+            Left(0),
             Top(0)
         ]
         ballon2 <- [
-            Height(100),
-            Width(59),
-            Right(2),
+            Height(screenWidth / 3.75),
+            Width(screenWidth / 6.355932),
+            Right(screenWidth / 187.5),
             Top(154)
         ]
     }

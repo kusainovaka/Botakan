@@ -5,7 +5,7 @@ class MenuViewController: UIViewController {
     
     let scrollView: UIScrollView = {
         let scrollView  = UIScrollView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
-        scrollView.contentSize = CGSize(width: 0, height: 1300)
+        scrollView.contentSize = CGSize(width: 0, height: screenHeight * 1.95)
         scrollView.setContentOffset(scrollView.contentOffset, animated: false)
         scrollView.isScrollEnabled = true
         return scrollView
@@ -17,15 +17,16 @@ class MenuViewController: UIViewController {
         return imgV
     }()
     let musicBTN : MusicBtnMenu = {
-        let btn = MusicBtnMenu()
+        let btn = MusicBtnMenu(frame: CGRect(x: screenWidth / 1.229, y: screenWidth / 18.75, width: screenWidth / 7.5, height: screenWidth / 7.5))
         return btn
     }()
     let ballonsV: BallonsView = {
-        let ballons = BallonsView(frame: CGRect(x: 78, y: 40, width: 250, height: 270))
+        let ballons = BallonsView()
         return ballons
     }()
     let headView: HeadTextView = {
-        let view = HeadTextView(frame: CGRect(x: 106, y: 70, width: 165, height: 165))
+        let view = HeadTextView()
+//        frame: CGRect(x: 106, y: 70, width: 165, height: 165)
         return view
     }()
     
@@ -34,11 +35,11 @@ class MenuViewController: UIViewController {
         return view
     }()
     let feedBackV: FeedBackView = {
-        let view = FeedBackView(frame: CGRect(x: 78, y: 1017, width: 220, height: 220))
-       return view
+        let view = FeedBackView()
+        return view
     }()
     let feedBackS: FeedBackSons = {
-        let view = FeedBackSons(frame: CGRect(x: 0, y: 950, width: screenWidth, height: 339))
+        let view = FeedBackSons()
         return view
     }()
     
@@ -46,6 +47,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         view.backgroundColor = UIColor.init(patternImage: #imageLiteral(resourceName: "summerBg"))
+        //        view.frame = CGRect(x: 0, y: 0, width: screenWidth*4, height: screenHeight)
         scrollView.frame = view.frame
         view.addSubview(scrollView)
         scrollView.addSubview(backgraundImage)
@@ -53,7 +55,7 @@ class MenuViewController: UIViewController {
         backgraundImage.addSubview(headView)
         backgraundImage.addSubview(ballonsV)
         scrollView.addSubview(musicBTN)
-
+        
         scrollView.addSubview(btn)
         scrollView.addSubview(feedBackV)
         scrollView.addSubview(feedBackS)
@@ -64,18 +66,18 @@ class MenuViewController: UIViewController {
         btn.sanamakBtn.addTarget(self, action: #selector(goToSanamak), for: .touchUpInside)
         
         musicBTN.addTarget(self, action: #selector(songStatus), for: .touchUpInside)
-        
-        Timer.scheduledTimer(timeInterval: 5.5, target: self, selector: #selector(hiddenHeadText), userInfo: nil, repeats: true)
+        Layouts()
+//        Timer.scheduledTimer(timeInterval: 5.5, target: self, selector: #selector(hiddenHeadText), userInfo: nil, repeats: true)
     }
     
     @objc func songStatus(){
-                if Model.sharedInstance.sound == true{
-                    musicBTN.setImage(UIImage(named:"sound_on.png"),for:.normal)
-                    Model.sharedInstance.sound = false
-                }else if Model.sharedInstance.sound == false{
-                    musicBTN.setImage(UIImage(named:"sound_off.png"),for:.normal)
-                    Model.sharedInstance.sound = true
-                }
+        if Model.sharedInstance.sound == true{
+            musicBTN.setImage(UIImage(named:"sound_on.png"),for:.normal)
+            Model.sharedInstance.sound = false
+        }else if Model.sharedInstance.sound == false{
+            musicBTN.setImage(UIImage(named:"sound_off.png"),for:.normal)
+            Model.sharedInstance.sound = true
+        }
     }
     @objc func goToTakpak(){
         let vc = TakpaktarVC()
@@ -97,6 +99,39 @@ class MenuViewController: UIViewController {
     @objc func hiddenHeadText(){
         headView.isHidden = true
     }
-   
- }
+    
+    func Layouts(){
+//        musicBTN <- [
+//            Height(50),
+//            Width(50),
+//            Top(40),
+//            Right(20)
+//        ]
+        headView <- [
+            Height(165),
+            Width(165),
+            Top(70),
+            Left(screenWidth / 3.57)
+        ]
+        feedBackV <- [
+            Height(screenWidth / 1.7),
+            Width(screenWidth / 1.7),
+            Top(screenHeight / 0.65),
+            Left(screenWidth / 4.4),
+        ]
+//        frame: CGRect(x: 0, y: 950, width: screenWidth, height: 339)
+        feedBackS <- [
+            Height(screenWidth / 1.1),
+            Width(screenWidth),
+            Top(screenHeight / 0.702),
+            Left(0)
+        ]
+        ballonsV <- [
+            Height(screenWidth / 1.388),
+            Width(screenWidth / 1.5),
+            Top(screenHeight / 9.375),
+            Left(screenWidth / 6)
+        ]
+    }
+}
 

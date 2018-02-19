@@ -11,22 +11,22 @@ import EasyPeasy
 class MenuButtons: UIView {
 
     let takpakBtn:UIButton = {
-        let btn = UIButton(frame: CGRect(x: 20, y: 352, width: 245, height: 105))
+        let btn = UIButton()
         btn.setImage(#imageLiteral(resourceName: "takpaktar"), for: .normal)
         return btn
     }()
     let anderBtn:UIButton = {
-        let btn = UIButton(frame: CGRect(x: 185, y: 497, width: 170, height: 100))
+        let btn = UIButton()
         btn.setImage(#imageLiteral(resourceName: "ander"), for: .normal)
         return btn
     }()
     let zhanyltBtn:UIButton = {
-        let btn = UIButton(frame: CGRect(x: 20, y: 637, width: 330, height: 109))
+        let btn = UIButton()
         btn.setImage(#imageLiteral(resourceName: "zhanyltpash"), for: .normal)
         return btn
     }()
     let sanamakBtn:UIButton = {
-        let btn = UIButton(frame: CGRect(x: 98, y: 814, width: 257, height: 87))
+        let btn = UIButton()
         btn.setImage(#imageLiteral(resourceName: "sanamak"), for: .normal)
         return btn
     }()
@@ -50,28 +50,28 @@ required init?(coder aDecoder: NSCoder) {
     
 func LayoutsLabel(){
     takpakBtn <- [
-        Height(105),
-        Width(241),
-        Left(20),
-        Top(20)
+        Height(screenWidth / 3.5714),
+        Width(screenWidth / 1.55601),
+        Left(screenWidth / 18.75),
+        Top(screenWidth / 18.75)
     ]
     anderBtn <- [
-        Height(100),
-        Width(170),
-        Right(20),
-        Top(40).to(takpakBtn)
+        Height(screenWidth / 3.75),
+        Width(screenWidth / 2.2058),
+        Right(screenWidth / 18.75),
+        Top(screenWidth / 9.375).to(takpakBtn)
     ]
     zhanyltBtn <- [
-        Height(109),
-        Width(330),
-        Left(20),
-        Top(40).to(anderBtn)
+        Height(screenWidth / 3.4403),
+        Width(screenWidth / 1.1363),
+        Left(screenWidth / 18.75),
+        Top(screenWidth / 9.375).to(anderBtn)
     ]
     sanamakBtn <- [
-        Height(87),
-        Width(257),
-        Right(20),
-        Top(40).to(zhanyltBtn)
+        Height(screenWidth / 4.31034),
+        Width(screenWidth / 1.4591),
+        Right(screenWidth / 18.75),
+        Top(screenWidth / 9.375).to(zhanyltBtn)
     ]
 }
 }

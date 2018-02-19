@@ -42,20 +42,20 @@ class HeadTextView: UIView {
         mamakLabel <- [
             Height(64),
             Width(69),
-            Left(53),
+            Left(screenWidth / 7.07547),
             Top(0)
         ]
         kazLabel <- [
             Height(64),
-            Width(164),
+            Width(180),
             Left(0),
-            Top(30)
+            Top(screenWidth / 12.5)
         ]
         asselSkLabel <- [
             Height(27),
             Width(147),
-            Left(30),
-            Top(20).to(mamakLabel)
+            Left(screenWidth / 12.5),
+            Top(screenWidth / 18.75).to(mamakLabel)
         ]
     }
 }

@@ -39,10 +39,10 @@ class FeedBackView: UIView {
         label.textColor = .BlueColor
         return label
     }()
-//    let orangeV: UIButton = {
-//        let btn = UIButton()
-//        return btn
-//    }()
+    //    let orangeV: UIButton = {
+    //        let btn = UIButton()
+    //        return btn
+    //    }()
     let instaAS: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "HelveticaNeue", size: screenWidth / 31.25)
@@ -58,12 +58,12 @@ class FeedBackView: UIView {
         return label
     }()
     let instaLogo: UIImageView = {
-        let imgV = UIImageView(frame: CGRect(x: 65, y: 169, width: 12, height: 12))
+        let imgV = UIImageView()
         imgV.image = UIImage(named: "instagram.png")
         return imgV
     }()
     let webLogo: UIImageView = {
-        let imgV = UIImageView(frame: CGRect(x: 43, y: 185, width: 12, height: 12))
+        let imgV = UIImageView()
         imgV.image = UIImage(named: "web.png")
         return imgV
     }()
@@ -72,16 +72,16 @@ class FeedBackView: UIView {
         imgV.image = UIImage(named: "son_small.png")
         return imgV
     }()
-   
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
         self.layer.cornerRadius = 10
-//        orangeV.backgroundColor = .orangeColor
-//        orangeV.layer.cornerRadius = 5
-//        orangeV.setTitle("Оценить приложение", for: .normal)
-//        orangeV.titleLabel?.font = UIFont(name: "HelveticaNeue", size: screenWidth / 31.25)
-//        orangeV.addTarget(self, action: #selector(rateApp), for: .touchUpInside)
+        //        orangeV.backgroundColor = .orangeColor
+        //        orangeV.layer.cornerRadius = 5
+        //        orangeV.setTitle("Оценить приложение", for: .normal)
+        //        orangeV.titleLabel?.font = UIFont(name: "HelveticaNeue", size: screenWidth / 31.25)
+        //        orangeV.addTarget(self, action: #selector(rateApp), for: .touchUpInside)
         setupViewsLabel()
         setUpLayout()
     }
@@ -98,52 +98,63 @@ class FeedBackView: UIView {
     func setUpLayout(){
         mamakLabel <- [
             Height(20),
-            Width(100),
-            Left(86.5),
-            Top(15)
+            Width(screenWidth / 3.75),
+            Left(screenWidth / 4.335),
+            Top(screenWidth / 25)
         ]
         kazLabel <- [
             Height(20),
             Width(245),
-            Left(40),
-            Top(35)
+            Left(screenWidth / 9.375),
+            Top(screenWidth / 10.714)
         ]
         govorim <- [
             Height(15),
             Width(320),
-            Left(23),
-            Top(55)
+            Left(screenWidth / 15),
+            Top(screenWidth / 6.818)
         ]
-//        orangeV <- [
-//            Height(40),
-//            Width(155),
-//            Left(38),
-//            Top(75)
-//        ]
+        //        orangeV <- [
+        //            Height(40),
+        //            Width(155),
+        //            Left(38),
+        //            Top(75)
+        //        ]
         asselSkLabel <- [
             Height(80),
             Width(345),
-            Left(44),
-            Top(100)
+            Left(screenWidth / 8.52272),
+            Top(screenWidth / 3.75)
         ]
         instaAS <- [
             Height(20),
             Width(105),
-            Left(80),
-            Top(165)
+            Left(screenWidth / 4.6875),
+            Top(screenWidth / 2.2727)
         ]
         botakanWeb <- [
             Height(20),
-            Width(130),
-            Left(58),
-            Top(180)
+            Width(160),
+            Left(screenWidth / 6.4655),
+            Top(screenWidth / 2.08)
         ]
         littleSon <- [
             Height(37),
             Width(45),
             Right(0),
-            Top(185)
+            Top(screenWidth / 2.027)
         ]
-        
+        instaLogo  <- [
+            Height(12),
+            Width(12),
+            Left(screenWidth / 5.7692),
+            Top(screenWidth / 2.2189)
+        ]
+        webLogo  <- [
+            Height(12),
+            Width(12),
+            Left(screenWidth / 8.72093),
+            Top(screenWidth / 2.027)
+        ]
     }
 }
