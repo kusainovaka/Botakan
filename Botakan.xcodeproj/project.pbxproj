@@ -251,8 +251,8 @@
 			children = (
 				8E90AAEB1FFFA2210070DD1B /* MenuViewController.swift */,
 				8E0D77C9201081A4008F1FC2 /* TakpaktarVC.swift */,
-				8EBAEB1620224B08008DB211 /* AnderVC.swift */,
 				8E7CCC9D20135C2700B4E47A /* TakpakDetailsVC.swift */,
+				8EBAEB1620224B08008DB211 /* AnderVC.swift */,
 				8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */,
 				8E37DFE02026463700E19382 /* ZhanyltViewController.swift */,
 				8E37DFE32026531300E19382 /* SanamakViewController.swift */,

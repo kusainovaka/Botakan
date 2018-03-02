@@ -1,3 +1,6 @@
 # botakan
-cretate 2Version
-thats in appStore
+Do scrolling
+Do music
+Do constrain
+DO arhitecture
+Do progress Bar

@@ -5,7 +5,7 @@ var tempParse = [ParsingJSON]()
 
 class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    var detailLabel: DetailLabels = {
+    fileprivate lazy  var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
         view.nameLabel.text = "     Тақпақтар"
         return view
@@ -18,7 +18,7 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         collectionView.register(CLImage.self, forCellWithReuseIdentifier: "collectionCell")
         return collectionView
     }()
-    var CVLayout: UICollectionViewFlowLayout = {
+    fileprivate lazy  var CVLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: 150, height: 150)
@@ -42,19 +42,19 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         layout.sectionInset = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
         return layout
     }()
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getFromJSONtemp()
+        getFromJSON()
         
         view.addSubview(detailLabel)
         view.addSubview(collectionView)
         
         detailLabel.backBTN.addTarget(self, action: #selector(backToBTN), for: .touchUpInside)
-        layouyts()
+        Layouyts()
     }
     
-    func getFromJSONtemp(){
+    func getFromJSON(){
         do {
             if let path = Bundle.main.url(forResource: "AllData", withExtension: "json") {
                 let url = try Data(contentsOf: path)
@@ -69,6 +69,7 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     @objc func backToBTN(){
+        print("Press")
         navigationController?.popViewController(animated: false)
     }
     
@@ -81,37 +82,36 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       var one = tempParse[indexPath.row].photo
+        let one = tempParse[indexPath.row].photo
         if collectionView == self.tempViewL{
-         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CLImage
-        cell.imageView.image = UIImage(named: one)
-            return cell
-        }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CLImage
             cell.imageView.image = UIImage(named: one)
-        
+            return cell
+        }else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CLImage
+            cell.imageView.image = UIImage(named: one)
             return cell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionView {
-           about(place: tempParse[indexPath.row])
-            Model.sharedInstance.getName = [tempParse[indexPath.row - 1]]
-            print(Model.sharedInstance.getName)
+            about(place: tempParse[indexPath.row])
+//            Model.sharedInstance.getName = [tempParse[indexPath.row - 1]]
+//            print(Model.sharedInstance.getName)
         }else {
         }
     }
     
     func about(place: ParsingJSON){
         let vc = TakpakDetailsVC()
-//        Model.sharedInstance.getName = [place]
-//        print(Model.sharedInstance.getName)
+        //        Model.sharedInstance.getName = [place]
+        //        print(Model.sharedInstance.getName)
         vc.tempImage = place
         navigationController?.pushViewController(vc, animated: false)
     }
     
-    func layouyts(){
+    func Layouyts(){
         collectionView <- [
             Top(screenWidth / 2.3),
             Width(screenWidth),

@@ -14,7 +14,7 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     var anderParse = [AnderJSON]()
 
-    var detailLabel: DetailLabels = {
+    fileprivate lazy var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
         view.nameLabel.text = "        Әндер"
         return view
@@ -36,6 +36,7 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         layout.sectionInset = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
         return layout
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getFromJSON()
@@ -114,6 +115,7 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
 //        vc.anderParse = place
         navigationController?.pushViewController(vc, animated: false)
     }
+    
     func layouyts(){
         collectionView <- [
             Top(screenWidth / 2.3),
@@ -121,8 +123,5 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             Left(10),
             Height(screenHeight / 1.08)
         ]
-    }
-    
-    
-    
+    } 
 }

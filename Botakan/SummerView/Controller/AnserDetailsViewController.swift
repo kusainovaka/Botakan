@@ -86,11 +86,10 @@ class AnserDetailsViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
     }
     
-   
-
     @objc func backToCV(){
         navigationController?.popViewController(animated: false)
     }
+    
     func musicConfig(){
         musicVC.btnMusic.setImage(UIImage(named:"play.png"),for:.normal)
         musicVC.btnMusic.addTarget(self, action: #selector(pressMussic), for: .touchDown)

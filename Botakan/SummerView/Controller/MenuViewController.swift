@@ -3,7 +3,7 @@ import EasyPeasy
 
 class MenuViewController: UIViewController {
     
-    let scrollView: UIScrollView = {
+    fileprivate lazy  var scrollView: UIScrollView = {
         let scrollView  = UIScrollView()
         scrollView.contentSize = CGSize(width: 0, height: screenHeight * 1.95)
         scrollView.setContentOffset(scrollView.contentOffset, animated: false)
@@ -11,36 +11,45 @@ class MenuViewController: UIViewController {
         return scrollView
     }()
     
-    let backgraundImage: UIImageView = {
+    fileprivate lazy  var backgraundImage: UIImageView = {
         let imgV = UIImageView(frame: CGRect(x: 0, y: -10, width: screenWidth, height: screenWidth * 3.5))
         imgV.image = UIImage(named: "mainSummer.png")
         return imgV
     }()
-    let musicBTN : MusicBtnMenu = {
+    fileprivate lazy  var musicBTN : MusicBtnMenu = {
         let btn = MusicBtnMenu(frame: CGRect(x: screenWidth / 1.229, y: screenWidth / 18.75, width: screenWidth / 7.5, height: screenWidth / 7.5))
         return btn
     }()
-    let ballonsV: BallonsView = {
+    fileprivate lazy  var ballonsV: BallonsView = {
         let ballons = BallonsView()
         return ballons
     }()
-    let headView: HeadTextView = {
+    fileprivate lazy  var headView: HeadTextView = {
         let view = HeadTextView()
 //        frame: CGRect(x: 106, y: 70, width: 165, height: 165)
         return view
     }()
     
-    let btn: MenuButtons = {
+    fileprivate lazy  var btn: MenuButtons = {
         let view = MenuButtons(frame: CGRect(x: 0, y: screenWidth / 1.1261, width: screenWidth, height: screenHeight / 1.11166))
         return view
     }()
-    let feedBackV: FeedBackView = {
+    fileprivate lazy  var feedBackV: FeedBackView = {
         let view = FeedBackView()
         return view
     }()
-    let feedBackS: FeedBackSons = {
+    fileprivate lazy  var feedBackS: FeedBackSons = {
         let view = FeedBackSons()
         return view
+    }()
+    fileprivate lazy  var progressView: ProgressBar = {
+        let temp = ProgressBar(frame: CGRect(x: screenWidth / 4.6875, y: screenWidth / 1.93, width: screenWidth / 1.736, height: screenWidth / 1.5))
+        temp.layer.shadowColor = UIColor.black.cgColor
+        temp.layer.masksToBounds = false
+        temp.layer.shadowOffset = CGSize(width: 3, height: 3)
+        temp.layer.shadowOpacity = 0.3
+        temp.layer.shadowRadius = 1
+        return temp
     }()
     
     override func viewDidLoad() {
@@ -68,7 +77,7 @@ class MenuViewController: UIViewController {
         
         musicBTN.addTarget(self, action: #selector(songStatus), for: .touchUpInside)
         Layouts()
-//        Timer.scheduledTimer(timeInterval: 5.5, target: self, selector: #selector(hiddenHeadText), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 5.5, target: self, selector: #selector(hiddenHeadText), userInfo: nil, repeats: true)
     }
     
     @objc func songStatus(){
@@ -81,9 +90,23 @@ class MenuViewController: UIViewController {
         }
     }
     @objc func goToTakpak(){
+//        scrollView.addSubview(progressView)
+//        Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer1), userInfo: nil, repeats: true)
+//        progressView.progress.setProgress(0, animated: false)
         let vc = TakpaktarVC()
         self.navigationController?.pushViewController(vc, animated: false)
     }
+    
+    @objc func timer1(){
+        if progressView.progress.progress  != 1{
+            progressView.progress.progress += 2 / 10
+        } else {
+            progressView.removeFromSuperview()
+            let vc = TakpaktarVC()
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+    }
+    
     @objc func goToAnder(){
         let vc = AnderVC()
         self.navigationController?.pushViewController(vc, animated: false)
@@ -135,7 +158,6 @@ class MenuViewController: UIViewController {
             Left(screenWidth / 4.4),
             Bottom(screenWidth / 6.95)
         ]
-//        frame: CGRect(x: 0, y: 950, width: screenWidth, height: 339)
         feedBackS <- [
             Height(screenWidth / 1.1),
             Width(screenWidth),
