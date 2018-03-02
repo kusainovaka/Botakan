@@ -4,7 +4,7 @@ import EasyPeasy
 class MenuViewController: UIViewController {
     
     let scrollView: UIScrollView = {
-        let scrollView  = UIScrollView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+        let scrollView  = UIScrollView()
         scrollView.contentSize = CGSize(width: 0, height: screenHeight * 1.95)
         scrollView.setContentOffset(scrollView.contentOffset, animated: false)
         scrollView.isScrollEnabled = true
@@ -31,7 +31,7 @@ class MenuViewController: UIViewController {
     }()
     
     let btn: MenuButtons = {
-        let view = MenuButtons(frame: CGRect(x: 0, y: 333, width: screenWidth, height: 600))
+        let view = MenuButtons(frame: CGRect(x: 0, y: screenWidth / 1.1261, width: screenWidth, height: screenHeight / 1.11166))
         return view
     }()
     let feedBackV: FeedBackView = {
@@ -47,7 +47,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         view.backgroundColor = UIColor.init(patternImage: #imageLiteral(resourceName: "summerBg"))
-        //        view.frame = CGRect(x: 0, y: 0, width: screenWidth*4, height: screenHeight)
+//        view.frame = CGRect(x: 0, y: 0, width: screenWidth*4, height: screenHeight)
         scrollView.frame = view.frame
         view.addSubview(scrollView)
         scrollView.addSubview(backgraundImage)
@@ -55,6 +55,7 @@ class MenuViewController: UIViewController {
         backgraundImage.addSubview(headView)
         backgraundImage.addSubview(ballonsV)
         scrollView.addSubview(musicBTN)
+        print(screenHeight)
         
         scrollView.addSubview(btn)
         scrollView.addSubview(feedBackV)
@@ -101,6 +102,20 @@ class MenuViewController: UIViewController {
     }
     
     func Layouts(){
+        backgraundImage <- [
+            Height(screenHeight),
+            Width(screenWidth),
+            Top(0),
+            Left(0),
+            Bottom(-10)
+        ]
+        scrollView <- [
+            Height(screenHeight),
+            Width(screenWidth),
+            Top(0),
+            Left(0),
+            Bottom(0)
+        ]
 //        musicBTN <- [
 //            Height(50),
 //            Width(50),
@@ -118,13 +133,15 @@ class MenuViewController: UIViewController {
             Width(screenWidth / 1.7),
             Top(screenHeight / 0.65),
             Left(screenWidth / 4.4),
+            Bottom(screenWidth / 6.95)
         ]
 //        frame: CGRect(x: 0, y: 950, width: screenWidth, height: 339)
         feedBackS <- [
             Height(screenWidth / 1.1),
             Width(screenWidth),
             Top(screenHeight / 0.702),
-            Left(0)
+            Left(0),
+            Bottom(screenWidth / 6.95)
         ]
         ballonsV <- [
             Height(screenWidth / 1.388),

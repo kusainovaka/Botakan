@@ -12,7 +12,7 @@ import EasyPeasy
 class SanamakViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
 
     var sanamakParse = [ParsingJSON]()
-    
+//    var vc = SanamakDetailsVC()
     var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
         view.nameLabel.text = "  Санамақтар"
@@ -62,6 +62,7 @@ class SanamakViewController: UIViewController, UICollectionViewDataSource, UICol
             print(error.localizedDescription)
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sanamakParse.count
     }
@@ -69,19 +70,34 @@ class SanamakViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sanamakCell", for: indexPath) as! CLImage
         cell.imageView.image = UIImage(named: sanamakParse[indexPath.row].photo)
-        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         about(place: sanamakParse[indexPath.row])
-    }
+//        tempSMT(place: sanamakParse[indexPath.row - 1])
+  }
     
     func about(place: ParsingJSON){
-        let vc = TakpakDetailsVC()
-        vc.tempImage = place
+        let vc = SanamakDetailsVC()
+        vc.sanamakJS = place
+//        print(place)
+//        vc.tempBTN1.addTarget(self, action: #selector(temp1), for: .touchUpInside)
         navigationController?.pushViewController(vc, animated: false)
     }
+    
+    @objc func temp1(sender: UIButton){
+        print("TempBTN1")
+//        vc.tempBTN2.setImage(UIImage(named:"3s.sng"),for:.normal)
+        
+    }
+    func tempSMT(place: ParsingJSON){
+//        vc.tempBTN1.addTarget(self, action: #selector(temp1), for: .touchUpInside)
+//        vc.sanamakJS = place
+        
+        print(place)
+    }
+    
     
     func layouyts(){
         collectionView <- [

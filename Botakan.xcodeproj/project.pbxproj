@@ -71,6 +71,8 @@
 		8EBC617220166291001F593E /* AnderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC61682016570C001F593E /* AnderScene.swift */; };
 		8EBC617320166291001F593E /* SanamakScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC617020165766001F593E /* SanamakScene.swift */; };
 		8EBC617420166291001F593E /* ZhanultpashScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC617120165767001F593E /* ZhanultpashScene.swift */; };
+		8ECEDFB02047E12900C22F0A /* SanamakDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEDFAF2047E12900C22F0A /* SanamakDetailsVC.swift */; };
+		8ECEDFB12047E15A00C22F0A /* SanamakDetailsVC.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8ECEDFAF2047E12900C22F0A /* SanamakDetailsVC.swift */; };
 		8EDD10E52026E2F300DB6267 /* AnserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */; };
 		8EDD10E62026E35200DB6267 /* AnserDetailsViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */; };
 		8EDD10E82026EAD100DB6267 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD10E72026EAD000DB6267 /* MusicView.swift */; };
@@ -155,6 +157,7 @@
 		8EBC61682016570C001F593E /* AnderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnderScene.swift; sourceTree = "<group>"; };
 		8EBC617020165766001F593E /* SanamakScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanamakScene.swift; sourceTree = "<group>"; };
 		8EBC617120165767001F593E /* ZhanultpashScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhanultpashScene.swift; sourceTree = "<group>"; };
+		8ECEDFAF2047E12900C22F0A /* SanamakDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanamakDetailsVC.swift; sourceTree = "<group>"; };
 		8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnserDetailsViewController.swift; sourceTree = "<group>"; };
 		8EDD10E72026EAD000DB6267 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 		8EF5E7612025B0DD00155124 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
@@ -253,6 +256,7 @@
 				8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */,
 				8E37DFE02026463700E19382 /* ZhanyltViewController.swift */,
 				8E37DFE32026531300E19382 /* SanamakViewController.swift */,
+				8ECEDFAF2047E12900C22F0A /* SanamakDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ECEDFB12047E15A00C22F0A /* SanamakDetailsVC.swift in Resources */,
 				8EDD10E92026EBF900DB6267 /* MusicView.swift in Resources */,
 				8EDD10E62026E35200DB6267 /* AnserDetailsViewController.swift in Resources */,
 				8E37DFE52026531B00E19382 /* SanamakViewController.swift in Resources */,
@@ -567,6 +572,7 @@
 				8E9C29BF2020EE2F00BB462B /* ImageCellCV.swift in Sources */,
 				8EF5E7822025B11500155124 /* ZhanyltpashExtensionV.swift in Sources */,
 				8EBC617320166291001F593E /* SanamakScene.swift in Sources */,
+				8ECEDFB02047E12900C22F0A /* SanamakDetailsVC.swift in Sources */,
 				8EBAEB1720224B08008DB211 /* AnderVC.swift in Sources */,
 				8EBC617420166291001F593E /* ZhanultpashScene.swift in Sources */,
 				8E1A36BB201F202200E089F5 /* FeedBackSons.swift in Sources */,

@@ -97,19 +97,21 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionView {
            about(place: tempParse[indexPath.row])
+            Model.sharedInstance.getName = [tempParse[indexPath.row - 1]]
+            print(Model.sharedInstance.getName)
         }else {
-            
         }
     }
     
     func about(place: ParsingJSON){
         let vc = TakpakDetailsVC()
+//        Model.sharedInstance.getName = [place]
+//        print(Model.sharedInstance.getName)
         vc.tempImage = place
         navigationController?.pushViewController(vc, animated: false)
     }
     
     func layouyts(){
-      
         collectionView <- [
             Top(screenWidth / 2.3),
             Width(screenWidth),

@@ -73,9 +73,10 @@ class TakpakDetailsVC: UIViewController , UICollectionViewDelegate, UICollection
         takpakLB.font = UIFont(name: "Noteworthy-Light", size: screenWidth / 18.75)
         return takpakLB
     }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addSubview(detailsTakpakBG)
         view.addSubview(detailsViewTakpakt)
         detailsViewTakpakt.addSubview(nameTakpak)
@@ -95,10 +96,10 @@ class TakpakDetailsVC: UIViewController , UICollectionViewDelegate, UICollection
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "takpakImageCell", for: indexPath) as! ImageCellCV
-        //        cell.image.image = UIImage(named: tempParse[indexPath.row].photo)
+////                cell.image.image = UIImage(named: tempParse[indexPath.row].photo)
         let strtemp = self.tempImage!.photo
         let tttt = Int(strtemp.components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
-        
+
         cell.image.image = UIImage(named: (self.tempImage!.photo))
         let pict1 = "\(tttt! - 1)t"
         let pict2 = "\(tttt! + 1)t"
@@ -106,6 +107,7 @@ class TakpakDetailsVC: UIViewController , UICollectionViewDelegate, UICollection
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
         cell.imageView1.image = UIImage(named: pict1)
         cell.imageView2.image = UIImage(named: pict2)
+//        print(Model.sharedInstance.getName)
         return cell
     }
     
@@ -113,6 +115,7 @@ class TakpakDetailsVC: UIViewController , UICollectionViewDelegate, UICollection
         if collectionView == self.tempCollectionView{
             print("Kamila")
         }
+        
     }
     
     func setUpLayout(){

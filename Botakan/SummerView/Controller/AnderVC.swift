@@ -42,6 +42,7 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         view.addSubview(detailLabel)
         view.addSubview(collectionView)
         layouyts()
+        print(Model.sharedInstance.getName)
         detailLabel.backBTN.addTarget(self, action: #selector(goToMenu), for: .touchUpInside)
     }
     
