@@ -3,6 +3,7 @@ import EasyPeasy
 
 class MenuViewController: UIViewController {
     
+    var timer : Timer?
     fileprivate lazy  var scrollView: UIScrollView = {
         let scrollView  = UIScrollView()
         scrollView.contentSize = CGSize(width: 0, height: screenHeight * 1.95)
@@ -90,17 +91,22 @@ class MenuViewController: UIViewController {
         }
     }
     @objc func goToTakpak(){
-//        scrollView.addSubview(progressView)
-//        Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer1), userInfo: nil, repeats: true)
-//        progressView.progress.setProgress(0, animated: false)
-        let vc = TakpaktarVC()
-        self.navigationController?.pushViewController(vc, animated: false)
+        scrollView.addSubview(progressView)
+         timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer1), userInfo: nil, repeats: true)
+        progressView.progress.setProgress(0, animated: false)
+//        let vc = TakpaktarVC()
+//        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     @objc func timer1(){
+//        progressView.progress.progress = 0.5
+//        progressView.progress.setProgress(0, animated: true)
         if progressView.progress.progress  != 1{
             progressView.progress.progress += 2 / 10
+//            progressView.removeFromSuperview()
         } else {
+//            progressView.removeFromSuperview()
+            timer?.invalidate()
             progressView.removeFromSuperview()
             let vc = TakpaktarVC()
             self.navigationController?.pushViewController(vc, animated: false)
