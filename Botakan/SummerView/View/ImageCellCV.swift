@@ -35,7 +35,7 @@ class ImageCellCV: UICollectionViewCell {
         LayoutsCLI()
     }
     func setupViewsLabel() {
-        [image,imageView1,imageView2].forEach{ addSubview($0) }
+        [imageView1,imageView2].forEach{ addSubview($0) }
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -47,12 +47,12 @@ class ImageCellCV: UICollectionViewCell {
             Left(47),
             Top(23)
         ]
-        image <- [
-            Height(110),
-            Width(110),
-            Left(10).to(imageView1),
-            Top(6)
-        ]
+//        image <- [
+//            Height(110),
+//            Width(110),
+//            Left(10).to(imageView1),
+//            Top(6)
+//        ]
         imageView2 <- [
             Height(76),
             Width(76),

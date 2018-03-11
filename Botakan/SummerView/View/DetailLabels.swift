@@ -12,6 +12,7 @@ class DetailLabels: UIView {
     
     let bgCV: UIImageView = {
         let imgV = UIImageView()
+        imgV.backgroundColor = .clear
         imgV.image = UIImage(named: "second_bg.png")
         return imgV
     }()
@@ -28,6 +29,7 @@ class DetailLabels: UIView {
     let nameLabel: UILabel = {
         let takpakLB = UILabel()
         takpakLB.font = UIFont(name: "Noteworthy-Bold", size: screenWidth / 15.625)
+        takpakLB.textAlignment = .center
         takpakLB.textColor = .BlueColor
         return takpakLB
     }()
@@ -62,22 +64,25 @@ class DetailLabels: UIView {
             Height(screenHeight)
         ]
         whiteBG <- [
-            Height(50),
-            Width(257),
-            Left(60),
-            Top(90)
+            Height(screenWidth / 7.5),
+            Width(screenWidth / 1.45),
+            CenterX(0),
+//            Left(60),
+            Top(screenWidth / 4.16)
         ]
         nameLabel <- [
-            Height(60),
-            Width(250),
-            Left(105),
-            Top(78)
+            Height(screenWidth / 6.25),
+            Width(screenWidth / 1.5),
+            CenterX(0),
+//            Left(screenWidth / 3.57),
+            Top(screenWidth / 4.8)
         ]
         triangle <- [
-            Height(43),
-            Width(255),
-            Left(60),
-            Top(0).to(whiteBG)
+            Height(screenWidth / 8.72),
+            Width(screenWidth / 1.47),
+            CenterX(0),
+//            Left(60),
+            Top(0).to(whiteBG, .bottom)
         ]
     }
 }

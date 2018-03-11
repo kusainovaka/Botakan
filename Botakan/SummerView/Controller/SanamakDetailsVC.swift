@@ -33,6 +33,7 @@ class SanamakDetailsVC: UIViewController {
     fileprivate lazy var nameSanamak: UILabel = {
         let takpakLB = UILabel(frame: CGRect(x: screenWidth / 5.97, y: screenWidth / 25, width: screenWidth / 1.5, height: screenWidth / 11.72))
         takpakLB.textColor = .BlueColor
+        takpakLB.textAlignment = .center
         takpakLB.font = UIFont(name: "Noteworthy-Bold", size: screenWidth / 18.75)
         return takpakLB
     }()
@@ -94,6 +95,12 @@ class SanamakDetailsVC: UIViewController {
             Width(screenWidth),
             Left(0),
             Height(screenHeight)
+        ]
+        nameSanamak <- [
+            CenterX(0),
+            Top(screenWidth / 25),
+            Width(screenWidth / 1.5),
+            Height(screenWidth / 11.72)
         ]
         tempBTN1  <- [
             Top(96),

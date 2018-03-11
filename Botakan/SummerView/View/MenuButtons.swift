@@ -12,22 +12,22 @@ class MenuButtons: UIView {
 
     let takpakBtn:UIButton = {
         let btn = UIButton()
-        btn.setImage(#imageLiteral(resourceName: "takpaktar"), for: .normal)
+        btn.setImage(#imageLiteral(resourceName: "Stakpaktar"), for: .normal)
         return btn
     }()
     let anderBtn:UIButton = {
         let btn = UIButton()
-        btn.setImage(#imageLiteral(resourceName: "ander"), for: .normal)
+        btn.setImage(#imageLiteral(resourceName: "Sander"), for: .normal)
         return btn
     }()
     let zhanyltBtn:UIButton = {
         let btn = UIButton()
-        btn.setImage(#imageLiteral(resourceName: "zhanyltpash"), for: .normal)
+        btn.setImage(#imageLiteral(resourceName: "Szhanyltpash"), for: .normal)
         return btn
     }()
     let sanamakBtn:UIButton = {
         let btn = UIButton()
-        btn.setImage(#imageLiteral(resourceName: "sanamak"), for: .normal)
+        btn.setImage(#imageLiteral(resourceName: "Ssanamak"), for: .normal)
         return btn
     }()
 override init(frame: CGRect) {
@@ -50,32 +50,34 @@ func LayoutsLabel(){
         Width(screenWidth / 1.55601),
         Left(screenWidth / 18.75),
         Top(screenWidth / 18.75),
-        Bottom(40).to(anderBtn)
+        Bottom(40).to(anderBtn, .top)
     ]
     anderBtn <- [
         Height(screenWidth / 3.75),
         Width(screenWidth / 2.2058),
         Right(screenWidth / 18.75),
-        Top(screenWidth / 9.375).to(takpakBtn),
-        Bottom(screenWidth / 9.375).to(zhanyltBtn)
+        Top(screenWidth / 9.375).to(takpakBtn, .bottom),
+        Bottom(screenWidth / 9.375).to(zhanyltBtn, .top)
     ]
     zhanyltBtn <- [
-        Height(screenWidth / 3.4403),
-        Width(screenWidth / 1.1363),
-        Left(screenWidth / 18.75),
-        Top(screenWidth / 9.375).to(anderBtn),
-        Bottom(screenWidth / 9.375).to(sanamakBtn)
 //        Height(109),
 //        Width(330),
-//        Left(40),
-//        Top(screenWidth / 9.375).to(anderBtn),
-//        Bottom(200)
+//        Left(20),
+//        Top(40).to(anderBtn),
+//        Bottom(40).to(sanamakBtn)
+//        screenWidth / 4.1
+        Height(screenWidth / 3.1),
+        Width(screenWidth / 1.1363),
+        Left(screenWidth / 18.75),
+        Top(screenWidth / 9.375).to(anderBtn, .bottom),
+        Bottom(screenWidth / 9.375).to(sanamakBtn, .top)
+
     ]
     sanamakBtn <- [
         Height(screenWidth / 4.31034),
         Width(screenWidth / 1.4591),
         Right(screenWidth / 18.75),
-        Top(screenWidth / 9.375).to(zhanyltBtn),
+        Top(screenWidth / 9.375).to(zhanyltBtn, .bottom),
         Bottom(screenWidth / 7.52)
     ]
 }

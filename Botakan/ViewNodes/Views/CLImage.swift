@@ -14,6 +14,11 @@ class CLImage: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.contentMode = .scaleAspectFill
         imgView.clipsToBounds = true
+        imgView.layer.shadowOffset = CGSize(width: 2, height: 0)
+        imgView.layer.shadowOpacity = 0.2
+        imgView.layer.cornerRadius = 10
+        imgView.layer.shadowRadius = 1
+        imgView.layer.shadowColor = UIColor.black.cgColor
         return imgView
     }()
     

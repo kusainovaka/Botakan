@@ -41,25 +41,26 @@ class TakpakDetailsVC: UIViewController , UICollectionViewDelegate, UICollection
         layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         return layout
     }()
-    fileprivate lazy var leftImage: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.intoTakpakImage)
-        collectionView.backgroundColor = .clear
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(ImageCellCV.self, forCellWithReuseIdentifier: "takpakImageCell")
-        collectionView.reloadData()
-        return collectionView
-    }()
-    fileprivate lazy var leftImageLayout: UICollectionViewFlowLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 50, height: 50)
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-        return layout
-    }()
+//    fileprivate lazy var leftImage: UICollectionView = {
+//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.intoTakpakImage)
+//        collectionView.backgroundColor = .clear
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+//        collectionView.register(ImageCellCV.self, forCellWithReuseIdentifier: "takpakImageCell")
+//        collectionView.reloadData()
+//        return collectionView
+//    }()
+//    fileprivate lazy var leftImageLayout: UICollectionViewFlowLayout = {
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .horizontal
+//        layout.itemSize = CGSize(width: 50, height: 50)
+//        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+//        return layout
+//    }()
     fileprivate lazy var nameTakpak: UILabel = {
-        let takpakLB = UILabel(frame: CGRect(x: screenWidth / 5.97, y: screenWidth / 25, width: screenWidth / 1.5, height: screenWidth / 11.72))
+        let takpakLB = UILabel()
         takpakLB.textColor = .BlueColor
+        takpakLB.textAlignment = .center
         takpakLB.font = UIFont(name: "Noteworthy-Bold", size: screenWidth / 18.75)
         return takpakLB
     }()
@@ -73,19 +74,26 @@ class TakpakDetailsVC: UIViewController , UICollectionViewDelegate, UICollection
         takpakLB.font = UIFont(name: "Noteworthy-Light", size: screenWidth / 18.75)
         return takpakLB
     }()
-    
+    fileprivate lazy var  imageTakpak: UIImageView = {
+        let imgV = UIImageView(frame: CGRect(x: screenWidth / 2.82, y: screenWidth / 7.5, width: screenWidth / 3.4, height: screenWidth / 3.4))
+        imgV.layer.cornerRadius = 5
+        return imgV
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(detailsTakpakBG)
         view.addSubview(detailsViewTakpakt)
         detailsViewTakpakt.addSubview(nameTakpak)
         detailsViewTakpakt.addSubview(takpak)
-        view.addSubview(tempCollectionView)
+        view.addSubview(imageTakpak)
+//        view.addSubview(tempCollectionView)
         
         nameTakpak.text = self.tempImage?.name
         takpak.text = self.tempImage?.text
+        imageTakpak.image = UIImage(named: (self.tempImage?.photo)!)
         detailsTakpakBG.backBTN.addTarget(self, action: #selector(backToCV), for: .touchUpInside)
         setUpLayout()
+//        print()
     }
     
     @objc func backToCV(){
@@ -105,9 +113,8 @@ class TakpakDetailsVC: UIViewController , UICollectionViewDelegate, UICollection
         cell.image.image = UIImage(named: (self.tempImage!.photo))
         let pict1 = "\(tttt! - 1)t"
         let pict2 = "\(tttt! + 1)t"
-        cell.isSelected = true
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
-        cell.imageView1.image = UIImage(named: pict1)
+//        cell.imageView1.image = UIImage(named: pict1)
         cell.imageView2.image = UIImage(named: pict2)
         return cell
     }
@@ -130,6 +137,12 @@ class TakpakDetailsVC: UIViewController , UICollectionViewDelegate, UICollection
             Width(screenWidth),
             Left(0),
             Height(130)
+        ]
+        nameTakpak <- [
+        CenterX(0),
+        Top(screenWidth / 25),
+        Width(screenWidth / 1.5),
+        Height(screenWidth / 11.72)
         ]
     }
 }

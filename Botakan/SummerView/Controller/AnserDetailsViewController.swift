@@ -47,8 +47,9 @@ class AnserDetailsViewController: UIViewController {
         return music
     }()
     public lazy var nameAnder: UILabel = {
-        let takpakLB = UILabel(frame: CGRect(x: screenWidth / 5.97, y: screenWidth / 25, width: screenWidth / 1.5, height: screenWidth / 11.72))
+        let takpakLB = UILabel()
         takpakLB.textColor = .BlueColor
+        takpakLB.textAlignment = .center
         takpakLB.font = UIFont(name: "Noteworthy-Bold", size: screenWidth / 18.75)
         return takpakLB
     }()
@@ -133,10 +134,16 @@ class AnserDetailsViewController: UIViewController {
             Height(screenHeight)
         ]
         musicVC <- [
-            Top(100),
-            Width(325),
-            Left(25),
-            Height(90)
+            Top(screenWidth / 3.75),
+            Width(screenWidth / 1.1538),
+            Left(screenWidth / 15),
+            Height(screenWidth / 4.166)
+        ]
+        nameAnder <- [
+            CenterX(0),
+            Top(screenWidth / 25),
+            Width(screenWidth / 1.5),
+            Height(screenWidth / 11.72)
         ]
     }
 }

@@ -74,7 +74,6 @@ class FeedBackSons: UIView {
             Width(screenWidth / 2.419),
             Left(screenWidth / 3.125),
             Top(screenWidth / 2.48),
-//            Bottom(screenWidth / 2.403)
         ]
         twoSons <- [
             Height(screenWidth / 3.75),

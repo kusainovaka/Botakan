@@ -16,7 +16,7 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
 
     fileprivate lazy var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
-        view.nameLabel.text = "        Әндер"
+        view.nameLabel.text = "   Әндер"
         return view
     }()
     fileprivate lazy var collectionView: UICollectionView = {
@@ -30,10 +30,10 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     fileprivate lazy var sanamakLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 150, height: 150)
-        layout.minimumLineSpacing = 25
-        layout.minimumInteritemSpacing = 25
-        layout.sectionInset = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
+        layout.itemSize = CGSize(width: screenWidth / 2.89, height: screenWidth / 2.89)
+        layout.minimumLineSpacing = screenWidth / 10.71
+        layout.minimumInteritemSpacing = screenWidth / 10.71
+        layout.sectionInset = UIEdgeInsets(top: screenWidth / 10.71, left: screenWidth / 9.375, bottom: screenWidth / 10.71, right: screenWidth / 9.375)
         return layout
     }()
     
@@ -120,7 +120,7 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         collectionView <- [
             Top(screenWidth / 2.3),
             Width(screenWidth),
-            Left(10),
+            Left(0),
             Height(screenHeight / 1.08)
         ]
     } 

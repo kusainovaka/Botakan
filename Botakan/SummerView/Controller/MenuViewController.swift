@@ -27,12 +27,12 @@ class MenuViewController: UIViewController {
     }()
     fileprivate lazy  var headView: HeadTextView = {
         let view = HeadTextView()
-//        frame: CGRect(x: 106, y: 70, width: 165, height: 165)
+        //        frame: CGRect(x: 106, y: 70, width: 165, height: 165)
         return view
     }()
-    
+    //MEnu Buttons
     fileprivate lazy  var btn: MenuButtons = {
-        let view = MenuButtons(frame: CGRect(x: 0, y: screenWidth / 1.1261, width: screenWidth, height: screenHeight / 1.11166))
+        let view = MenuButtons()
         return view
     }()
     fileprivate lazy  var feedBackV: FeedBackView = {
@@ -43,8 +43,8 @@ class MenuViewController: UIViewController {
         let view = FeedBackSons()
         return view
     }()
-    fileprivate lazy  var progressView: ProgressBar = {
-        let temp = ProgressBar(frame: CGRect(x: screenWidth / 4.6875, y: screenWidth / 1.93, width: screenWidth / 1.736, height: screenWidth / 1.5))
+    var progressView: ProgressBar = {
+        let temp = ProgressBar()
         temp.layer.shadowColor = UIColor.black.cgColor
         temp.layer.masksToBounds = false
         temp.layer.shadowOffset = CGSize(width: 3, height: 3)
@@ -56,8 +56,8 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        view.backgroundColor = UIColor.init(patternImage: #imageLiteral(resourceName: "summerBg"))
-//        view.frame = CGRect(x: 0, y: 0, width: screenWidth*4, height: screenHeight)
+        view.backgroundColor = UIColor.init(patternImage: UIImage(named: "bg_blueGreen.png")!)
+        view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         scrollView.frame = view.frame
         view.addSubview(scrollView)
         scrollView.addSubview(backgraundImage)
@@ -91,21 +91,16 @@ class MenuViewController: UIViewController {
         }
     }
     @objc func goToTakpak(){
-        scrollView.addSubview(progressView)
-         timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer1), userInfo: nil, repeats: true)
+        view.addSubview(progressView)
+        progressLayout()
+        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer1), userInfo: nil, repeats: true)
         progressView.progress.setProgress(0, animated: false)
-//        let vc = TakpaktarVC()
-//        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     @objc func timer1(){
-//        progressView.progress.progress = 0.5
-//        progressView.progress.setProgress(0, animated: true)
         if progressView.progress.progress  != 1{
             progressView.progress.progress += 2 / 10
-//            progressView.removeFromSuperview()
         } else {
-//            progressView.removeFromSuperview()
             timer?.invalidate()
             progressView.removeFromSuperview()
             let vc = TakpaktarVC()
@@ -114,18 +109,57 @@ class MenuViewController: UIViewController {
     }
     
     @objc func goToAnder(){
-        let vc = AnderVC()
-        self.navigationController?.pushViewController(vc, animated: false)
-    }
-    @objc func goToZhanylt(){
-        let vc = ZhanyltViewController()
-        self.navigationController?.pushViewController(vc, animated: false)
-    }
-    @objc func goToSanamak(){
-        let vc = SanamakViewController()
-        self.navigationController?.pushViewController(vc, animated: false)
+        view.addSubview(progressView)
+        progressLayout()
+        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer2), userInfo: nil, repeats: true)
+        progressView.progress.setProgress(0, animated: false)
     }
     
+    @objc func timer2(){
+        if progressView.progress.progress  != 1{
+            progressView.progress.progress += 2 / 10
+        } else {
+            timer?.invalidate()
+            progressView.removeFromSuperview()
+            let vc = AnderVC()
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+    }
+    
+    @objc func goToZhanylt(){
+        view.addSubview(progressView)
+        progressLayout()
+        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer3), userInfo: nil, repeats: true)
+        progressView.progress.setProgress(0, animated: false)
+    }
+    
+    @objc func timer3(){
+        if progressView.progress.progress  != 1{
+            progressView.progress.progress += 2 / 10
+        } else {
+            timer?.invalidate()
+            progressView.removeFromSuperview()
+            let vc = ZhanyltViewController()
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+    }
+    
+    @objc func goToSanamak(){
+        view.addSubview(progressView)
+        progressLayout()
+        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer4), userInfo: nil, repeats: true)
+        progressView.progress.setProgress(0, animated: false)
+    }
+    
+    @objc func timer4(){
+        if progressView.progress.progress  != 1{
+            progressView.progress.progress += 2 / 10
+        } else {
+            timer?.invalidate()
+            progressView.removeFromSuperview()
+            let vc = SanamakViewController()
+            self.navigationController?.pushViewController(vc, animated: false) }
+    }
     @objc func hiddenHeadText(){
         headView.isHidden = true
     }
@@ -151,6 +185,7 @@ class MenuViewController: UIViewController {
 //            Top(40),
 //            Right(20)
 //        ]
+      
         headView <- [
             Height(165),
             Width(165),
@@ -164,18 +199,52 @@ class MenuViewController: UIViewController {
             Left(screenWidth / 4.4),
             Bottom(screenWidth / 6.95)
         ]
-        feedBackS <- [
-            Height(screenWidth / 1.1),
-            Width(screenWidth),
-            Top(screenHeight / 0.702),
-            Left(0),
-            Bottom(screenWidth / 6.95)
-        ]
+        if UIDevice().userInterfaceIdiom == .phone && UIScreen.main.nativeBounds.height == 2436 {
+            feedBackS <- [
+                Height(screenWidth / 1.1),
+                Width(screenWidth),
+                Top(screenHeight / 0.69),
+                Left(0),
+                Bottom(screenWidth / 6.95)
+            ]
+            btn <- [
+                Height(650),
+                Width(screenWidth),
+                Top(screenHeight / 1.6675),
+                Left(0)
+            ]
+        } else {
+            feedBackS <- [
+                Height(screenWidth / 1.1),
+                Width(screenWidth),
+                Top(screenHeight / 0.702),
+                Left(0),
+                Bottom(screenWidth / 6.95)
+            ]
+            btn <- [
+//                screenHeight / 1.15)
+                Height(screenHeight / 1.09),
+                Width(screenWidth),
+                Top(screenWidth / 1.13),
+                Left(0)
+            ]
+            
+        }
+        
         ballonsV <- [
             Height(screenWidth / 1.388),
             Width(screenWidth / 1.5),
             Top(screenHeight / 9.375),
             Left(screenWidth / 6)
+        ]
+    }
+    
+    func progressLayout(){
+        progressView <- [
+            CenterX(0),
+            CenterY(0),
+            Height(screenWidth / 1.5),
+            Width(screenWidth / 1.736)
         ]
     }
 }

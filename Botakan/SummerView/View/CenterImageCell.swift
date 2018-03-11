@@ -38,10 +38,10 @@ class CenterImageCell: UICollectionViewCell {
     }
     func LayoutsCLI(){
         imageView1 <- [
-            Height(76),
-            Width(76),
-            Left(47),
-            Top(23)
+            Height(screenWidth / 4.934),
+            Width(screenWidth / 4.934),
+            Left(screenWidth / 7.978),
+            Top(screenWidth / 16.304)
         ]
 //        image <- [
 //            Height(110),

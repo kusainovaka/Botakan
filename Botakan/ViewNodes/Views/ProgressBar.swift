@@ -23,8 +23,6 @@ class ProgressBar: UIView {
     }()
     let cuteWord: UILabel = {
         let takpakLB = UILabel()
-//        takpakLB.text = "Құлыншағым жеребеночек мой"
-//        takpakLB.lineBreakMode = .byWordWrapping
         takpakLB.numberOfLines = 2
         takpakLB.font = UIFont(name: "Noteworthy-Bold", size: screenWidth / 23.43)
         takpakLB.textColor = .orangeColor
@@ -47,6 +45,7 @@ class ProgressBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         let array = ["  Құлыншағым \nжеребеночек мой","     Тірегім \nопора моя","  Кішкетайым \nмаленький мой",
            "       Айым \nлуна моя","    Жүрегім \nсердечко мое","      Күнім \nсолнышко моё","   Қошақаным \nягненочек мой","    Шөжегім \nцыпленок мой","     Көжегім \nзайка мой",
            "  Жапалағым \nсовенок мой","   Айналайын \nлюбовь моя","  Балапаным \nптенчик мой","    Шырағым \nсветик мой","      Сәнім \n  краса моя"]
