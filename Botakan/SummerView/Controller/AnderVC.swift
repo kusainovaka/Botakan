@@ -135,7 +135,7 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     func layouyts(){
         collectionView <- [
-            Top(screenWidth / 2.3),
+            Top(screenWidth / 2.1),
             Width(screenWidth),
             Left(0),
             Height(screenHeight / 1.08)

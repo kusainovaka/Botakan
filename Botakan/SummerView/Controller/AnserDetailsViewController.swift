@@ -126,7 +126,14 @@ class AnserDetailsViewController: UIViewController {
         b = (String(time))
         musicVC.allDurationMusic.text = b
         musicVC.durationMusic.text = "0.00"
-     
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
+            print("Playback OK")
+            try AVAudioSession.sharedInstance().setActive(true)
+            print("Session is Active")
+        } catch {
+            print(error)
+        }
         
     }
    

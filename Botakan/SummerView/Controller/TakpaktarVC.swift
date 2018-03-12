@@ -68,7 +68,7 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             print(error.localizedDescription)
         }
     }
-    
+ 
     @objc func backToBTN(){
         navigationController?.popViewController(animated: false)
         if Model.sharedInstance.sound == true{
