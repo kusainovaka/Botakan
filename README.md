@@ -1,6 +1,5 @@
 # botakan
-Do scrolling
-Do music
-Do constrain
-DO arhitecture
-Do progress Bar
+Do scrolling \n
+Do music \n
+DO arhitecture \n
+

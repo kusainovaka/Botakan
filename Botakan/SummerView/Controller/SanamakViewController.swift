@@ -15,7 +15,7 @@ class SanamakViewController: UIViewController, UICollectionViewDataSource, UICol
     //    var vc = SanamakDetailsVC()
     fileprivate lazy var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
-        view.nameLabel.text = "  Санамақтар"
+        view.nameLabel.text = "Санамақтар"
         return view
     }()
     fileprivate lazy var collectionView: UICollectionView = {

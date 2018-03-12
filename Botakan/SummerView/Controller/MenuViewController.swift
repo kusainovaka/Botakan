@@ -80,14 +80,15 @@ class MenuViewController: UIViewController {
         btn.anderBtn.addTarget(self, action: #selector(goToAnder), for: .touchUpInside)
         btn.zhanyltBtn.addTarget(self, action: #selector(goToZhanylt), for: .touchUpInside)
         btn.sanamakBtn.addTarget(self, action: #selector(goToSanamak), for: .touchUpInside)
-        
         musicBTN.addTarget(self, action: #selector(songStatus), for: .touchUpInside)
+        
+        
         Layouts()
         
         if Model.sharedInstance.sound == true{
-        musicBTN.setImage(UIImage(named:"sound_on.png"),for:.normal)
-        let url = Bundle.main.url(forResource: "MainMusic", withExtension: "mp3")
-        player =  try! AVAudioPlayer(contentsOf: url!)
+            musicBTN.setImage(UIImage(named:"sound_on.png"),for:.normal)
+            let url = Bundle.main.url(forResource: "MainMusic", withExtension: "mp3")
+            player =  try! AVAudioPlayer(contentsOf: url!)
             player.prepareToPlay()
             player.play()
         }else {
@@ -97,7 +98,7 @@ class MenuViewController: UIViewController {
             player.prepareToPlay()
             player.stop()
         }
-     
+        
         
         Timer.scheduledTimer(timeInterval: 5.5, target: self, selector: #selector(hiddenHeadText), userInfo: nil, repeats: true)
     }
@@ -106,25 +107,12 @@ class MenuViewController: UIViewController {
     @objc func songStatus(){
         if Model.sharedInstance.sound == true{
             musicBTN.setImage(UIImage(named:"sound_off.png"),for:.normal)
-                player.stop()
+            player.stop()
             Model.sharedInstance.sound = false
         } else if Model.sharedInstance.sound == false{
             musicBTN.setImage(UIImage(named:"sound_on.png"),for:.normal)
             Model.sharedInstance.sound = true
             player.play()
-        }
-    }
-    
-    func enableBackgroundPlaying(_ enable: Bool) throws {
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            do {
-                try AVAudioSession.sharedInstance().setActive(enable)
-            } catch {
-                throw error
-            }
-        } catch {
-            throw error
         }
     }
     
@@ -139,6 +127,7 @@ class MenuViewController: UIViewController {
     
     @objc func timer1(){
         if progressView.progress.progress  != 1{
+            progressView.backMenuBTN.addTarget(self, action: #selector(closeView), for: .touchUpInside)
             progressView.progress.progress += 2 / 10
         } else {
             timer?.invalidate()
@@ -159,6 +148,7 @@ class MenuViewController: UIViewController {
     
     @objc func timer2(){
         if progressView.progress.progress  != 1{
+            progressView.backMenuBTN.addTarget(self, action: #selector(closeView), for: .touchUpInside)
             progressView.progress.progress += 2 / 10
         } else {
             timer?.invalidate()
@@ -179,6 +169,7 @@ class MenuViewController: UIViewController {
     
     @objc func timer3(){
         if progressView.progress.progress  != 1{
+            progressView.backMenuBTN.addTarget(self, action: #selector(closeView), for: .touchUpInside)
             progressView.progress.progress += 2 / 10
         } else {
             timer?.invalidate()
@@ -199,6 +190,7 @@ class MenuViewController: UIViewController {
     
     @objc func timer4(){
         if progressView.progress.progress  != 1{
+            progressView.backMenuBTN.addTarget(self, action: #selector(closeView), for: .touchUpInside)
             progressView.progress.progress += 2 / 10
         } else {
             timer?.invalidate()
@@ -208,6 +200,10 @@ class MenuViewController: UIViewController {
     }
     @objc func hiddenHeadText(){
         headView.isHidden = true
+    }
+    @objc func closeView(){
+        timer?.invalidate()
+        progressView.removeFromSuperview()
     }
     
     func Layouts(){
@@ -225,13 +221,13 @@ class MenuViewController: UIViewController {
             Left(0),
             Bottom(0)
         ]
-//        musicBTN <- [
-//            Height(50),
-//            Width(50),
-//            Top(40),
-//            Right(20)
-//        ]
-      
+        //        musicBTN <- [
+        //            Height(50),
+        //            Width(50),
+        //            Top(40),
+        //            Right(20)
+        //        ]
+        
         headView <- [
             Height(165),
             Width(165),
@@ -268,7 +264,7 @@ class MenuViewController: UIViewController {
                 Bottom(screenWidth / 6.95)
             ]
             btn <- [
-//                screenHeight / 1.15)
+                //                screenHeight / 1.15)
                 Height(screenHeight / 1.09),
                 Width(screenWidth),
                 Top(screenWidth / 1.13),

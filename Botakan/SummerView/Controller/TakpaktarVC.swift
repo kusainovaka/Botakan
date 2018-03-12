@@ -7,7 +7,7 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     fileprivate lazy  var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
-        view.nameLabel.text = "   Тақпақтар"
+        view.nameLabel.text = "Тақпақтар"
         return view
     }()
     
@@ -99,7 +99,7 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     func Layouyts(){
         collectionView <- [
-            Top(screenWidth / 2.3),
+            Top(screenWidth / 2.1),
             Width(screenWidth),
             Left(0),
             Height(screenHeight / 1.08)

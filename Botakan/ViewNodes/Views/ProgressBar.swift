@@ -51,20 +51,20 @@ class ProgressBar: UIView {
            "  Жапалағым \nсовенок мой","   Айналайын \nлюбовь моя","  Балапаным \nптенчик мой","    Шырағым \nсветик мой","      Сәнім \n  краса моя"]
         let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
         cuteWord.text = array[randomIndex]
-        backMenuBTN.addTarget(self, action: #selector(returnMenu), for: .touchUpInside)
+//        backMenuBTN.addTarget(self, action: #selector(returnMenu), for: .touchUpInside)
         setupViewsPRogress()
         LayoutsPgoress()
     }
     func setupViewsPRogress() {
-        [imageBack,imageSun,cuteName,cuteWord,progress].forEach{ addSubview($0) }
+        [imageBack,imageSun,cuteName,cuteWord,progress,backMenuBTN].forEach{ addSubview($0) }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    @objc func returnMenu(){
-        print("OKAY GET MENU")
-    }
+//    @objc func returnMenu(){
+//        print("OKAY GET MENU")
+//    }
     func LayoutsPgoress(){
         imageBack <- [
         Top(0),
@@ -96,12 +96,13 @@ class ProgressBar: UIView {
             Height(screenWidth / 10.71),
             Width(screenWidth / 2.5)
         ]
-//        backMenuBTN <- [
+        backMenuBTN <- [
+            CenterX(0),
 //            Left(screenWidth / 4.032),
-//            Top(screenWidth / 1.83),
-//            Height(screenWidth / 12.5),
-//            Width(screenWidth / 12.5)
-//        ]
+            Top(screenWidth / 1.83),
+            Height(screenWidth / 12.5),
+            Width(screenWidth / 12.5)
+        ]
     }
 }
 
