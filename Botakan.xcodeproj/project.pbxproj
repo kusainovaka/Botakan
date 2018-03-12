@@ -77,16 +77,27 @@
 		8EDD10E62026E35200DB6267 /* AnserDetailsViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */; };
 		8EDD10E82026EAD100DB6267 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD10E72026EAD000DB6267 /* MusicView.swift */; };
 		8EDD10E92026EBF900DB6267 /* MusicView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD10E72026EAD000DB6267 /* MusicView.swift */; };
-		8EE569F32055AF99002070C7 /* 08_ Dostik any(+).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569E92055AF94002070C7 /* 08_ Dostik any(+).mp3 */; };
-		8EE569F42055AF99002070C7 /* 02_Jas( ).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569EA2055AF95002070C7 /* 02_Jas( ).mp3 */; };
-		8EE569F52055AF99002070C7 /* 06_ As nauriz( ).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569EB2055AF96002070C7 /* 06_ As nauriz( ).mp3 */; };
-		8EE569F62055AF99002070C7 /* 11_Kosctasu ani(+).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569EC2055AF96002070C7 /* 11_Kosctasu ani(+).mp3 */; };
-		8EE569F72055AF99002070C7 /* 07_ Men gariscker bolamin( ).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569ED2055AF97002070C7 /* 07_ Men gariscker bolamin( ).mp3 */; };
-		8EE569F82055AF99002070C7 /* 02_Byzdyn schyrschamyz( ).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569EE2055AF97002070C7 /* 02_Byzdyn schyrschamyz( ).mp3 */; };
-		8EE569F92055AF99002070C7 /* 12_Koktem(+).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569EF2055AF98002070C7 /* 12_Koktem(+).mp3 */; };
-		8EE569FA2055AF99002070C7 /* Beybit bolsyn kashanda (+).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569F02055AF98002070C7 /* Beybit bolsyn kashanda (+).mp3 */; };
-		8EE569FB2055AF99002070C7 /* Mamam guldyn bakbany (+).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569F12055AF98002070C7 /* Mamam guldyn bakbany (+).mp3 */; };
-		8EE569FC2055AF99002070C7 /* 10_Balalardy korgayik( ).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569F22055AF99002070C7 /* 10_Balalardy korgayik( ).mp3 */; };
+		8EE3C5112056D8E7003F277B /* mamam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C5072056D8E4003F277B /* mamam.mp3 */; };
+		8EE3C5122056D8E7003F277B /* koktem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C5082056D8E4003F277B /* koktem.mp3 */; };
+		8EE3C5132056D8E7003F277B /* Beibyt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C5092056D8E4003F277B /* Beibyt.mp3 */; };
+		8EE3C5142056D8E7003F277B /* shyrsha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C50A2056D8E5003F277B /* shyrsha.mp3 */; };
+		8EE3C5152056D8E7003F277B /* Garyshker.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C50B2056D8E5003F277B /* Garyshker.mp3 */; };
+		8EE3C5162056D8E7003F277B /* koshtasu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C50C2056D8E6003F277B /* koshtasu.mp3 */; };
+		8EE3C5172056D8E7003F277B /* balalardy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C50D2056D8E6003F277B /* balalardy.mp3 */; };
+		8EE3C5182056D8E7003F277B /* dostyk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C50E2056D8E6003F277B /* dostyk.mp3 */; };
+		8EE3C5192056D8E7003F277B /* Jas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C50F2056D8E7003F277B /* Jas.mp3 */; };
+		8EE3C51A2056D8E7003F277B /* asNauryz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE3C5102056D8E7003F277B /* asNauryz.mp3 */; };
+		8EE56A082055B32C002070C7 /* 9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569FD2055B326002070C7 /* 9.mp3 */; };
+		8EE56A092055B32C002070C7 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569FE2055B327002070C7 /* 2.mp3 */; };
+		8EE56A0A2055B32C002070C7 /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE569FF2055B328002070C7 /* 3.mp3 */; };
+		8EE56A0B2055B32C002070C7 /* 10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A002055B328002070C7 /* 10.mp3 */; };
+		8EE56A0C2055B32C002070C7 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A012055B329002070C7 /* 1.mp3 */; };
+		8EE56A0D2055B32C002070C7 /* 6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A022055B329002070C7 /* 6.mp3 */; };
+		8EE56A0E2055B32C002070C7 /* 7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A032055B32A002070C7 /* 7.mp3 */; };
+		8EE56A0F2055B32C002070C7 /* 11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A042055B32A002070C7 /* 11.mp3 */; };
+		8EE56A102055B32C002070C7 /* 8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A052055B32A002070C7 /* 8.mp3 */; };
+		8EE56A112055B32C002070C7 /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A062055B32B002070C7 /* 4.mp3 */; };
+		8EE56A122055B32C002070C7 /* 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A072055B32B002070C7 /* 5.mp3 */; };
 		8EF5E7682025B0DE00155124 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7612025B0DD00155124 /* ProgressBar.swift */; };
 		8EF5E7692025B0DE00155124 /* DefaultBGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */; };
 		8EF5E76A2025B0DE00155124 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7632025B0DD00155124 /* BackgroundView.swift */; };
@@ -121,7 +132,7 @@
 		8EF5E7932025B1CD00155124 /* SanamakExtensionV.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E77D2025B11500155124 /* SanamakExtensionV.swift */; };
 		8EF5E7942025B1CD00155124 /* TakpaktarExtensionV.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E77F2025B11500155124 /* TakpaktarExtensionV.swift */; };
 		8EF5E7952025B1CD00155124 /* ZhanyltpashExtensionV.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E77E2025B11500155124 /* ZhanyltpashExtensionV.swift */; };
-		8EF5E7972025B30000155124 /* other-music-loops-08610001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7962025B2FF00155124 /* other-music-loops-08610001.mp3 */; };
+		8EF5E7972025B30000155124 /* MainMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5E7962025B2FF00155124 /* MainMusic.mp3 */; };
 		9D76546255D14CDEE7E5624E /* Pods_Botakan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4FC35A0B099ABA6465B19C /* Pods_Botakan.framework */; };
 /* End PBXBuildFile section */
 
@@ -170,16 +181,27 @@
 		8ECEDFAF2047E12900C22F0A /* SanamakDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanamakDetailsVC.swift; sourceTree = "<group>"; };
 		8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnserDetailsViewController.swift; sourceTree = "<group>"; };
 		8EDD10E72026EAD000DB6267 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
-		8EE569E92055AF94002070C7 /* 08_ Dostik any(+).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "08_ Dostik any(+).mp3"; sourceTree = "<group>"; };
-		8EE569EA2055AF95002070C7 /* 02_Jas( ).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02_Jas( ).mp3"; sourceTree = "<group>"; };
-		8EE569EB2055AF96002070C7 /* 06_ As nauriz( ).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06_ As nauriz( ).mp3"; sourceTree = "<group>"; };
-		8EE569EC2055AF96002070C7 /* 11_Kosctasu ani(+).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "11_Kosctasu ani(+).mp3"; sourceTree = "<group>"; };
-		8EE569ED2055AF97002070C7 /* 07_ Men gariscker bolamin( ).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "07_ Men gariscker bolamin( ).mp3"; sourceTree = "<group>"; };
-		8EE569EE2055AF97002070C7 /* 02_Byzdyn schyrschamyz( ).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02_Byzdyn schyrschamyz( ).mp3"; sourceTree = "<group>"; };
-		8EE569EF2055AF98002070C7 /* 12_Koktem(+).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "12_Koktem(+).mp3"; sourceTree = "<group>"; };
-		8EE569F02055AF98002070C7 /* Beybit bolsyn kashanda (+).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beybit bolsyn kashanda (+).mp3"; sourceTree = "<group>"; };
-		8EE569F12055AF98002070C7 /* Mamam guldyn bakbany (+).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mamam guldyn bakbany (+).mp3"; sourceTree = "<group>"; };
-		8EE569F22055AF99002070C7 /* 10_Balalardy korgayik( ).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "10_Balalardy korgayik( ).mp3"; sourceTree = "<group>"; };
+		8EE3C5072056D8E4003F277B /* mamam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mamam.mp3; sourceTree = "<group>"; };
+		8EE3C5082056D8E4003F277B /* koktem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = koktem.mp3; sourceTree = "<group>"; };
+		8EE3C5092056D8E4003F277B /* Beibyt.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Beibyt.mp3; sourceTree = "<group>"; };
+		8EE3C50A2056D8E5003F277B /* shyrsha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shyrsha.mp3; sourceTree = "<group>"; };
+		8EE3C50B2056D8E5003F277B /* Garyshker.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Garyshker.mp3; sourceTree = "<group>"; };
+		8EE3C50C2056D8E6003F277B /* koshtasu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = koshtasu.mp3; sourceTree = "<group>"; };
+		8EE3C50D2056D8E6003F277B /* balalardy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = balalardy.mp3; sourceTree = "<group>"; };
+		8EE3C50E2056D8E6003F277B /* dostyk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dostyk.mp3; sourceTree = "<group>"; };
+		8EE3C50F2056D8E7003F277B /* Jas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Jas.mp3; sourceTree = "<group>"; };
+		8EE3C5102056D8E7003F277B /* asNauryz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asNauryz.mp3; sourceTree = "<group>"; };
+		8EE569FD2055B326002070C7 /* 9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9.mp3; sourceTree = "<group>"; };
+		8EE569FE2055B327002070C7 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
+		8EE569FF2055B328002070C7 /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
+		8EE56A002055B328002070C7 /* 10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10.mp3; sourceTree = "<group>"; };
+		8EE56A012055B329002070C7 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		8EE56A022055B329002070C7 /* 6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 6.mp3; sourceTree = "<group>"; };
+		8EE56A032055B32A002070C7 /* 7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 7.mp3; sourceTree = "<group>"; };
+		8EE56A042055B32A002070C7 /* 11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 11.mp3; sourceTree = "<group>"; };
+		8EE56A052055B32A002070C7 /* 8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8.mp3; sourceTree = "<group>"; };
+		8EE56A062055B32B002070C7 /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4.mp3; sourceTree = "<group>"; };
+		8EE56A072055B32B002070C7 /* 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5.mp3; sourceTree = "<group>"; };
 		8EF5E7612025B0DD00155124 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBGImage.swift; sourceTree = "<group>"; };
 		8EF5E7632025B0DD00155124 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -197,7 +219,7 @@
 		8EF5E77E2025B11500155124 /* ZhanyltpashExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhanyltpashExtensionV.swift; sourceTree = "<group>"; };
 		8EF5E77F2025B11500155124 /* TakpaktarExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakpaktarExtensionV.swift; sourceTree = "<group>"; };
 		8EF5E7802025B11500155124 /* AnderExtensionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnderExtensionV.swift; sourceTree = "<group>"; };
-		8EF5E7962025B2FF00155124 /* other-music-loops-08610001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "other-music-loops-08610001.mp3"; sourceTree = "<group>"; };
+		8EF5E7962025B2FF00155124 /* MainMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MainMusic.mp3; sourceTree = "<group>"; };
 		DDC95B2DBF50FCAD9CDC1E7F /* Pods-Botakan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Botakan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Botakan/Pods-Botakan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -398,17 +420,28 @@
 		8E6D9BC51FE8EAAA00E0E3DC /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				8EF5E7962025B2FF00155124 /* other-music-loops-08610001.mp3 */,
-				8EE569EE2055AF97002070C7 /* 02_Byzdyn schyrschamyz( ).mp3 */,
-				8EE569EA2055AF95002070C7 /* 02_Jas( ).mp3 */,
-				8EE569EB2055AF96002070C7 /* 06_ As nauriz( ).mp3 */,
-				8EE569ED2055AF97002070C7 /* 07_ Men gariscker bolamin( ).mp3 */,
-				8EE569E92055AF94002070C7 /* 08_ Dostik any(+).mp3 */,
-				8EE569F22055AF99002070C7 /* 10_Balalardy korgayik( ).mp3 */,
-				8EE569EC2055AF96002070C7 /* 11_Kosctasu ani(+).mp3 */,
-				8EE569EF2055AF98002070C7 /* 12_Koktem(+).mp3 */,
-				8EE569F02055AF98002070C7 /* Beybit bolsyn kashanda (+).mp3 */,
-				8EE569F12055AF98002070C7 /* Mamam guldyn bakbany (+).mp3 */,
+				8EF5E7962025B2FF00155124 /* MainMusic.mp3 */,
+				8EE3C5102056D8E7003F277B /* asNauryz.mp3 */,
+				8EE3C50D2056D8E6003F277B /* balalardy.mp3 */,
+				8EE3C5092056D8E4003F277B /* Beibyt.mp3 */,
+				8EE3C50E2056D8E6003F277B /* dostyk.mp3 */,
+				8EE3C50B2056D8E5003F277B /* Garyshker.mp3 */,
+				8EE3C50F2056D8E7003F277B /* Jas.mp3 */,
+				8EE3C5082056D8E4003F277B /* koktem.mp3 */,
+				8EE3C50C2056D8E6003F277B /* koshtasu.mp3 */,
+				8EE3C5072056D8E4003F277B /* mamam.mp3 */,
+				8EE3C50A2056D8E5003F277B /* shyrsha.mp3 */,
+				8EE56A012055B329002070C7 /* 1.mp3 */,
+				8EE569FE2055B327002070C7 /* 2.mp3 */,
+				8EE569FF2055B328002070C7 /* 3.mp3 */,
+				8EE56A062055B32B002070C7 /* 4.mp3 */,
+				8EE56A072055B32B002070C7 /* 5.mp3 */,
+				8EE56A022055B329002070C7 /* 6.mp3 */,
+				8EE56A032055B32A002070C7 /* 7.mp3 */,
+				8EE56A052055B32A002070C7 /* 8.mp3 */,
+				8EE569FD2055B326002070C7 /* 9.mp3 */,
+				8EE56A002055B328002070C7 /* 10.mp3 */,
+				8EE56A042055B32A002070C7 /* 11.mp3 */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -475,74 +508,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EE569F32055AF99002070C7 /* 08_ Dostik any(+).mp3 in Resources */,
 				8ECEDFB12047E15A00C22F0A /* SanamakDetailsVC.swift in Resources */,
 				8EDD10E92026EBF900DB6267 /* MusicView.swift in Resources */,
 				8EDD10E62026E35200DB6267 /* AnserDetailsViewController.swift in Resources */,
+				8EE56A0B2055B32C002070C7 /* 10.mp3 in Resources */,
 				8E37DFE52026531B00E19382 /* SanamakViewController.swift in Resources */,
+				8EE56A0E2055B32C002070C7 /* 7.mp3 in Resources */,
 				8E37DFE22026499F00E19382 /* ZhanyltViewController.swift in Resources */,
 				8E37DFDF2025D82400E19382 /* CenterImageCell.swift in Resources */,
 				8EF5E78B2025B1CD00155124 /* AnderDetails.swift in Resources */,
 				8EF5E78C2025B1CD00155124 /* anderNodes.swift in Resources */,
 				8EF5E78D2025B1CD00155124 /* menuNodes.swift in Resources */,
 				8EF5E78E2025B1CD00155124 /* SanamakDetails.swift in Resources */,
+				8EE56A0C2055B32C002070C7 /* 1.mp3 in Resources */,
+				8EE3C5142056D8E7003F277B /* shyrsha.mp3 in Resources */,
 				8EF5E78F2025B1CD00155124 /* TakpakDeatils.swift in Resources */,
 				8EF5E7902025B1CD00155124 /* takpakView.swift in Resources */,
 				8EF5E7912025B1CD00155124 /* ZhanyltDetails.swift in Resources */,
 				8EF5E7922025B1CD00155124 /* AnderExtensionV.swift in Resources */,
 				8EF5E7932025B1CD00155124 /* SanamakExtensionV.swift in Resources */,
-				8EE569F42055AF99002070C7 /* 02_Jas( ).mp3 in Resources */,
-				8EE569F52055AF99002070C7 /* 06_ As nauriz( ).mp3 in Resources */,
 				8EF5E7942025B1CD00155124 /* TakpaktarExtensionV.swift in Resources */,
+				8EE3C5122056D8E7003F277B /* koktem.mp3 in Resources */,
+				8EE3C5152056D8E7003F277B /* Garyshker.mp3 in Resources */,
 				8EF5E7952025B1CD00155124 /* ZhanyltpashExtensionV.swift in Resources */,
 				8EF5E7852025B17E00155124 /* BackgroundView.swift in Resources */,
 				8EF5E7862025B17E00155124 /* CLImage.swift in Resources */,
 				8EF5E7872025B17E00155124 /* CollectionViewDetails.swift in Resources */,
 				8EF5E7882025B17E00155124 /* DefaultBGImage.swift in Resources */,
 				8EF5E7892025B17E00155124 /* LabelView.swift in Resources */,
-				8EF5E7972025B30000155124 /* other-music-loops-08610001.mp3 in Resources */,
+				8EE56A092055B32C002070C7 /* 2.mp3 in Resources */,
+				8EF5E7972025B30000155124 /* MainMusic.mp3 in Resources */,
+				8EE3C5172056D8E7003F277B /* balalardy.mp3 in Resources */,
 				8EF5E78A2025B17E00155124 /* ProgressBar.swift in Resources */,
 				8EBAEB1820224B5B008DB211 /* AnderVC.swift in Resources */,
 				8E9C29C02020F00D00BB462B /* ImageCellCV.swift in Resources */,
+				8EE56A0A2055B32C002070C7 /* 3.mp3 in Resources */,
 				8E9C29BD2020EDA300BB462B /* TakpakImageCV.swift in Resources */,
 				8E1A36C2201F541600E089F5 /* MenuButtons.swift in Resources */,
 				8E1A36BF201F278100E089F5 /* DetailLabels.swift in Resources */,
+				8EE56A0F2055B32C002070C7 /* 11.mp3 in Resources */,
 				8E1A36BC201F221300E089F5 /* FeedBackSons.swift in Resources */,
 				8E099EE4201A62FC00151DE8 /* FeedBackView.swift in Resources */,
 				8EA0E10B20188DF400C7DE57 /* MusicBtnMenu.swift in Resources */,
-				8EE569FC2055AF99002070C7 /* 10_Balalardy korgayik( ).mp3 in Resources */,
+				8EE56A0D2055B32C002070C7 /* 6.mp3 in Resources */,
 				8E87FE7E20173A9C00FE7560 /* HeadTextView.swift in Resources */,
-				8EE569F72055AF99002070C7 /* 07_ Men gariscker bolamin( ).mp3 in Resources */,
 				8E87FE7F20173A9C00FE7560 /* BallonsView.swift in Resources */,
 				8E87FE7A2017208600FE7560 /* TakpaktarVC.swift in Resources */,
-				8EE569F92055AF99002070C7 /* 12_Koktem(+).mp3 in Resources */,
 				8E87FE7B2017208600FE7560 /* TakpakDetailsVC.swift in Resources */,
 				8E87FE7C2017208600FE7560 /* TakpakCVext.swift in Resources */,
-				8EE569F82055AF99002070C7 /* 02_Byzdyn schyrschamyz( ).mp3 in Resources */,
+				8EE3C5182056D8E7003F277B /* dostyk.mp3 in Resources */,
+				8EE56A102055B32C002070C7 /* 8.mp3 in Resources */,
+				8EE3C5192056D8E7003F277B /* Jas.mp3 in Resources */,
+				8EE3C5162056D8E7003F277B /* koshtasu.mp3 in Resources */,
 				8E87FE7D2017208600FE7560 /* Info.plist in Resources */,
-				8EE569FA2055AF99002070C7 /* Beybit bolsyn kashanda (+).mp3 in Resources */,
 				8E87FE772017206800FE7560 /* MenuViewController.swift in Resources */,
+				8EE3C5112056D8E7003F277B /* mamam.mp3 in Resources */,
+				8EE3C51A2056D8E7003F277B /* asNauryz.mp3 in Resources */,
 				8E87FE762017205200FE7560 /* AppDelegate.swift in Resources */,
-				8EE569F62055AF99002070C7 /* 11_Kosctasu ani(+).mp3 in Resources */,
+				8EE56A122055B32C002070C7 /* 5.mp3 in Resources */,
 				8E87FE732017014900FE7560 /* Helpers.swift in Resources */,
 				8E87FE742017014900FE7560 /* ParsingJSON.swift in Resources */,
-				8EE569FB2055AF99002070C7 /* Mamam guldyn bakbany (+).mp3 in Resources */,
 				8E87FE752017014900FE7560 /* screenSize.swift in Resources */,
 				8E87FE6A2017011C00FE7560 /* AnderScene.swift in Resources */,
 				8E87FE6B2017011C00FE7560 /* GameScene.swift in Resources */,
 				8E87FE6C2017011C00FE7560 /* SanamakScene.swift in Resources */,
 				8E87FE6D2017011C00FE7560 /* ZhanultpashScene.swift in Resources */,
 				8E87FE6E2017011C00FE7560 /* GameViewController.swift in Resources */,
+				8EE3C5132056D8E7003F277B /* Beibyt.mp3 in Resources */,
 				8E6D9BDE1FE8EB4A00E0E3DC /* HelveticaMedCd.ttf in Resources */,
 				8E6D9BE21FE8EBDF00E0E3DC /* Assets.xcassets in Resources */,
 				8E6D9B781FE8E5C700E0E3DC /* Main.storyboard in Resources */,
 				8E6D9B931FE8E85800E0E3DC /* Sanamak.json in Resources */,
 				8E6D9B7A1FE8E5C700E0E3DC /* Assets.xcassets in Resources */,
 				8E6D9B951FE8E85800E0E3DC /* ZhanylData.json in Resources */,
+				8EE56A112055B32C002070C7 /* 4.mp3 in Resources */,
 				8E6D9B941FE8E85800E0E3DC /* AllData.json in Resources */,
 				8E6D9B991FE8E8D800E0E3DC /* Default-568h@2x.png in Resources */,
 				8E6D9B901FE8E85800E0E3DC /* AnderData.json in Resources */,
 				8E6D9B7D1FE8E5C700E0E3DC /* LaunchScreen.storyboard in Resources */,
+				8EE56A082055B32C002070C7 /* 9.mp3 in Resources */,
 				8E6D9BE11FE8EBDF00E0E3DC /* MyParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

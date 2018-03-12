@@ -39,6 +39,9 @@ class ZhanyltViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     @objc func backToBTN(){
         navigationController?.popViewController(animated: false)
+        if Model.sharedInstance.sound == true{
+            player.play()
+        }
     }
     
     func getFromJSON(){

@@ -1,9 +1,14 @@
 import UIKit
 import EasyPeasy
+import AVFoundation
 
+var player = AVAudioPlayer()
 class MenuViewController: UIViewController {
     
     var timer : Timer?
+    var pos = true
+    
+    
     fileprivate lazy  var scrollView: UIScrollView = {
         let scrollView  = UIScrollView()
         scrollView.contentSize = CGSize(width: 0, height: screenHeight * 1.95)
@@ -65,7 +70,7 @@ class MenuViewController: UIViewController {
         backgraundImage.addSubview(headView)
         backgraundImage.addSubview(ballonsV)
         scrollView.addSubview(musicBTN)
-        print(screenHeight)
+        
         
         scrollView.addSubview(btn)
         scrollView.addSubview(feedBackV)
@@ -78,19 +83,54 @@ class MenuViewController: UIViewController {
         
         musicBTN.addTarget(self, action: #selector(songStatus), for: .touchUpInside)
         Layouts()
+        
+        if Model.sharedInstance.sound == true{
+        musicBTN.setImage(UIImage(named:"sound_on.png"),for:.normal)
+        let url = Bundle.main.url(forResource: "MainMusic", withExtension: "mp3")
+        player =  try! AVAudioPlayer(contentsOf: url!)
+            player.prepareToPlay()
+            player.play()
+        }else {
+            musicBTN.setImage(UIImage(named:"sound_off.png"),for:.normal)
+            let url = Bundle.main.url(forResource: "MainMusic", withExtension: "mp3")
+            player =  try! AVAudioPlayer(contentsOf: url!)
+            player.prepareToPlay()
+            player.stop()
+        }
+     
+        
         Timer.scheduledTimer(timeInterval: 5.5, target: self, selector: #selector(hiddenHeadText), userInfo: nil, repeats: true)
     }
     
+    
     @objc func songStatus(){
         if Model.sharedInstance.sound == true{
-            musicBTN.setImage(UIImage(named:"sound_on.png"),for:.normal)
-            Model.sharedInstance.sound = false
-        }else if Model.sharedInstance.sound == false{
             musicBTN.setImage(UIImage(named:"sound_off.png"),for:.normal)
+                player.stop()
+            Model.sharedInstance.sound = false
+        } else if Model.sharedInstance.sound == false{
+            musicBTN.setImage(UIImage(named:"sound_on.png"),for:.normal)
             Model.sharedInstance.sound = true
+            player.play()
         }
     }
+    
+    func enableBackgroundPlaying(_ enable: Bool) throws {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            do {
+                try AVAudioSession.sharedInstance().setActive(enable)
+            } catch {
+                throw error
+            }
+        } catch {
+            throw error
+        }
+    }
+    
     @objc func goToTakpak(){
+        if Model.sharedInstance.sound == true{
+            player.stop()}
         view.addSubview(progressView)
         progressLayout()
         timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer1), userInfo: nil, repeats: true)
@@ -109,6 +149,8 @@ class MenuViewController: UIViewController {
     }
     
     @objc func goToAnder(){
+        if Model.sharedInstance.sound == true{
+            player.stop()}
         view.addSubview(progressView)
         progressLayout()
         timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer2), userInfo: nil, repeats: true)
@@ -127,6 +169,8 @@ class MenuViewController: UIViewController {
     }
     
     @objc func goToZhanylt(){
+        if Model.sharedInstance.sound == true{
+            player.stop()}
         view.addSubview(progressView)
         progressLayout()
         timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer3), userInfo: nil, repeats: true)
@@ -145,6 +189,8 @@ class MenuViewController: UIViewController {
     }
     
     @objc func goToSanamak(){
+        if Model.sharedInstance.sound == true{
+            player.stop()}
         view.addSubview(progressView)
         progressLayout()
         timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(timer4), userInfo: nil, repeats: true)

@@ -13,10 +13,11 @@ import AVFoundation
 class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout  {
     
     var anderParse = [AnderJSON]()
-
+    
+    
     fileprivate lazy var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
-        view.nameLabel.text = "   Әндер"
+        view.nameLabel.text = "Әндер"
         return view
     }()
     fileprivate lazy var collectionView: UICollectionView = {
@@ -63,6 +64,9 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     @objc func goToMenu(){
         navigationController?.popViewController(animated: false)
+        if Model.sharedInstance.sound == true{
+            player.play()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -77,16 +81,41 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        about(place: anderParse[indexPath.row])
+                about(place: anderParse[indexPath.row])
+//        let vc = AnserDetailsViewController()
+//        vc.anderParse = place
+//        navigationController?.pushViewController(vc, animated: false)
+//        let name = anderParse[indexPath.row].name
+//        let text = anderParse[indexPath.row].text
+//        let photo = anderParse[indexPath.row].photo
+//        let anderM = anderParse[indexPath.row].music
+//        let authorAN = anderParse[indexPath.row].author
+//        let anNameq = anderParse[indexPath.row].Anname
+//
+//        do{
+//            let url = Bundle.main.url(forResource: "\(anderM)", withExtension: "mp3")
+//            AudioPlayer = try AVAudioPlayer(contentsOf: url!)
+//            AudioPlayer.prepareToPlay()
+//        }catch let error as NSError{
+//            print(error.debugDescription)
+//        }
+//
+//        vc.ander.text = text
+//        vc.nameAnder.text = name
+//        vc.musicVC.imageAnder.image = UIImage(named: photo)
+//        vc.musicVC.nameAn.text = anNameq
+//        vc.musicVC.nameArtist.text = authorAN
+        
+    }
+    
+    func about(place: AnderJSON){
         let vc = AnserDetailsViewController()
-        //        vc.anderParse = place
+        vc.anderParse = place
+//        navigationController?.pushViewController(vc, animated: false)
+//        let vc = AnserDetailsViewController()
+//        vc.anderParse = place
         navigationController?.pushViewController(vc, animated: false)
-        let name = anderParse[indexPath.row].name
-        let text = anderParse[indexPath.row].text
-        let photo = anderParse[indexPath.row].photo
-        let anderM = anderParse[indexPath.row].music
-        let authorAN = anderParse[indexPath.row].author
-        let anNameq = anderParse[indexPath.row].Anname
+        
         
 //        do{
 //            let url = Bundle.main.url(forResource: "\(anderM)", withExtension: "mp3")
@@ -95,25 +124,13 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
 //        }catch let error as NSError{
 //            print(error.debugDescription)
 //        }
-    
-        vc.ander.text = text
-        vc.nameAnder.text = name
-        vc.musicVC.imageAnder.image = UIImage(named: photo)
-        vc.musicVC.nameAn.text = anNameq
-        vc.musicVC.nameArtist.text = authorAN
-//        anderkDetail.anderDeatilView()
-//        nameAnder.text = name
-//        ander.text = text
-//        imageAnder.image = UIImage(named: photo)
-//        nameAn.text = anNameq
-//        nameArtist.text = authorAN
         
-    }
-    
-    func about(place: ParsingJSON){
-        let vc = AnserDetailsViewController()
-//        vc.anderParse = place
-        navigationController?.pushViewController(vc, animated: false)
+//        vc.ander.text = text
+//        vc.nameAnder.text = name
+//        vc.musicVC.imageAnder.image = UIImage(named: photo)
+//        vc.musicVC.nameAn.text = anNameq
+//        vc.musicVC.nameArtist.text = authorAN
+        
     }
     
     func layouyts(){

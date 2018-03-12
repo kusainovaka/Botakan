@@ -49,26 +49,26 @@ class MusicView: UIView {
         return takpakLB
     }()
     //slider
-    var sliderMusic:UISlider = {
-        let slider = UISlider(frame: CGRect(x: screenWidth / 2.757, y: screenWidth / 6.578, width: screenWidth / 2.38, height: screenWidth / 46.875))
-        slider.isContinuous = true
+    var sliderMusic: UIProgressView = {
+        let slider = UIProgressView()
+        slider.frame = CGRect(x: screenWidth / 2.84, y: screenWidth / 6, width: screenWidth / 2.38, height: screenWidth / 12.5)
+        slider.transform = CGAffineTransform(scaleX: 1, y: 3)
+
         slider.layer.cornerRadius = 5
-        slider.layer.borderWidth = 1
         slider.layer.borderColor = UIColor.white.cgColor
         slider.layer.backgroundColor = UIColor.init(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0).cgColor
         slider.backgroundColor = .sliderMusic
         slider.tintColor = .sliderMusic
-        slider.setThumbImage(UIImage(named: "Oval2")!, for: .normal)
         return slider
     }()
     let durationMusic : UILabel = {
-        let takpakLB = UILabel(frame: CGRect(x: screenWidth / 3.588, y: screenWidth / 6.94, width: screenWidth / 14.42, height: screenWidth / 31.25))
+        let takpakLB = UILabel(frame: CGRect(x: screenWidth / 3.588, y: screenWidth / 6.55, width: screenWidth / 14.42, height: screenWidth / 31.25))
         takpakLB.textColor = .BlueColor
         takpakLB.font = UIFont(name: "HelveticaNeue-Medium", size: screenWidth / 37.5)
         return takpakLB
     }()
     let allDurationMusic: UILabel = {
-        let takpakLB = UILabel(frame: CGRect(x: screenWidth / 1.256, y: screenWidth / 6.94, width: screenWidth / 14.42, height: screenWidth / 31.25))
+        let takpakLB = UILabel(frame: CGRect(x: screenWidth / 1.27, y: screenWidth / 6.55, width: screenWidth / 14.42, height: screenWidth / 31.25))
         takpakLB.textColor = .BlueColor
         takpakLB.font = UIFont(name: "HelveticaNeue-Medium", size: screenWidth / 37.5)
         return takpakLB
@@ -81,7 +81,7 @@ class MusicView: UIView {
     }
     
     func setupViewsLabel() {
-        [imageAnder,leftMusic,rightMusic,btnMusic,nameAn,nameArtist,sliderMusic,durationMusic,allDurationMusic].forEach{ addSubview($0) }
+[imageAnder,leftMusic,rightMusic,btnMusic,nameAn,nameArtist,sliderMusic,durationMusic,allDurationMusic].forEach{ addSubview($0) }
     }
     
     required init?(coder aDecoder: NSCoder) {

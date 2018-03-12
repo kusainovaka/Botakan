@@ -24,7 +24,7 @@ var sanamakN:SKSpriteNode!
 let swipeToCvTakpak = UISwipeGestureRecognizer()
 var backgroundMusic = SKAudioNode()
 
-var player = AVAudioPlayer()
+//var player = AVAudioPlayer()
 var toggleState = 1
 
 // MARK: - takpakView

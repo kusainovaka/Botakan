@@ -71,6 +71,9 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     @objc func backToBTN(){
         navigationController?.popViewController(animated: false)
+        if Model.sharedInstance.sound == true{
+            player.play()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

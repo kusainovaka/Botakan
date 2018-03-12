@@ -13,7 +13,7 @@ import AVFoundation
 
 class AnserDetailsViewController: UIViewController {
 
-    var anderParse: ParsingJSON?
+    var anderParse : AnderJSON?
     var musicState = 1
 
     var detailsTakpakBG: BackgroundView = {
@@ -63,7 +63,15 @@ class AnserDetailsViewController: UIViewController {
         takpakLB.font = UIFont(name: "Noteworthy-Light", size: screenWidth / 18.75)
         return takpakLB
     }()
-
+//smt
+    var audioPlayer = AVAudioPlayer()
+    var allDurM = Float()
+    var nowDurM = Float()
+    var a = String()
+    var b = String()
+  
+    var time = TimeInterval()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(detailsTakpakBG)
@@ -74,21 +82,67 @@ class AnserDetailsViewController: UIViewController {
         detailsTakpakBG.backBTN.addTarget(self, action: #selector(backToCV), for: .touchUpInside)
         setUpLayout()
         musicConfig()
+        ander.text = anderParse?.text
+        nameAnder.text = anderParse?.name
+        musicVC.imageAnder.image = UIImage(named: (anderParse?.photo)!)
+        musicVC.nameAn.text = anderParse?.Anname
+        musicVC.nameArtist.text = anderParse?.author
+       
+        
+//        let path = Bundle.main.path(forResource: "\(anderParse?.music)", ofType: "mp3")
+//        if let path = path {
+//            let mp3URL = NSURL.fileURL(withPath: path)
         do{
-            let url = Bundle.main.url(forResource: "", withExtension: "mp3")
-            AudioPlayer = try AVAudioPlayer(contentsOf: url!)
-            AudioPlayer.prepareToPlay()
-        }catch let error as NSError{
-            print(error.debugDescription)
+//            audioPlayer = try AVAudioPlayer(contentsOf: mp3URL)
+//            audioPlayer.play()
+            let url = Bundle.main.url(forResource: "\(String(describing: anderParse!.music))", withExtension: "mp3")
+            audioPlayer = try AVAudioPlayer(contentsOf: url!)
+            audioPlayer.prepareToPlay()
+            Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+            musicVC.sliderMusic.setProgress(Float(audioPlayer.currentTime / audioPlayer.duration), animated: false)
+
+        }catch let error as NSError {
+            print(error.localizedDescription)
         }
-        //misocSlider
-        musicVC.sliderMusic.maximumValue = Float(AudioPlayer.duration)
-        musicVC.sliderMusic.addTarget(self, action: #selector(scrollMusic), for: .valueChanged)
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
+//        }
+   
+        
+        let allT = audioPlayer.duration
+//        let minutes = Float(allT / 60)
+//        let seconds = Float(allT.truncatingRemainder(dividingBy: 60))
+//        NSString(format:"%02d:%02d", minutes, seconds) as String
+//        nowDurM = Float((allT.truncatingRemainder(dividingBy: 3600)) / 60)
+//        b = (String(format: "%.2f", nowDurM))
+//        let minutes = allT / 60.truncatingRemainder(dividingBy: 60)
+//        let seconds = allT.truncatingRemainder(dividingBy: 60)
+//        b = (String(format: "%0.2d:%0.2d", minutes,seconds))
+        
+//        let seconds = 131.531   // 131.531
+        let time = allT.minuteSecondMS  //  "2:11.531"
+        let millisecond = allT.millisecond    // 531
+        
+//        let ms = 1111
+//        let sec = ms.msToSeconds.minuteSecondMS
+        b = (String(time))
+        musicVC.allDurationMusic.text = b
+        musicVC.durationMusic.text = "0.00"
+     
+        
     }
-    
+   
     @objc func backToCV(){
         navigationController?.popViewController(animated: false)
+    }
+    
+    @objc func updateProgress(){
+        
+        if audioPlayer.isPlaying == true{
+            musicVC.sliderMusic.setProgress(Float(audioPlayer.currentTime / audioPlayer.duration), animated: true)
+                    time = audioPlayer.currentTime
+                    allDurM = Float(time / 60)
+                    b = (String(format: "%.2f", allDurM))
+                    musicVC.durationMusic.text = b
+        }
     }
     
     func musicConfig(){
@@ -101,11 +155,11 @@ class AnserDetailsViewController: UIViewController {
     @objc func pressMussic(){
         if musicState == 1 {
             musicVC.btnMusic.setImage(UIImage(named:"pause.png"),for:.normal)
-//            AudioPlayer.play()
+            audioPlayer.play()
             musicState = 2
         } else {
             musicVC.btnMusic.setImage(UIImage(named:"play.png"),for:.normal)
-//            AudioPlayer.pause()
+            audioPlayer.pause()
             musicState = 1
         }
     }
@@ -123,9 +177,6 @@ class AnserDetailsViewController: UIViewController {
         AudioPlayer.play()
     }
     
-    @objc func updateSlider(){
-        sliderMusic.value = Float(AudioPlayer.currentTime)
-    }
     func setUpLayout(){
         detailsTakpakBG <- [
             Top(0),
@@ -145,5 +196,27 @@ class AnserDetailsViewController: UIViewController {
             Width(screenWidth / 1.5),
             Height(screenWidth / 11.72)
         ]
+    }
+}
+
+
+extension TimeInterval {
+    var minuteSecondMS: String {
+        return String(format:"%d:%02d", minute, second, millisecond)
+    }
+    var minute: Int {
+        return Int((self/60).truncatingRemainder(dividingBy: 60))
+    }
+    var second: Int {
+        return Int(truncatingRemainder(dividingBy: 60))
+    }
+    var millisecond: Int {
+        return Int((self*1000).truncatingRemainder(dividingBy: 1000))
+    }
+}
+
+extension Int {
+    var msToSeconds: Double {
+        return Double(self) / 1000
     }
 }
