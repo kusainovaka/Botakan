@@ -47,7 +47,6 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
                 let jsonData = try
                     JSONDecoder().decode([ParsingJSON].self, from: url)
                 tempParse = jsonData
-                print(tempParse[4])
             } else { print("Error") }
         }
         catch {
@@ -74,7 +73,6 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
         let curr = indexPath.row
         details(data: curr)
     }

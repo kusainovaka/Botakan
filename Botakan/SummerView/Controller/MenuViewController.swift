@@ -61,7 +61,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        view.backgroundColor = UIColor.init(patternImage: UIImage(named: "bg_blueGreen.png")!)
+        view.backgroundColor = UIColor.init(patternImage: UIImage(named: "bgGB.png")!)
         view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         scrollView.frame = view.frame
         view.addSubview(scrollView)

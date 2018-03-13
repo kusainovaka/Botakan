@@ -9,10 +9,11 @@
 import UIKit
 import EasyPeasy
 
+var sanamakParse = [ParsingJSON]()
+
 class SanamakViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
     
-    var sanamakParse = [ParsingJSON]()
-    //    var vc = SanamakDetailsVC()
+    
     fileprivate lazy var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
         view.nameLabel.text = "Санамақтар"
@@ -58,7 +59,7 @@ class SanamakViewController: UIViewController, UICollectionViewDataSource, UICol
                 let url = try Data(contentsOf: path)
                 let jsonData = try
                     JSONDecoder().decode([ParsingJSON].self, from: url)
-                self.sanamakParse = jsonData
+                    sanamakParse = jsonData
             } else { print("Error") }
         }
         catch {
@@ -77,27 +78,16 @@ class SanamakViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        about(place: sanamakParse[indexPath.row])
-        //        tempSMT(place: sanamakParse[indexPath.row - 1])
+        let curr = indexPath.row
+        about(data: curr)
     }
     
-    func about(place: ParsingJSON){
+    func about(data: Int){
         let vc = SanamakDetailsVC()
-        vc.sanamakJS = place
-        navigationController?.pushViewController(vc, animated: false)
+        vc.sanamakData = data
+       navigationController?.pushViewController(vc, animated: false)
     }
-    
-    @objc func temp1(sender: UIButton){
-        print("TempBTN1")
-        //        vc.tempBTN2.setImage(UIImage(named:"3s.sng"),for:.normal)
-        
-    }
-    func tempSMT(place: ParsingJSON){
-        //        vc.tempBTN1.addTarget(self, action: #selector(temp1), for: .touchUpInside)
-        //        vc.sanamakJS = place
-        
-        print(place)
-    }
+   
     
     
     func layouyts(){

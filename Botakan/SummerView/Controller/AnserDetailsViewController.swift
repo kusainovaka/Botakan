@@ -14,7 +14,6 @@ import AVFoundation
 class AnserDetailsViewController: UIViewController {
 
     var trackId: Int = 0
-    var anderParse : AnderJSON?
     var musicState = 1
 
     var detailsTakpakBG: BackgroundView = {
@@ -83,20 +82,15 @@ class AnserDetailsViewController: UIViewController {
         detailsTakpakBG.backBTN.addTarget(self, action: #selector(backToCV), for: .touchUpInside)
         setUpLayout()
         musicConfig()
-        ander.text = anderParse?.text
-        nameAnder.text = anderParse?.name
-        musicVC.imageAnder.image = UIImage(named: (anderParse?.photo)!)
-        musicVC.nameAn.text = anderParse?.Anname
-        musicVC.nameArtist.text = anderParse?.author
+        ander.text = anderParse[trackId].text
+        nameAnder.text = anderParse[trackId].name
+        musicVC.imageAnder.image = UIImage(named: ("\(anderParse[trackId].photo)"))
+        musicVC.nameAn.text = anderParse[trackId].Anname
+        musicVC.nameArtist.text = anderParse[trackId].author
        
         
-//        let path = Bundle.main.path(forResource: "\(anderParse?.music)", ofType: "mp3")
-//        if let path = path {
-//            let mp3URL = NSURL.fileURL(withPath: path)
         do{
-//            audioPlayer = try AVAudioPlayer(contentsOf: mp3URL)
-//            audioPlayer.play()
-            let url = Bundle.main.url(forResource: "\(String(describing: anderParse!.music))", withExtension: "mp3")
+            let url = Bundle.main.url(forResource: "\(String(describing: anderParse[trackId].music))", withExtension: "mp3")
             audioPlayer = try AVAudioPlayer(contentsOf: url!)
             audioPlayer.prepareToPlay()
             Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
@@ -105,25 +99,16 @@ class AnserDetailsViewController: UIViewController {
         }catch let error as NSError {
             print(error.localizedDescription)
         }
-//        }
    
         
         let allT = audioPlayer.duration
-//        let minutes = Float(allT / 60)
-//        let seconds = Float(allT.truncatingRemainder(dividingBy: 60))
-//        NSString(format:"%02d:%02d", minutes, seconds) as String
-//        nowDurM = Float((allT.truncatingRemainder(dividingBy: 3600)) / 60)
-//        b = (String(format: "%.2f", nowDurM))
-//        let minutes = allT / 60.truncatingRemainder(dividingBy: 60)
-//        let seconds = allT.truncatingRemainder(dividingBy: 60)
-//        b = (String(format: "%0.2d:%0.2d", minutes,seconds))
+        
         
 //        let seconds = 131.531   // 131.531
         let time = allT.minuteSecondMS  //  "2:11.531"
         let millisecond = allT.millisecond    // 531
         
-//        let ms = 1111
-//        let sec = ms.msToSeconds.minuteSecondMS
+        
         b = (String(time))
         musicVC.allDurationMusic.text = b
         musicVC.durationMusic.text = "0.00"
@@ -172,10 +157,50 @@ class AnserDetailsViewController: UIViewController {
         }
     }
     @objc func leftBTN(){
+        if trackId != 0 || trackId > 0 {
+            trackId -= 1
+            nameAnder.text = anderParse[trackId].name
+            ander.text = anderParse[trackId].text
+            musicVC.imageAnder.image = UIImage(named: ("\(anderParse[trackId].photo)"))
+            musicVC.nameAn.text = anderParse[trackId].Anname
+            musicVC.nameArtist.text = anderParse[trackId].author
+           
+            do{
+                let url = Bundle.main.url(forResource: "\(String(describing: anderParse[trackId].music))", withExtension: "mp3")
+                audioPlayer = try AVAudioPlayer(contentsOf: url!)
+                audioPlayer.prepareToPlay()
+                Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+                musicVC.sliderMusic.setProgress(Float(audioPlayer.currentTime / audioPlayer.duration), animated: false)
+                
+            }catch let error as NSError {
+                print(error.localizedDescription)
+            }
+            musicVC.btnMusic.setImage(UIImage(named:"play.png"),for:.normal)
+        }
         
     }
     @objc func rightBTN(){
-        
+        if trackId == 0 || trackId < 21 {
+            trackId += 1
+            nameAnder.text = anderParse[trackId].name
+            ander.text = anderParse[trackId].text
+            musicVC.imageAnder.image = UIImage(named: ("\(anderParse[trackId].photo)"))
+            musicVC.nameAn.text = anderParse[trackId].Anname
+            musicVC.nameArtist.text = anderParse[trackId].author
+           
+            do{
+                let url = Bundle.main.url(forResource: "\(String(describing: anderParse[trackId].music))", withExtension: "mp3")
+                audioPlayer = try AVAudioPlayer(contentsOf: url!)
+                audioPlayer.prepareToPlay()
+                Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+                musicVC.sliderMusic.setProgress(Float(audioPlayer.currentTime / audioPlayer.duration), animated: false)
+                
+            }catch let error as NSError {
+                print(error.localizedDescription)
+            }
+           musicVC.btnMusic.setImage(UIImage(named:"play.png"),for:.normal)
+            musicState == 1
+        }
     }
     @objc func scrollMusic(){
         AudioPlayer.stop()

@@ -25,13 +25,13 @@ class TakpakDetailsVC: UIViewController{
         field.backgroundColor = .white
         return field
     }()
-    let leftBTN: UIButton = {
+    fileprivate lazy var leftBTN: UIButton = {
         let btn = UIButton()
         btn.contentMode = .scaleAspectFill
         btn.clipsToBounds = true
         return btn
     }()
-    let rightBTN: UIButton = {
+    fileprivate lazy var rightBTN: UIButton = {
         let btn = UIButton()
         btn.contentMode = .scaleAspectFill
         btn.clipsToBounds = true

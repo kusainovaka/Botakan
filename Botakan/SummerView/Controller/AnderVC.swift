@@ -10,9 +10,11 @@ import UIKit
 import EasyPeasy
 import AVFoundation
 
+ var anderParse = [AnderJSON]()
+
 class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout  {
     
-    var anderParse = [AnderJSON]()
+   
     
     
     fileprivate lazy var detailLabel: DetailLabels = {
@@ -54,7 +56,7 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
                 let url = try Data(contentsOf: path)
                 let jsonData = try
                     JSONDecoder().decode([AnderJSON].self, from: url)
-                self.anderParse = jsonData
+                anderParse = jsonData
             } else { print("Error") }
         }
         catch {
@@ -81,13 +83,13 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        about(place: anderParse[indexPath.row])
+        detail(data: indexPath.row)
     
     }
     
-    func about(place: AnderJSON){
+    func detail(data: Int){
         let vc = AnserDetailsViewController()
-        vc.anderParse = place
+        vc.trackId = data
         navigationController?.pushViewController(vc, animated: false)
     }
     

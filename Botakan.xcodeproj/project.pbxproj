@@ -27,7 +27,6 @@
 		8E6D9B731FE8E5C700E0E3DC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B721FE8E5C700E0E3DC /* GameScene.swift */; };
 		8E6D9B751FE8E5C700E0E3DC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B741FE8E5C700E0E3DC /* GameViewController.swift */; };
 		8E6D9B781FE8E5C700E0E3DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B761FE8E5C700E0E3DC /* Main.storyboard */; };
-		8E6D9B7A1FE8E5C700E0E3DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B791FE8E5C700E0E3DC /* Assets.xcassets */; };
 		8E6D9B7D1FE8E5C700E0E3DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B7B1FE8E5C700E0E3DC /* LaunchScreen.storyboard */; };
 		8E6D9B901FE8E85800E0E3DC /* AnderData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B891FE8E85700E0E3DC /* AnderData.json */; };
 		8E6D9B911FE8E85800E0E3DC /* ParsingJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9B8A1FE8E85700E0E3DC /* ParsingJSON.swift */; };
@@ -39,7 +38,6 @@
 		8E6D9B991FE8E8D800E0E3DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B981FE8E8D800E0E3DC /* Default-568h@2x.png */; };
 		8E6D9BDE1FE8EB4A00E0E3DC /* HelveticaMedCd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B971FE8E86D00E0E3DC /* HelveticaMedCd.ttf */; };
 		8E6D9BE11FE8EBDF00E0E3DC /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9BDF1FE8EBDF00E0E3DC /* MyParticle.sks */; };
-		8E6D9BE21FE8EBDF00E0E3DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9BE01FE8EBDF00E0E3DC /* Assets.xcassets */; };
 		8E7CCC9E20135C2700B4E47A /* TakpakDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CCC9D20135C2700B4E47A /* TakpakDetailsVC.swift */; };
 		8E87FE6A2017011C00FE7560 /* AnderScene.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EBC61682016570C001F593E /* AnderScene.swift */; };
 		8E87FE6B2017011C00FE7560 /* GameScene.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9B721FE8E5C700E0E3DC /* GameScene.swift */; };
@@ -98,6 +96,10 @@
 		8EE56A102055B32C002070C7 /* 8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A052055B32A002070C7 /* 8.mp3 */; };
 		8EE56A112055B32C002070C7 /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A062055B32B002070C7 /* 4.mp3 */; };
 		8EE56A122055B32C002070C7 /* 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE56A072055B32B002070C7 /* 5.mp3 */; };
+		8EE6F7A220583F4E008635DB /* ZhanyltDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6F7A120583F4E008635DB /* ZhanyltDetailsViewController.swift */; };
+		8EE6F7A320583F62008635DB /* ZhanyltDetailsViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8EE6F7A120583F4E008635DB /* ZhanyltDetailsViewController.swift */; };
+		8EE6F7A4205847A7008635DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D9BE01FE8EBDF00E0E3DC /* Assets.xcassets */; };
+		8EE6F7A6205847E0008635DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE6F7A5205847E0008635DB /* Assets.xcassets */; };
 		8EF5E7682025B0DE00155124 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7612025B0DD00155124 /* ProgressBar.swift */; };
 		8EF5E7692025B0DE00155124 /* DefaultBGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */; };
 		8EF5E76A2025B0DE00155124 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5E7632025B0DD00155124 /* BackgroundView.swift */; };
@@ -153,7 +155,6 @@
 		8E6D9B721FE8E5C700E0E3DC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8E6D9B741FE8E5C700E0E3DC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8E6D9B771FE8E5C700E0E3DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8E6D9B791FE8E5C700E0E3DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E6D9B7C1FE8E5C700E0E3DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E6D9B7E1FE8E5C700E0E3DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E6D9B891FE8E85700E0E3DC /* AnderData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnderData.json; sourceTree = "<group>"; };
@@ -202,6 +203,8 @@
 		8EE56A052055B32A002070C7 /* 8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8.mp3; sourceTree = "<group>"; };
 		8EE56A062055B32B002070C7 /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4.mp3; sourceTree = "<group>"; };
 		8EE56A072055B32B002070C7 /* 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5.mp3; sourceTree = "<group>"; };
+		8EE6F7A120583F4E008635DB /* ZhanyltDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhanyltDetailsViewController.swift; sourceTree = "<group>"; };
+		8EE6F7A5205847E0008635DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Botakan/Assets.xcassets; sourceTree = "<group>"; };
 		8EF5E7612025B0DD00155124 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		8EF5E7622025B0DD00155124 /* DefaultBGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBGImage.swift; sourceTree = "<group>"; };
 		8EF5E7632025B0DD00155124 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -297,6 +300,7 @@
 				8EBAEB1620224B08008DB211 /* AnderVC.swift */,
 				8EDD10E42026E2F300DB6267 /* AnserDetailsViewController.swift */,
 				8E37DFE02026463700E19382 /* ZhanyltViewController.swift */,
+				8EE6F7A120583F4E008635DB /* ZhanyltDetailsViewController.swift */,
 				8E37DFE32026531300E19382 /* SanamakViewController.swift */,
 				8ECEDFAF2047E12900C22F0A /* SanamakDetailsVC.swift */,
 			);
@@ -306,6 +310,7 @@
 		8E6D9B601FE8E5C700E0E3DC = {
 			isa = PBXGroup;
 			children = (
+				8EE6F7A5205847E0008635DB /* Assets.xcassets */,
 				8E6D9B981FE8E8D800E0E3DC /* Default-568h@2x.png */,
 				8E6D9B6B1FE8E5C700E0E3DC /* Botakan */,
 				8E6D9B6A1FE8E5C700E0E3DC /* Products */,
@@ -330,7 +335,6 @@
 				8E6D9B851FE8E7FE00E0E3DC /* MainView */,
 				8E3D15F02019A9FD004720F3 /* SummerView */,
 				8E6D9B841FE8E7E800E0E3DC /* Others */,
-				8E6D9B791FE8E5C700E0E3DC /* Assets.xcassets */,
 				8E6D9B7E1FE8E5C700E0E3DC /* Info.plist */,
 				8E6D9BC51FE8EAAA00E0E3DC /* Media */,
 				8E6D9B881FE8E83900E0E3DC /* Helpers */,
@@ -513,6 +517,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE6F7A6205847E0008635DB /* Assets.xcassets in Resources */,
+				8EE6F7A4205847A7008635DB /* Assets.xcassets in Resources */,
+				8EE6F7A320583F62008635DB /* ZhanyltDetailsViewController.swift in Resources */,
 				8ECEDFB12047E15A00C22F0A /* SanamakDetailsVC.swift in Resources */,
 				8EDD10E92026EBF900DB6267 /* MusicView.swift in Resources */,
 				8EDD10E62026E35200DB6267 /* AnserDetailsViewController.swift in Resources */,
@@ -581,10 +588,8 @@
 				8E87FE6E2017011C00FE7560 /* GameViewController.swift in Resources */,
 				8EE3C5132056D8E7003F277B /* Beibyt.mp3 in Resources */,
 				8E6D9BDE1FE8EB4A00E0E3DC /* HelveticaMedCd.ttf in Resources */,
-				8E6D9BE21FE8EBDF00E0E3DC /* Assets.xcassets in Resources */,
 				8E6D9B781FE8E5C700E0E3DC /* Main.storyboard in Resources */,
 				8E6D9B931FE8E85800E0E3DC /* Sanamak.json in Resources */,
-				8E6D9B7A1FE8E5C700E0E3DC /* Assets.xcassets in Resources */,
 				8E6D9B951FE8E85800E0E3DC /* ZhanylData.json in Resources */,
 				8EE56A112055B32C002070C7 /* 4.mp3 in Resources */,
 				8E6D9B941FE8E85800E0E3DC /* AllData.json in Resources */,
@@ -694,6 +699,7 @@
 				8E37DFE42026531300E19382 /* SanamakViewController.swift in Sources */,
 				8E6D9B911FE8E85800E0E3DC /* ParsingJSON.swift in Sources */,
 				8EF5E76D2025B0DE00155124 /* LabelView.swift in Sources */,
+				8EE6F7A220583F4E008635DB /* ZhanyltDetailsViewController.swift in Sources */,
 				8EF5E7772025B10200155124 /* ZhanyltDetails.swift in Sources */,
 				8E90AAEC1FFFA2210070DD1B /* MenuViewController.swift in Sources */,
 				8EF5E7762025B10200155124 /* menuNodes.swift in Sources */,

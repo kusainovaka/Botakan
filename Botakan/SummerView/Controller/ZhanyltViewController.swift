@@ -1,9 +1,11 @@
 import UIKit
 import EasyPeasy
 
+var zhanultParse = [ParsingJSON]()
+
 class ZhanyltViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
     
-    var zhanultParse = [ParsingJSON]()
+    
     fileprivate lazy var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
         view.nameLabel.text = "Жаңылтпаштар"
@@ -50,7 +52,7 @@ class ZhanyltViewController: UIViewController, UICollectionViewDataSource, UICol
                 let url = try Data(contentsOf: path)
                 let jsonData = try
                     JSONDecoder().decode([ParsingJSON].self, from: url)
-                self.zhanultParse = jsonData
+                zhanultParse = jsonData
             } else { print("Error") }
         }
         catch {
@@ -69,12 +71,12 @@ class ZhanyltViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        about(place: zhanultParse[indexPath.row])
+        detail(data:indexPath.row)
     }
     
-    func about(place: ParsingJSON){
-        let vc = TakpakDetailsVC()
-
+    func detail(data: Int){
+        let vc = ZhanyltDetailsViewController()
+        vc.zhanyltData = data
         navigationController?.pushViewController(vc, animated: false)
     }
     

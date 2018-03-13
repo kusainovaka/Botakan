@@ -1,27 +1,27 @@
 //
-//  SanamakDetailsVC.swift
+//  ZhanyltDetailsViewController.swift
 //  Botakan
 //
-//  Created by Kamila Kusainova on 01.03.18.
+//  Created by Kamila Kusainova on 13.03.18.
 //  Copyright © 2018 kusainovaka. All rights reserved.
 //
 
 import UIKit
 import EasyPeasy
 
-class SanamakDetailsVC: UIViewController {
+class ZhanyltDetailsViewController: UIViewController {
 
-    var sanamakData: Int = 0
+    var zhanyltData: Int = 0
     
     var detailsBG: BackgroundView = {
         let field = BackgroundView()
         field.isUserInteractionEnabled = true
         return field
     }()
-    var detailsViewSanamak: CollectionViewDetails = {
+    var detailsViewZhanylt: CollectionViewDetails = {
         let field = CollectionViewDetails()
         field.frame = CGRect(x: screenWidth / 15, y: screenWidth / 1.92, width: screenWidth / 1.153 , height: screenHeight / 1.66)
-        field.imageCV.image =  UIImage(named: "sana.png")
+        field.imageCV.image =  UIImage(named: "zhyldam.png")
         field.layer.masksToBounds = false
         field.layer.shadowOffset = CGSize(width: 3, height: 3)
         field.layer.shadowOpacity = 0.3
@@ -31,14 +31,14 @@ class SanamakDetailsVC: UIViewController {
         field.backgroundColor = .white
         return field
     }()
-    fileprivate lazy var nameSanamak: UILabel = {
+    fileprivate lazy var nameZhanylt: UILabel = {
         let takpakLB = UILabel(frame: CGRect(x: screenWidth / 5.97, y: screenWidth / 25, width: screenWidth / 1.5, height: screenWidth / 11.72))
         takpakLB.textColor = .BlueColor
         takpakLB.textAlignment = .center
         takpakLB.font = UIFont(name: "Noteworthy-Bold", size: screenWidth / 18.75)
         return takpakLB
     }()
-    fileprivate lazy var sanamak: UITextView = {
+    fileprivate lazy var zhanylt: UITextView = {
         let takpakLB = UITextView(frame: CGRect(x: screenWidth / 6, y: screenWidth / 3.5, width: screenWidth / 1.563, height: screenWidth / 1.3))
         takpakLB.textAlignment = NSTextAlignment.justified
         takpakLB.showsVerticalScrollIndicator = false
@@ -48,7 +48,7 @@ class SanamakDetailsVC: UIViewController {
         takpakLB.font = UIFont(name: "Noteworthy-Light", size: screenWidth / 18.75)
         return takpakLB
     }()
-    fileprivate lazy var  imageSanamak: UIImageView = {
+    fileprivate lazy var  imageZhanylt: UIImageView = {
         let imgV = UIImageView(frame: CGRect(x: screenWidth / 2.82, y: screenWidth / 7.5, width: screenWidth / 3.4, height: screenWidth / 3.4))
         imgV.layer.cornerRadius = 5
         return imgV
@@ -67,69 +67,69 @@ class SanamakDetailsVC: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.addSubview(detailsBG)
-        view.addSubview(detailsViewSanamak)
+        view.addSubview(detailsViewZhanylt)
         view.addSubview(leftBTN)
         view.addSubview(rightBTN)
-        detailsViewSanamak.addSubview(nameSanamak)
-        detailsViewSanamak.addSubview(sanamak)
-        view.addSubview(imageSanamak)
+        detailsViewZhanylt.addSubview(nameZhanylt)
+        detailsViewZhanylt.addSubview(zhanylt)
+        view.addSubview(imageZhanylt)
         detailsBG.backBTN.addTarget(self, action: #selector(backToCV), for: .touchUpInside)
-
+        
         setUpLayout()
         detailsData()
     }
     
     
     func detailsData(){
-        nameSanamak.text = sanamakParse[sanamakData].name
-        sanamak.text = sanamakParse[sanamakData].text
-        imageSanamak.image = UIImage(named: ("\(sanamakParse[sanamakData].photo)"))
+        nameZhanylt.text = zhanultParse[zhanyltData].name
+        zhanylt.text = zhanultParse[zhanyltData].text
+        imageZhanylt.image = UIImage(named: ("\(zhanultParse[zhanyltData].photo)"))
         
-        if sanamakData != 0 || sanamakData > 0{
-            leftBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData - 1].photo)")), for: .normal)
+        if zhanyltData != 0 || zhanyltData > 0{
+            leftBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData - 1].photo)")), for: .normal)
         }
         leftBTN.addTarget(self, action: #selector(leftAction), for: .touchUpInside)
-        if sanamakData == 0 || sanamakData < 13 {
-            rightBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData + 1].photo)")), for: .normal)
+        if zhanyltData == 0 || zhanyltData < 13 {
+            rightBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData + 1].photo)")), for: .normal)
         }
         rightBTN.addTarget(self, action: #selector(rightAction), for: .touchUpInside)
         
     }
     
     @objc func leftAction(){
-        if sanamakData != 0 || sanamakData > 0 {
-            sanamakData -= 1
-            nameSanamak.text = sanamakParse[sanamakData].name
-            sanamak.text = sanamakParse[sanamakData].text
-            imageSanamak.image = UIImage(named: ("\(sanamakParse[sanamakData].photo).png"))
-            if sanamakData == 0 {
+        if zhanyltData != 0 || zhanyltData > 0 {
+            zhanyltData -= 1
+            nameZhanylt.text = zhanultParse[zhanyltData].name
+            sanamak.text = zhanultParse[zhanyltData].text
+            imageZhanylt.image = UIImage(named: ("\(zhanultParse[zhanyltData].photo).png"))
+            if zhanyltData == 0 {
                 leftBTN.setImage(UIImage(named: ("")), for: .normal)
             }else {
-                leftBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData - 1].photo)")), for: .normal)
+                leftBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData - 1].photo)")), for: .normal)
             }
-            rightBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData + 1].photo)")), for: .normal)
+            rightBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData + 1].photo)")), for: .normal)
             print("LEFT")
         }
-        
     }
+    
     @objc func rightAction(){
-        if sanamakData == 0 || sanamakData < 8 {
-            sanamakData += 1
-            nameSanamak.text = sanamakParse[sanamakData].name
-            sanamak.text = sanamakParse[sanamakData].text
+        if zhanyltData == 0 || zhanyltData < 33 {
+            zhanyltData += 1
+            nameZhanylt.text = zhanultParse[zhanyltData].name
+            zhanylt.text = zhanultParse[zhanyltData].text
             print("RIGHT")
-            imageSanamak.image = UIImage(named: ("\(sanamakParse[sanamakData].photo).png"))
-            leftBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData - 1].photo)")), for: .normal)
-            rightBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData + 1].photo)")), for: .normal)
+            imageZhanylt.image = UIImage(named: ("\(zhanultParse[zhanyltData].photo).png"))
+            leftBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData - 1].photo)")), for: .normal)
+            rightBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData + 1].photo)")), for: .normal)
         }
     }
     
     @objc func backToCV(){
         navigationController?.popViewController(animated: false)
     }
-
+    
     
     func setUpLayout(){
         detailsBG <- [
@@ -138,7 +138,7 @@ class SanamakDetailsVC: UIViewController {
             Left(0),
             Height(screenHeight)
         ]
-        nameSanamak <- [
+        nameZhanylt <- [
             CenterX(0),
             Top(screenWidth / 25),
             Width(screenWidth / 1.5),
@@ -157,6 +157,6 @@ class SanamakDetailsVC: UIViewController {
             Height(screenWidth / 4.6875)
         ]
     }
-  
-
+    
 }
+
