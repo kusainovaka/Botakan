@@ -15,7 +15,7 @@ class TakpakDetailsVC: UIViewController{
     fileprivate lazy var detailsViewTakpakt: CollectionViewDetails = {
         let field = CollectionViewDetails()
         field.frame = CGRect(x: screenWidth / 15, y: screenWidth / 1.92, width: screenWidth / 1.153 , height: screenHeight / 1.66)
-        field.imageCV.image =  UIImage(named: "sana.png")
+        field.imageCV.image =  UIImage(named: "oky.png")
         field.layer.masksToBounds = false
         field.layer.shadowOffset = CGSize(width: 3, height: 3)
         field.layer.shadowOpacity = 0.3

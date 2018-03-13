@@ -12,7 +12,7 @@ extension UIColor {
 
 class Model{
     static let sharedInstance = Model()
-    var sound = false
+    var sound = true
     var getName = [ParsingJSON]()
 }
 
