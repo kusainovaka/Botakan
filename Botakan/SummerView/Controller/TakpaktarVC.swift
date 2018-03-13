@@ -28,21 +28,6 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         layout.sectionInset = UIEdgeInsets(top: screenWidth / 10.71, left: screenWidth / 9.375, bottom: screenWidth / 10.71, right: screenWidth / 9.375)
         return layout
     }()
-//    fileprivate lazy var tempViewL: UICollectionView = {
-//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.tempViewLayp)
-//        collectionView.backgroundColor = UIColor.clear
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
-//        collectionView.register(CLImage.self, forCellWithReuseIdentifier: "collectionCell")
-//        return collectionView
-//    }()
-//    fileprivate lazy var tempViewLayp: UICollectionViewFlowLayout = {
-//        let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = .vertical
-//        layout.itemSize = CGSize(width: 100, height: 100)
-//        layout.sectionInset = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
-//        return layout
-//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +47,7 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
                 let jsonData = try
                     JSONDecoder().decode([ParsingJSON].self, from: url)
                 tempParse = jsonData
+                print(tempParse[4])
             } else { print("Error") }
         }
         catch {
@@ -88,12 +74,14 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      about(place: tempParse[indexPath.row])
+        print(indexPath.row)
+        let curr = indexPath.row
+        details(data: curr)
     }
     
-    func about(place: ParsingJSON) {
+    func details(data: Int) {
         let vc = TakpakDetailsVC()
-        vc.tempImage = place
+        vc.tempImage = data
         navigationController?.pushViewController(vc, animated: false)
     }
     
@@ -104,11 +92,5 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             Left(0),
             Height(screenHeight / 1.08)
         ]
-//        tempViewL <- [
-//            Top(100),
-//            Width(110),
-//            Left(153),
-//            Height(130)
-//        ]
     }
 }

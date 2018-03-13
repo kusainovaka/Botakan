@@ -74,7 +74,7 @@ class ZhanyltViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func about(place: ParsingJSON){
         let vc = TakpakDetailsVC()
-        vc.tempImage = place
+
         navigationController?.pushViewController(vc, animated: false)
     }
     

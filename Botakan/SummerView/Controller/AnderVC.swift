@@ -81,56 +81,14 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-                about(place: anderParse[indexPath.row])
-//        let vc = AnserDetailsViewController()
-//        vc.anderParse = place
-//        navigationController?.pushViewController(vc, animated: false)
-//        let name = anderParse[indexPath.row].name
-//        let text = anderParse[indexPath.row].text
-//        let photo = anderParse[indexPath.row].photo
-//        let anderM = anderParse[indexPath.row].music
-//        let authorAN = anderParse[indexPath.row].author
-//        let anNameq = anderParse[indexPath.row].Anname
-//
-//        do{
-//            let url = Bundle.main.url(forResource: "\(anderM)", withExtension: "mp3")
-//            AudioPlayer = try AVAudioPlayer(contentsOf: url!)
-//            AudioPlayer.prepareToPlay()
-//        }catch let error as NSError{
-//            print(error.debugDescription)
-//        }
-//
-//        vc.ander.text = text
-//        vc.nameAnder.text = name
-//        vc.musicVC.imageAnder.image = UIImage(named: photo)
-//        vc.musicVC.nameAn.text = anNameq
-//        vc.musicVC.nameArtist.text = authorAN
-        
+        about(place: anderParse[indexPath.row])
+    
     }
     
     func about(place: AnderJSON){
         let vc = AnserDetailsViewController()
         vc.anderParse = place
-//        navigationController?.pushViewController(vc, animated: false)
-//        let vc = AnserDetailsViewController()
-//        vc.anderParse = place
         navigationController?.pushViewController(vc, animated: false)
-        
-        
-//        do{
-//            let url = Bundle.main.url(forResource: "\(anderM)", withExtension: "mp3")
-//            AudioPlayer = try AVAudioPlayer(contentsOf: url!)
-//            AudioPlayer.prepareToPlay()
-//        }catch let error as NSError{
-//            print(error.debugDescription)
-//        }
-        
-//        vc.ander.text = text
-//        vc.nameAnder.text = name
-//        vc.musicVC.imageAnder.image = UIImage(named: photo)
-//        vc.musicVC.nameAn.text = anNameq
-//        vc.musicVC.nameArtist.text = authorAN
-        
     }
     
     func layouyts(){

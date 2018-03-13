@@ -13,6 +13,7 @@ import AVFoundation
 
 class AnserDetailsViewController: UIViewController {
 
+    var trackId: Int = 0
     var anderParse : AnderJSON?
     var musicState = 1
 

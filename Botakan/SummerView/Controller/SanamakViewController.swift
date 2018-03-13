@@ -84,8 +84,6 @@ class SanamakViewController: UIViewController, UICollectionViewDataSource, UICol
     func about(place: ParsingJSON){
         let vc = SanamakDetailsVC()
         vc.sanamakJS = place
-        //        print(place)
-        //        vc.tempBTN1.addTarget(self, action: #selector(temp1), for: .touchUpInside)
         navigationController?.pushViewController(vc, animated: false)
     }
     
