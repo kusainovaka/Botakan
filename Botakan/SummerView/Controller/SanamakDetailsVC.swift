@@ -39,7 +39,7 @@ class SanamakDetailsVC: UIViewController {
         return takpakLB
     }()
     fileprivate lazy var sanamak: UITextView = {
-        let takpakLB = UITextView(frame: CGRect(x: screenWidth / 6, y: screenWidth / 3.5, width: screenWidth / 1.563, height: screenWidth / 1.3))
+        let takpakLB = UITextView()
         takpakLB.textAlignment = NSTextAlignment.justified
         takpakLB.showsVerticalScrollIndicator = false
         takpakLB.isScrollEnabled = true
@@ -79,6 +79,10 @@ class SanamakDetailsVC: UIViewController {
 
         setUpLayout()
         detailsData()
+        
+        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(backToCV))
+        swipeRecognizer.direction = .right
+        view.addGestureRecognizer(swipeRecognizer)
     }
     
     
@@ -110,8 +114,7 @@ class SanamakDetailsVC: UIViewController {
                 leftBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData - 1].photo)")), for: .normal)
             }
             rightBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData + 1].photo)")), for: .normal)
-            print("LEFT")
-        }
+       }
         
     }
     @objc func rightAction(){
@@ -119,7 +122,7 @@ class SanamakDetailsVC: UIViewController {
             sanamakData += 1
             nameSanamak.text = sanamakParse[sanamakData].name
             sanamak.text = sanamakParse[sanamakData].text
-            print("RIGHT")
+           
             imageSanamak.image = UIImage(named: ("\(sanamakParse[sanamakData].photo).png"))
             leftBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData - 1].photo)")), for: .normal)
             rightBTN.setImage(UIImage(named: ("\(sanamakParse[sanamakData + 1].photo)")), for: .normal)
@@ -155,6 +158,13 @@ class SanamakDetailsVC: UIViewController {
             Top(screenWidth / 5.3571),
             Width(screenWidth / 4.6875),
             Height(screenWidth / 4.6875)
+        ]
+        sanamak <- [
+            Left(screenWidth / 6),
+            Top(screenWidth / 3.5),
+            Width(screenWidth / 1.563),
+            Height(screenWidth / 1.3),
+            Bottom(5).to(detailsViewSanamak, .bottom)
         ]
     }
   

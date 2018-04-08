@@ -97,20 +97,20 @@ class FeedBackView: UIView {
     }
     func setUpLayout(){
         mamakLabel <- [
-            Height(20),
+            Height(screenWidth / 18.75),
             Width(screenWidth / 3.75),
             Left(screenWidth / 4.335),
             Top(screenWidth / 25)
         ]
         kazLabel <- [
-            Height(20),
-            Width(245),
+            Height(screenWidth / 18.75),
+            Width(screenWidth / 1.5306),
             Left(screenWidth / 9.375),
             Top(screenWidth / 10.714)
         ]
         govorim <- [
-            Height(15),
-            Width(320),
+            Height(screenWidth / 25),
+            Width(screenWidth / 1.1718),
             Left(screenWidth / 15),
             Top(screenWidth / 6.818)
         ]
@@ -121,38 +121,38 @@ class FeedBackView: UIView {
         //            Top(75)
         //        ]
         asselSkLabel <- [
-            Height(80),
-            Width(345),
+            Height(screenWidth / 4.6875),
+            Width(screenWidth / 1.0869),
             Left(screenWidth / 8.52272),
             Top(screenWidth / 3.75)
         ]
         instaAS <- [
-            Height(20),
-            Width(105),
+            Height(screenWidth / 18.75),
+            Width(screenWidth / 3.5714),
             Left(screenWidth / 4.6875),
             Top(screenWidth / 2.2727)
         ]
         botakanWeb <- [
-            Height(20),
-            Width(160),
+            Height(screenWidth / 18.75),
+            Width(screenWidth / 2.3437),
             Left(screenWidth / 6.4655),
             Top(screenWidth / 2.08)
         ]
         littleSon <- [
-            Height(37),
-            Width(45),
+            Height(screenWidth / 10.135),
+            Width(screenWidth / 8.3333),
             Right(0),
             Top(screenWidth / 2.027)
         ]
         instaLogo  <- [
-            Height(12),
-            Width(12),
+            Height(screenWidth / 31.25),
+            Width(screenWidth / 31.25),
             Left(screenWidth / 5.7692),
             Top(screenWidth / 2.2189)
         ]
         webLogo  <- [
-            Height(12),
-            Width(12),
+            Height(screenWidth / 31.25),
+            Width(screenWidth / 31.25),
             Left(screenWidth / 8.72093),
             Top(screenWidth / 2.027)
         ]

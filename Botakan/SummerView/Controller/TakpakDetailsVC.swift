@@ -45,7 +45,7 @@ class TakpakDetailsVC: UIViewController{
         return takpakLB
     }()
     fileprivate lazy var takpak: UITextView = {
-        let takpakLB = UITextView(frame: CGRect(x: screenWidth / 6, y: screenWidth / 3.5, width: screenWidth / 1.563, height: screenWidth / 1.3))
+        let takpakLB = UITextView()
         takpakLB.textAlignment = NSTextAlignment.justified
         takpakLB.showsVerticalScrollIndicator = false
         takpakLB.isScrollEnabled = true
@@ -85,6 +85,10 @@ class TakpakDetailsVC: UIViewController{
         imageTakpak.image = UIImage(named: ("\(tempParse[tempImage].photo)"))
         detailsTakpakBG.backBTN.addTarget(self, action: #selector(backToCV), for: .touchUpInside)
         setUpLayout()
+        
+        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(backToCV))
+        swipeRecognizer.direction = .right
+        view.addGestureRecognizer(swipeRecognizer)
     }
     
     @objc func backToCV(){
@@ -103,7 +107,6 @@ class TakpakDetailsVC: UIViewController{
                 leftBTN.setImage(UIImage(named: ("\(tempParse[tempImage - 1].photo)")), for: .normal)
             }
             rightBTN.setImage(UIImage(named: ("\(tempParse[tempImage + 1].photo)")), for: .normal)
-            print("LEFT")
         }
         
     }
@@ -112,7 +115,6 @@ class TakpakDetailsVC: UIViewController{
             tempImage += 1
             nameTakpak.text = tempParse[tempImage].name
             takpak.text = tempParse[tempImage].text
-            print("RIGHT")
             imageTakpak.image = UIImage(named: ("\(tempParse[tempImage].photo).png"))
             leftBTN.setImage(UIImage(named: ("\(tempParse[tempImage - 1].photo)")), for: .normal)
             rightBTN.setImage(UIImage(named: ("\(tempParse[tempImage + 1].photo)")), for: .normal)
@@ -143,6 +145,13 @@ class TakpakDetailsVC: UIViewController{
             Top(screenWidth / 5.3571),
             Width(screenWidth / 4.6875),
             Height(screenWidth / 4.6875)
+        ]
+        takpak <- [
+            Left(screenWidth / 6),
+            Top(screenWidth / 3.5),
+            Width(screenWidth / 1.563),
+            Height(screenWidth / 1.3),
+            Bottom(5).to(detailsViewTakpakt, .bottom)
         ]
     }
 }

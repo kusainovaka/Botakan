@@ -39,7 +39,7 @@ class BallonsView: UIView {
     }
     func LayoutsLabel(){
         ballon1 <- [
-            Height(80),
+            Height(screenWidth / 4.6875),
             Width(screenWidth / 7.81),
             Left(0),
             Top(0)

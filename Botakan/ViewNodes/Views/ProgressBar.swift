@@ -62,9 +62,6 @@ class ProgressBar: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-//    @objc func returnMenu(){
-//        print("OKAY GET MENU")
-//    }
     func LayoutsPgoress(){
         imageBack <- [
         Top(0),

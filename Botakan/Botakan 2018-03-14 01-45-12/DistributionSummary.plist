@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Botakan.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>bitcode</key>
+			<true/>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>E0DFF12808DF65B35C3E6D2305A77D93E0741CD2</string>
+				<key>dateExpires</key>
+				<string>18.12.18</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>bitcode</key>
+					<true/>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E0DFF12808DF65B35C3E6D2305A77D93E0741CD2</string>
+						<key>dateExpires</key>
+						<string>18.12.18</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>EasyPeasy.framework</string>
+					<key>symbols</key>
+					<true/>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>3456T57P5Z</string>
+						<key>name</key>
+						<string>UNIVERSITET IMENI SULEIMANA DEMIRELYA, UCH</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>3456T57P5Z.kamila.instamamakaz</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>3456T57P5Z</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>3456T57P5Z.kamila.instamamakaz</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>Botakan.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>96ded74d-b99d-44ef-8a35-e1a445be2fe2</string>
+				<key>name</key>
+				<string>iOS Team Store Provisioning Profile: kamila.instamamakaz</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>3456T57P5Z</string>
+				<key>name</key>
+				<string>UNIVERSITET IMENI SULEIMANA DEMIRELYA, UCH</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

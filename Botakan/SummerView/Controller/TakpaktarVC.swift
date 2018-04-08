@@ -38,6 +38,8 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         detailLabel.backBTN.addTarget(self, action: #selector(backToBTN), for: .touchUpInside)
         Layouyts()
+        
+        
     }
     
     func getFromJSON(){
@@ -53,7 +55,7 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             print(error.localizedDescription)
         }
     }
- 
+    
     @objc func backToBTN(){
         navigationController?.popViewController(animated: false)
         if Model.sharedInstance.sound == true{

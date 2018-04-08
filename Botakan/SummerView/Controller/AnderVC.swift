@@ -15,8 +15,6 @@ import AVFoundation
 class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout  {
     
    
-    
-    
     fileprivate lazy var detailLabel: DetailLabels = {
         let view = DetailLabels(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 175))
         view.nameLabel.text = "Әндер"
@@ -66,6 +64,7 @@ class AnderVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     @objc func goToMenu(){
         navigationController?.popViewController(animated: false)
+        
         if Model.sharedInstance.sound == true{
             player.play()
         }

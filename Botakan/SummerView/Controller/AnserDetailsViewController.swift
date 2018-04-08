@@ -54,7 +54,7 @@ class AnserDetailsViewController: UIViewController {
         return takpakLB
     }()
     public lazy var ander: UITextView = {
-        let takpakLB = UITextView(frame: CGRect(x: screenWidth / 6, y: screenWidth / 3.5, width: screenWidth / 1.563, height: screenWidth / 1.3))
+        let takpakLB = UITextView()
         takpakLB.textAlignment = NSTextAlignment.justified
         takpakLB.showsVerticalScrollIndicator = false
         takpakLB.isScrollEnabled = true
@@ -106,7 +106,7 @@ class AnserDetailsViewController: UIViewController {
         
 //        let seconds = 131.531   // 131.531
         let time = allT.minuteSecondMS  //  "2:11.531"
-        let millisecond = allT.millisecond    // 531
+//        let millisecond = allT.millisecond    // 531
         
         
         b = (String(time))
@@ -120,11 +120,14 @@ class AnserDetailsViewController: UIViewController {
         } catch {
             print(error)
         }
-        
+        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(backToCV))
+        swipeRecognizer.direction = .right
+        view.addGestureRecognizer(swipeRecognizer)
     }
    
     @objc func backToCV(){
         navigationController?.popViewController(animated: false)
+        audioPlayer.stop()
     }
     
     @objc func updateProgress(){
@@ -164,7 +167,7 @@ class AnserDetailsViewController: UIViewController {
             musicVC.imageAnder.image = UIImage(named: ("\(anderParse[trackId].photo)"))
             musicVC.nameAn.text = anderParse[trackId].Anname
             musicVC.nameArtist.text = anderParse[trackId].author
-           
+           musicVC.durationMusic.text = "0.00"
             do{
                 let url = Bundle.main.url(forResource: "\(String(describing: anderParse[trackId].music))", withExtension: "mp3")
                 audioPlayer = try AVAudioPlayer(contentsOf: url!)
@@ -180,13 +183,14 @@ class AnserDetailsViewController: UIViewController {
         
     }
     @objc func rightBTN(){
-        if trackId == 0 || trackId < 21 {
+        if trackId == 0 || trackId < 20 {
             trackId += 1
             nameAnder.text = anderParse[trackId].name
             ander.text = anderParse[trackId].text
             musicVC.imageAnder.image = UIImage(named: ("\(anderParse[trackId].photo)"))
             musicVC.nameAn.text = anderParse[trackId].Anname
             musicVC.nameArtist.text = anderParse[trackId].author
+            musicVC.durationMusic.text = "0.00"
            
             do{
                 let url = Bundle.main.url(forResource: "\(String(describing: anderParse[trackId].music))", withExtension: "mp3")
@@ -199,16 +203,15 @@ class AnserDetailsViewController: UIViewController {
                 print(error.localizedDescription)
             }
            musicVC.btnMusic.setImage(UIImage(named:"play.png"),for:.normal)
-            musicState == 1
         }
     }
-    @objc func scrollMusic(){
-        AudioPlayer.stop()
-        AudioPlayer.currentTime = TimeInterval(sliderMusic.value)
-        AudioPlayer.prepareToPlay()
-        musicState = 1
-        AudioPlayer.play()
-    }
+//    @objc func scrollMusic(){
+//        AudioPlayer.stop()
+//        AudioPlayer.currentTime = TimeInterval(sliderMusic.value)
+//        AudioPlayer.prepareToPlay()
+//        musicState = 1
+//        AudioPlayer.play()
+//    }
     
     func setUpLayout(){
         detailsTakpakBG <- [
@@ -228,6 +231,14 @@ class AnserDetailsViewController: UIViewController {
             Top(screenWidth / 25),
             Width(screenWidth / 1.5),
             Height(screenWidth / 11.72)
+        ]
+//        frame: CGRect(x: screenWidth / 6, y: screenWidth / 3.5, width: screenWidth / 1.563, height: screenWidth / 1.3)
+        ander <- [
+            Left(screenWidth / 6),
+            Top(screenWidth / 3.5),
+            Width(screenWidth / 1.563),
+            Height(screenWidth / 1.3),
+            Bottom(5).to(detailsViewAnder, .bottom)
         ]
     }
 }

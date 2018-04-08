@@ -212,7 +212,7 @@ class MenuViewController: UIViewController {
             Width(screenWidth),
             Top(0),
             Left(0),
-            Bottom(-10)
+            Bottom(-screenWidth / 37.5)
         ]
         scrollView <- [
             Height(screenHeight),
@@ -229,9 +229,9 @@ class MenuViewController: UIViewController {
         //        ]
         
         headView <- [
-            Height(165),
-            Width(165),
-            Top(70),
+            Height(screenWidth / 2.27),
+            Width(screenWidth / 2.27),
+            Top(screenWidth / 5.357),
             Left(screenWidth / 3.57)
         ]
         feedBackV <- [
@@ -250,7 +250,7 @@ class MenuViewController: UIViewController {
                 Bottom(screenWidth / 6.95)
             ]
             btn <- [
-                Height(650),
+                Height(screenWidth / 1.02615),
                 Width(screenWidth),
                 Top(screenHeight / 1.6675),
                 Left(0)
@@ -270,7 +270,6 @@ class MenuViewController: UIViewController {
                 Top(screenWidth / 1.13),
                 Left(0)
             ]
-            
         }
         
         ballonsV <- [

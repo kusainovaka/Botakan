@@ -40,20 +40,20 @@ class HeadTextView: UIView {
     }
     func LayoutsLabel(){
         mamakLabel <- [
-            Height(64),
-            Width(69),
+            Height(screenWidth / 5.8593),
+            Width(screenWidth / 5.4347),
             Left(screenWidth / 7.07547),
             Top(0)
         ]
         kazLabel <- [
-            Height(64),
-            Width(180),
+            Height(screenWidth / 5.8593),
+            Width(screenWidth / 2.0833),
             Left(0),
             Top(screenWidth / 12.5)
         ]
         asselSkLabel <- [
-            Height(27),
-            Width(147),
+            Height(screenWidth / 13.888),
+            Width(screenWidth / 2.55),
             Left(screenWidth / 12.5),
             Top(screenWidth / 18.75).to(mamakLabel)
         ]

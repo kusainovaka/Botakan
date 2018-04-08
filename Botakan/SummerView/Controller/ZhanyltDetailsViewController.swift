@@ -39,7 +39,7 @@ class ZhanyltDetailsViewController: UIViewController {
         return takpakLB
     }()
     fileprivate lazy var zhanylt: UITextView = {
-        let takpakLB = UITextView(frame: CGRect(x: screenWidth / 6, y: screenWidth / 3.5, width: screenWidth / 1.563, height: screenWidth / 1.3))
+        let takpakLB = UITextView()
         takpakLB.textAlignment = NSTextAlignment.justified
         takpakLB.showsVerticalScrollIndicator = false
         takpakLB.isScrollEnabled = true
@@ -79,6 +79,10 @@ class ZhanyltDetailsViewController: UIViewController {
         
         setUpLayout()
         detailsData()
+        
+        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(backToCV))
+        swipeRecognizer.direction = .right
+        view.addGestureRecognizer(swipeRecognizer)
     }
     
     
@@ -102,7 +106,7 @@ class ZhanyltDetailsViewController: UIViewController {
         if zhanyltData != 0 || zhanyltData > 0 {
             zhanyltData -= 1
             nameZhanylt.text = zhanultParse[zhanyltData].name
-            sanamak.text = zhanultParse[zhanyltData].text
+            zhanylt.text = zhanultParse[zhanyltData].text
             imageZhanylt.image = UIImage(named: ("\(zhanultParse[zhanyltData].photo).png"))
             if zhanyltData == 0 {
                 leftBTN.setImage(UIImage(named: ("")), for: .normal)
@@ -110,7 +114,6 @@ class ZhanyltDetailsViewController: UIViewController {
                 leftBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData - 1].photo)")), for: .normal)
             }
             rightBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData + 1].photo)")), for: .normal)
-            print("LEFT")
         }
     }
     
@@ -119,7 +122,6 @@ class ZhanyltDetailsViewController: UIViewController {
             zhanyltData += 1
             nameZhanylt.text = zhanultParse[zhanyltData].name
             zhanylt.text = zhanultParse[zhanyltData].text
-            print("RIGHT")
             imageZhanylt.image = UIImage(named: ("\(zhanultParse[zhanyltData].photo).png"))
             leftBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData - 1].photo)")), for: .normal)
             rightBTN.setImage(UIImage(named: ("\(zhanultParse[zhanyltData + 1].photo)")), for: .normal)
@@ -155,6 +157,13 @@ class ZhanyltDetailsViewController: UIViewController {
             Top(screenWidth / 5.3571),
             Width(screenWidth / 4.6875),
             Height(screenWidth / 4.6875)
+        ]
+        zhanylt <- [
+            Left(screenWidth / 6),
+            Top(screenWidth / 3.5),
+            Width(screenWidth / 1.563),
+            Height(screenWidth / 1.3),
+            Bottom(5).to(detailsViewZhanylt, .bottom)
         ]
     }
     

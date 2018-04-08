@@ -52,10 +52,10 @@ class DetailLabels: UIView {
     }
     func LayoutsLabel(){
         backBTN <- [
-            Height(30),
-            Width(37),
-            Left(20),
-            Top(40)
+            Height(screenWidth / 12.5),
+            Width(screenWidth / 10.135),
+            Left(screenWidth / 18.75),
+            Top(screenWidth / 9.375)
         ]
         bgCV <- [
             Top(0),
