@@ -19,6 +19,7 @@ class TakpaktarVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         collectionView.register(CLImage.self, forCellWithReuseIdentifier: "collectionCell")
         return collectionView
     }()
+    
     fileprivate lazy  var CVLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
