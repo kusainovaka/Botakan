@@ -221,12 +221,6 @@ class MenuViewController: UIViewController {
             Left(0),
             Bottom(0)
         ]
-        //        musicBTN <- [
-        //            Height(50),
-        //            Width(50),
-        //            Top(40),
-        //            Right(20)
-        //        ]
         
         headView <- [
             Height(screenWidth / 2.27),
