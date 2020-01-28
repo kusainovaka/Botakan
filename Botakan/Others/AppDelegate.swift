@@ -1,6 +1,10 @@
-//First version
-//download
-
+//
+//  AppDelegate.swift
+//  mamakaz
+//
+//  Created by Kamila Kusainova on 10.12.17.
+//  Copyright © 2017 kusainovaka. All rights reserved.
+//
 import UIKit
 import StoreKit
 
@@ -12,24 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: screenBounds)
-        let viewFirst = UINavigationController(rootViewController: MenuViewController())
         
-        window?.rootViewController = viewFirst
+        let menuViewController = UINavigationController(rootViewController: MenuViewController())
+        window?.rootViewController = menuViewController
         window?.makeKeyAndVisible()
-        return true
-    }
-    
-    func requestReview(){
-        if #available(iOS 10.1, *){
-            if #available(iOS 10.3, *) {
-                SKStoreReviewController.requestReview()
-            } else {
-                // Fallback on earlier versions
-            }
-        }else{
-            print("Rate is disable")
-        }
         
+        return true
     }
 }
 

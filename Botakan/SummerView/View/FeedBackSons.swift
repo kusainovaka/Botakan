@@ -9,7 +9,7 @@ import UIKit
 import EasyPeasy
 
 class FeedBackSons: UIView {
-   
+    
     let ballons: UIImageView = {
         let imgV = UIImageView(frame: CGRect(x: 65, y: 169, width: 12, height: 12))
         imgV.image = UIImage(named: "baloons.png")
@@ -42,7 +42,7 @@ class FeedBackSons: UIView {
         orangeV.layer.cornerRadius = 5
         orangeV.setTitle("Оценить приложение", for: .normal)
         orangeV.titleLabel?.font = UIFont(name: "HelveticaNeue", size: screenWidth / 31.25)
-        orangeV.addTarget(self, action: #selector(rateApp), for: .touchUpInside)
+        orangeV.addTarget(self, action: #selector(rateAppAction), for: .touchUpInside)
         setupViewsLabel()
         setUpLayout()
     }
@@ -52,10 +52,12 @@ class FeedBackSons: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    @objc func rateApp(){
-        let appDelegate = AppDelegate()
-        appDelegate.requestReview()
+    
+    @objc func rateAppAction() {
+        // TODO:
+//        rateApp()
     }
+    
     func setUpLayout(){
         ballons <- [
             Height(screenWidth / 3.75),

@@ -77,11 +77,6 @@ class FeedBackView: UIView {
         super.init(frame: frame)
         self.backgroundColor = .white
         self.layer.cornerRadius = 10
-        //        orangeV.backgroundColor = .orangeColor
-        //        orangeV.layer.cornerRadius = 5
-        //        orangeV.setTitle("Оценить приложение", for: .normal)
-        //        orangeV.titleLabel?.font = UIFont(name: "HelveticaNeue", size: screenWidth / 31.25)
-        //        orangeV.addTarget(self, action: #selector(rateApp), for: .touchUpInside)
         setupViewsLabel()
         setUpLayout()
     }
@@ -90,10 +85,6 @@ class FeedBackView: UIView {
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    @objc func rateApp(){
-        let appDelegate = AppDelegate()
-        appDelegate.requestReview()
     }
     func setUpLayout(){
         mamakLabel <- [
